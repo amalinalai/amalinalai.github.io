@@ -1,0 +1,51 @@
+body {
+			color: #d3c9a1;
+			font-family: monospace;
+			background: #323C39;
+			place-items: center;
+			display: grid;
+		}
+		
+		/* width */
+		::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #323C39;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #d3c9a1;
+			border-radius: 10px;
+		}
+		
+		a:link, a:visited {
+			color: #d3c9a1;
+		}
+		
+
+
+		#main {
+			width: clamp(250px, 100%, 500px);
+			}
+		
+		
+		.content {
+			padding: 10px;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		
+		p > a:hover {
+			background: #d3c9a1;
+			color: #323C39;
+		}
+		
+		li > a:hover {
+			background: #d3c9a1;
+			color: #323C39;
+		}
