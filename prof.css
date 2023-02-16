@@ -73,9 +73,11 @@ body {
 			padding: 20px;
 			float: left;
 			width: 500px;
-			text-align: justify;
 		}
 		
+		main > p { text-align: justify; }
+		
+		h1 { line-height: 100%; }
 		
 		/* Use a media query to add a break point at 800px: */
 		@media screen and (max-width: 800px) {
