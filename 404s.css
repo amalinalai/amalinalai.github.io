@@ -1,0 +1,59 @@
+	body {
+	  display: grid;
+	  place-items: center;
+	  height: 95vh;
+	}
+	
+	summary {
+		color: #ad6051;
+	}
+	
+	summary:hover {
+		cursor: pointer;
+	}
+
+	.card {
+	  width: clamp(45ch, 50%, 75ch);
+	  display: flex;
+	  flex-direction: column;
+	  padding: 1rem;
+	  text-align: justify;
+	}
+	
+	 .center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 100%;
+	  max-width: 400px;
+	}
+	
+	a::before {
+	  content: "[";
+	  color: #000;
+	  padding-right: 5px;
+	}
+	
+	a {
+	  color: #ad6051;
+	}
+	
+	a::after {
+	  content: "]";
+	  color: #000;
+	  padding-left: 5px;
+	}
+	
+	a:active, a:visited {
+	  color: #aaa;
+	}
+	
+	a:hover {
+	  color: #aaa;
+	}
+	
+	h1 {
+	  font-size: 12pt;
+	  font-style: italic;
+	  text-align: center;
+	}
