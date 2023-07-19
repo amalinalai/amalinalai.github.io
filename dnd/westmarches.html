@@ -4,18 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="robots" content="noai, noimageai">
 	<title>qhub dungeons & dragons</title>
-	
-	<style>
-	body { font-family: sans-serif; display: grid; place-items: center; font-size: 11pt;}
-	.main { width: clamp(20ch, 90%, 80ch); }
-	.text-content { text-align: justify; }
-	.quest { display: flex; flex-wrap: nowrap; gap: 10px; padding: 10px; border-bottom: solid #eee 1px;}
-	.quest:hover { background: #eee; }
-	.quest-content { font-family: Courier New; text-align: justify; }
-	.profile { width: 120px; text-align: center; font-size: 9pt; font-weight: bold;}
-	.profile img { border: solid #ccc 1px; padding: 2px; border-radius: 100px; }
-	blockquote { background: #eee; border-left: solid #ccc 7px; padding: 10px; }
-	</style>
+	<link rel="stylesheet" href="dndstyle.css">
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
@@ -26,22 +15,46 @@
   </head>
   <body>
 	<div class="main">
-	<h1>Quantum Hub's Dungeons & Dragons Campaign</h1>
-	
-	<h2 id="start">Let's Play!</h2>
+	<h1>Quantum Hub's Dungeons & Dragons West Marches Campaign</h1>
 	<div class="text-content">
-	<p>Hello, thank you for your interest in playing D&D! Due to the large number of interested players, I cannot run a regular campaign as it will be too difficult for me to manage all players at the same time. If the number of players still interested in this after Session 1 drops to 5 & below, I will convert this into a regular campaign. Otherwise, I will continue to do a West Marches style campaign, for which I will explain the rules in-depth next time and update this page! :-)</p>
+	<blockquote><i>Last updated: 19 July 2023</i></blockquote>
+	<p><b>Dungeon Master(s) [DM]:</b> Amalina</p>
+	<p>Due to the large number of interested players, I cannot run a normal game with all players in the same session as it is too difficult for me to manage everyone at the same time. Thus I have chosen to run a West Marches campaign. The idea is simple: the <b>players decide the time, party (group of players you go on the adventure with) and the direction of the adventure</b>. Because of this, the players within each session can be different and flexible. Read on to see how this format works!</p>
+	</div>
 	
-	<p>For now, do not worry. In preparation for your first session, please do the following:</p>
+	<hr class="divider">
+	
+	<h2 id="start">Starting your Next Adventure</h2>
+	<h3>Your First Session</h3>
+	<div class="text-content">
 	<ol>
 		<li>Read through <a href="#setting">Setting</a> and the first request on <a href="#bulletin">Bulletin Board</a>.</li>
 		<li>Create a basic outline for your D&D character following the <a href="cc.html">Character Creation page</a>.</li>
-		<li>Send your character outline to me (Amalina!) to look through before your first session.</li>
-		<li>Organize a group of 5 people maximum (known as a 'party') to do the first quest. Decide on the date, time and let me know. This will be your first session! Recommended to do this in our group chat.</li>
+		<li>Send your character outline to your DM to look through before your first session.</li>
+		<li>Organize a party of <b>3 to 5 people</b> to do the first request. I recommend this to be done in the group chat.</li>
+		<li>Decide on the date and time of your first session with your DM.</li> 
 	</ol>
 	
 	<p>During the first session, we will polish up your character creation and play your first quest!</p>
 	</div>
+	<h3>Subsequent Sessions</h3>
+	<div class="text-content">
+	<ol>
+		<li>Pick a request from the <a href="#bulletin">Bulletin Board</a>.</li>
+		<li>Organize a party of <b>3 to 5 people</b> to tackle this request together.</li>
+		<li>Inform your DM <b>at least 1 week in advance</b>.</li>
+		<li>Decide on the date and time of your first session with your DM.</li>
+	</ol>
+	<p>Additional notes:</p>
+	<ul>
+		<li>While the party is flexible and up to you to decide, do try to include everyone when deciding your party for various sessions.</li>
+		<li>Adventures not on the bulletin board can be proposed to the DM with a good reason to tackle them.</li>
+		<li>Any adventure idea can be vetoed by the DM if they don't think its worth a session.</li>
+		<li>Levels and loot come with adventuring. More sessions = more loot and levelling up to progress your character.</li>
+	</ul>
+	</div>
+	
+	<hr class="divider">
 	
 	<h2 id="setting">Setting</h2>
 	<div class="text-content">
@@ -56,10 +69,13 @@
 	<blockquote><b>TL;DR / Simplified:</b> 200 years ago, The Fog had destroyed everything on earth with radiation ravaging everything above ground. Your kingdom, Linde, managed to seek refuge in underground bunkers. The Fog has just begun to clear, and it seems as though a group of townsfolk, known as <i>Hielaphites</i>, have a mutation that allows them to uniquely withstand the high radiation levels above ground and walk amidst The Fog. You are one such person, and now you have been pushed to become the pioneering batch of explorers for your kingdom.</blockquote>
 	</div>
 	
+	<hr class="divider">
+	
 	<h2 id="bulletin">Bulletin Board</h2>
-	<p>Completed quests will be put in Archives.</p>
+	<p>Completed quests will be put in <a href="archives.html">Archives</a>.</p>
+	
 	<div class="quest">
-	<div class="profile"><img src="https://placehold.co/100x100"><br><br>Mayor</div>
+	<div class="npc"><span style="font-size: 12pt;">📌</span><br><br><img src="https://placehold.co/100x100"><p>Mayor</p></div>
 	<div class="quest-content">
 	<b>INVESTIGATION REQUEST.</b><br>
 	<b>THREAT LEVEL:</b> LOW <br>
@@ -67,16 +83,34 @@
 	</div>
 	</div>
 	
+	<hr class="divider">
+	
 	<h2 id="players">Players</h2>
-	<p>To join the ranks, please look at <a href="cc.html">Character Creation</a>.</p>
+	<p>To join the game, please look at <a href="cc.html">Character Creation</a>.</p>
+	<div class="player-list">
+		<div class="profile"><b>Name.</b><br>Class & Level. / Race.<br>Personality traits. <br><br><center><i>Played by Player.</i></center></div>
+		<div class="profile"><b>Name.</b><br>Class & Level. / Race.<br>Personality traits. <br><br><center><i>Played by Player.</i></center></div>
+		<div class="profile"><b>Name.</b><br>Class & Level. / Race.<br>Personality traits. <br><br><center><i>Played by Player.</i></center></div>
+	</div>
+	
+	<hr class="divider">
+	
+	<h2 id="ending">Wrapping Up an Adventuring Session</h2>
+	<p>After the adventuring session has ended, please remember to:</p>
+	<ul>
+		<li>Split any loot with your party members.</li>
+		<li>Trade loot with non-participating players or sell loot to NPCs, if desired.</li>
+		<li>Provide a short summary of your adventure to be added to the <a href="archives.html">Archives</a> for other players to reference.</li>
+	</ul>
+	
+	<hr class="divider">
 	
 	<h2 id="links">More Links</h2>
 	<div class="text-content">
-	<p>To be linked to next time. :-)</p>
 	<ul>
-		<li>Quick Rules</li>
-		<li>Character Creation</li>
-		<li>Archives</li>
+		<li><a href="rules.html">Quick Rules</a></li>
+		<li><a href="cc.html">Character Creation</a></li>
+		<li><a href="archives.html">Archives</a></li>
 	</ul>
 	</div>
   </body>
