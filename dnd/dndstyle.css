@@ -1,15 +1,24 @@
 body { font-family: sans-serif; display: grid; place-items: center; font-size: 11pt;}
-	blockquote { background: #eee; padding: 10px; border-left: 2px #ccc solid;}
-	hr.divider { border: 0; border-top: solid #ccc 1px; }
+blockquote { background: #eee; padding: 10px; border-left: 2px #ccc solid;}
+hr.divider { border: 0; border-top: solid #ccc 1px; }
+details summary { padding: 10px; background: #272A2B; cursor: pointer; color: #fff; font-weight: 600; border-bottom: 2px solid #fff; }
+
+a { color: #272A2B; text-decoration: none; border-bottom: 1px solid #aaa; transition: all 0.2s; font-weight: 600; }
+a:hover { color: #aaa; }
+
+table { font-size: 11pt; }
+th { padding: 10px; border-bottom: #ccc 2px solid; }
+td { padding: 10px; transition: all 0.2s; }
+tbody:hover td[rowspan], tr:hover td {background-color: #eee;}
 	
-	.main { width: clamp(20ch, 90%, 80ch); margin-bottom: 20px;}
-	.text-content { text-align: justify; }
-	.quest { display: flex; flex-wrap: nowrap; gap: 10px; padding: 10px; }
-	.quest:hover { background: #eee; }
-	.quest-content { font-family: Courier New; flex: 83%; text-align: justify; }
-	.npc { flex: 17%; text-align: center; font-size: 9pt; font-weight: bold; }
-	.npc img { border: solid #ccc 1px; padding: 2px; border-radius: 100px; }
-	.player-list { display: flex; flex-wrap: wrap; gap: 6px; }
-	.profile { flex: 29%; padding: 10px; background-color: #eee; text-align: justify;}
+.main { width: clamp(20ch, 90%, 80ch); margin-bottom: 20px;}
+.text-content { text-align: justify; }
+.quest { display: flex; flex-wrap: nowrap; gap: 10px; padding: 10px; }
+.quest:hover { background: #eee; }
+.quest-content { font-family: Courier New; flex: 83%; text-align: justify; }
+.npc { flex: 17%; text-align: center; font-size: 9pt; font-weight: bold; }
+.npc img { border: solid #ccc 1px; padding: 2px; border-radius: 100px; }
+.player-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.profile { flex: 29%; padding: 10px; background-color: #eee; text-align: justify;}
 	
-	@media (max-width: 800px) { .player-list, .quest { flex-direction: column; } }
+@media (max-width: 800px) { .player-list, .quest { flex-direction: column; } }
