@@ -1,7 +1,8 @@
 body { font-family: sans-serif; display: grid; place-items: center; font-size: 11pt;}
 blockquote { background: #eee; padding: 10px; border-left: 2px #ccc solid;}
 hr.divider { border: 0; border-top: solid #ccc 1px; }
-details summary { padding: 10px; background: #272A2B; cursor: pointer; color: #fff; font-weight: 600; border-bottom: 2px solid #fff; }
+details .outer-summary { padding: 10px; background: #272A2B; cursor: pointer; color: #fff; font-weight: 600; border-bottom: 2px solid #fff; }
+details .inner-summary { cursor: pointer; color: #000; font-weight: 600; }
 
 a { color: #272A2B; text-decoration: none; border-bottom: 1px solid #aaa; transition: all 0.2s; font-weight: 600; }
 a:hover { color: #aaa; }
@@ -20,5 +21,6 @@ tbody:hover td[rowspan], tr:hover td {background-color: #eee;}
 .npc img { border: solid #ccc 1px; padding: 2px; border-radius: 100px; }
 .player-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .profile { flex: 29%; padding: 10px; background-color: #eee; text-align: justify;}
+.showcase { margin: 0.75rem; background-color: #eee; padding: 0.5rem; }
 	
 @media (max-width: 800px) { .player-list, .quest { flex-direction: column; } }
