@@ -5,14 +5,8 @@ body {
 }
 
 
-a:link {
+a:link, a:visited {
 	color: #000;
-	text-decoration: none;
-	border-bottom: 1px solid #aaa;
-}
-
-a:visited {
-	color: #0e0e0e;
 	text-decoration: none;
 	border-bottom: 1px solid #aaa;
 }
