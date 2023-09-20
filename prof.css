@@ -6,13 +6,19 @@ body {
 		
 		a:link {
 			color: #000;
+			text-decoration: none;
+			border-bottom: 1px solid #aaa;
 		}
 		
-		a:visited { color: #0e0e0e; }
+		a:visited {
+			color: #0e0e0e;
+			text-decoration: none;
+			border-bottom: 1px solid #aaa;
+		}
 		
 		a:hover {
 			color: #aaa;
-			transition: 0.2s;
+			transition: 0.5s;
 		}
 		
 		a[target="_blank"]::after {
