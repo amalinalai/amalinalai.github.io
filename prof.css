@@ -1,113 +1,105 @@
 body {
-		font-family: Arial, sans-serif;
-		font-size: 11.5pt;
-		line-height: 120%;
-		}
-		
-		
-		a:link {
-			color: #000;
-			text-decoration: none;
-			border-bottom: 1px solid #aaa;
-		}
-		
-		a:visited {
-			color: #0e0e0e;
-			text-decoration: none;
-			border-bottom: 1px solid #aaa;
-		}
-		
-		a:hover {
-			color: #aaa;
-			transition: 0.5s;
-			text-decoration: none;
-			border-bottom: 1px solid #aaa;
-		}
-		
-		a[target="_blank"]::after {
-			content: url(new-tab-icon.svg);
-			display: inline-block;
-			margin-left: 0.2em;
-			width: 0.5em;
-			height: 0.5em;
-		}
-		
-		header {
-			margin-top: 40px;
-			border-bottom: solid 1px #000;
-		}
-			
-		.left {
-			padding: 20px;
-			float: left;
-			width: 150px;
-		}
-		
-		.left > img {
-			border: solid 1px #000;
-			padding: 7px;
-			margin-top: 10px;
-		}
-		
-		nav {
-		margin-top: 10px;
-		}
+	font-family: Arial, sans-serif;
+	font-size: 11.5pt;
+	line-height: 120%;
+}
 
-		nav > a:link {
-			float: right;
-			clear: right;
-			padding: 7px;
-			text-decoration: none;
-			color: #000;
-			display: block;
-			width: max-content;
-			margin-bottom: 2px;
-			border: solid 1px #000;
-		}
-		
-		nav > a:hover {
-			padding: 7px;
-			text-decoration: none;
-			color: #fff;
-			background: #000;
-			transition: 0.2s;
-		}
-		
-		.selected {
-			float: right;
-			clear: right;
-			padding: 7px;
-			text-decoration: none;
-			color: #fff;
-			display: block;
-			width: max-content;
-			margin-bottom: 2px;
-			background: #000;
-			border: solid 1px #000;
-		}
 
-		main {
-			padding: 20px;
-			float: left;
-			width: 500px;
-		}
-		
-		main > p { text-align: justify; }
-		
-		h1 { line-height: 100%; }
-		
-		/* Use a media query to add a break point at 800px: */
-		@media screen and (max-width: 800px) {
-		main { width: 90%; }
-		
-		.left {
-			width: 90%;
-			display: flex;
-			justify-content: space-between;
-			flex-flow: row-reverse;  /* reverse order when in smaller screen size for image to appear right */
-		}
-		
-		.left > img { float: right; width: 136px; }
-		
-		nav > a:link, nav > a:hover, .selected {float: left; clear: left; }
-		}	
+a:link {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #aaa;
+}
+
+a:visited {
+	color: #0e0e0e;
+	text-decoration: none;
+	border-bottom: 1px solid #aaa;
+}
+
+a:hover {
+	color: #aaa;
+	transition: 0.5s;
+	text-decoration: none;
+	border-bottom: 1px solid #aaa;
+}
+
+header {
+	margin-top: 40px;
+	border-bottom: solid 1px #000;
+}
+	
+.left {
+	padding: 20px;
+	float: left;
+	width: 150px;
+}
+
+.left > img {
+	border: solid 1px #000;
+	padding: 7px;
+	margin-top: 10px;
+}
+
+nav {
+margin-top: 10px;
+}
+
+nav > a:link {
+	float: right;
+	clear: right;
+	padding: 7px;
+	text-decoration: none;
+	color: #000;
+	display: block;
+	width: max-content;
+	margin-bottom: 2px;
+	border: solid 1px #000;
+}
+
+nav > a:hover {
+	padding: 7px;
+	text-decoration: none;
+	color: #fff;
+	background: #000;
+	transition: 0.2s;
+}
+
+.selected {
+	float: right;
+	clear: right;
+	padding: 7px;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	width: max-content;
+	margin-bottom: 2px;
+	background: #000;
+	border: solid 1px #000;
+}
+
+main {
+	padding: 20px;
+	float: left;
+	width: 500px;
+}
+
+main > p { text-align: justify; }
+
+h1 { line-height: 100%; }
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+main { width: 90%; }
+
+.left {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row-reverse;  /* reverse order when in smaller screen size for image to appear right */
+}
+
+.left > img { float: right; width: 136px; }
+
+nav > a:link, nav > a:hover, .selected {float: left; clear: left; }
+}	
