@@ -1,0 +1,127 @@
+body {
+	font-family: Courier New, monospace;
+	font-size: 11pt;
+	line-height: 120%;
+}
+
+
+a:link, a:visited {
+	color: #000;
+	text-decoration: underline;
+	font-weight: 800;
+	border-bottom: 2px solid Chartreuse;
+}
+
+a:hover {
+	color: Chartreuse;
+	transition: 0.5s;
+	text-decoration:underline;
+	border-bottom: 1px solid #000;
+}
+
+.container {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.left {
+	height: 100vh;
+}
+
+/* The following sketch highlight code is taken from https://alvarotrigo.com/blog/css-highlight-text/ */
+
+.sketch-highlight{
+  position:relative;
+  padding: 0 5px;
+}
+
+.sketch-highlight:before{
+  content:"";
+  z-index:-1;
+  left:0em;
+  top:0em;
+  border-width:2px;
+  border-style:solid;
+  border-color:Chartreuse;
+  position:absolute;
+  border-right-color:transparent;
+  width:100%;
+  height:1em;
+  transform:rotate(2deg);
+  opacity:0.5;
+  border-radius:0.25em;
+}
+
+.sketch-highlight:after{
+  content:"";
+  z-index:-1;
+  left:0em;
+  top:0em;
+  border-width:2px;
+  border-style:solid;
+  border-color:Chartreuse;
+  border-left-color:transparent;
+  border-top-color:transparent;
+  position:absolute;
+  width:100%;
+  height:1em;
+  transform:rotate(-1deg);
+  opacity:0.5;
+  border-radius:0.25em;
+}
+
+summary {
+	text-align: center;
+	transform-origin: top left;
+	padding-bottom: 2px;
+	rotate: 270deg;
+	position: fixed;
+	width: 98vh;
+	bottom: -10px;
+	border-bottom: 1px solid #000;
+	background-color: Chartreuse;
+}
+	
+nav {
+	position: fixed;
+	left: 30px;
+	padding: 10px;
+	height: 96vh;
+	width: 120px;
+	border-right: 1px solid #000;
+	overflow-y: scroll;
+}
+
+nav > a:link, a:visited {
+	display: block;
+	border: 1px solid #000;
+	background-color: Chartreuse;
+	margin-bottom: 3px;
+	color: #000;
+	padding: 5px;
+	text-decoration: none;
+}
+
+nav > a:hover, a:active {
+	display: block;
+	transition: 0.5s;
+	border: 1px solid #000;
+	background-color: #000;
+	margin-bottom: 3px;
+	color: Chartreuse;
+	padding: 5px;
+}
+
+main {
+	line-height: 140%;
+	padding: 20px;
+	margin-left: 160px;
+	max-width: 700px;
+
+}
+
+main > p { text-align: justify; }
+
+mark { background-color: Chartreuse; }
+
+h1 { line-height: 100%; }
