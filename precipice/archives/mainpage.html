@@ -1,0 +1,74 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>archives › main page</title>
+	
+	<link rel="stylesheet" href="archives.css" type="text/css" media="all">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+	
+	<div class="container">
+	<div class="left">
+	<details>
+	<summary>click for navigation</summary>
+	<nav>
+	<p><small>Click the links below to explore the different histories of each page & this website.</small></p>
+	 <a href="/precipice/map/">prelude</a>
+	 <a href="mainpage.html">main page</a>
+	 <a href="404page.html">404 page</a>
+	 <a href="archives.html">archives</a>
+	 <a href="bookshelf.html">bookshelf</a>
+	 <a href="map.html">map of the internet</a>
+	 <a href="pen.html">pen collection</a>
+	 <a href="precipice.html">precipice</a>
+	 <a href="toybox.html">toybox</a>
+	 <a href="tsp.html">the slow press portfolio</a>
+	</nav>
+	 </details>
+	</div>
+	
+	<main>
+	<h1><span class="sketch-highlight">main page</span></h1>
+	<h2>aka <mark>the professional page(s)</mark></h2>
+	
+	<p>As mentioned, this entire website / domain was originally intended to be for my professional digital identity as I embarked on my PhD. It was early 2023, and I had just come back from a conference where I realised that email exchange was one way of making connections, but having a website allowed others to also find you easily and have your credentials on hand. Delighted at the opportunity to code my own layout and craft my own space, I created a domain and started working on it. The professional side of this domain, which I dub the main page is actually a collection of a few pages pertaining to me as a PhD student with similar layouts.</p>
+	
+	<h3>version 1.0 › early 2023</h3>
+	<p>I looked to a lot of other scientists to what information they included in their websites. Obviously, as I had no publications yet, I stuck to a main page with a short introduction, a page for my CV and another for presentations.</p>
+	
+	<figure>
+	<img src="images/mainpage-v1.jpg">
+	<figcaption><span>Version 1.0 of my professional page.</span> I was extremely interested in simple and lightweight web design at that time, and opted for something simple. However, I think the font size was too big especially on large screens.</figcaption>
+	</figure>
+	
+	<p>At that point in time, I was deeply enamoured by lightweight and brutalist web design, so I went with a simple layout I could easily make responsive as well. The first version had a font size that was marginally too big, an photo I had to Photoshop a friend out of, and less words about myself. I remember the horizontal line on the header was something I drew from <a href="https://100r.co/site/home.html">100r.co</a>. I also wasn't sure if adding a link to my personal site (hosted on the same domain) was considered 'professional' enough to do, so I decided against it.</p>
+	
+	<figure>
+	<img src="images/mainpage-v1-responsive.jpg">
+	<figcaption><span>Responsive version of the layout.</span> I wanted my professional page to still be accessible on mobile.</figcaption>
+	</figure>
+	
+	<p>The layout itself consists of two floating <code>div</code> elements(the left navigation div and the main body). Within the left navigation, there are two elements, namely the image and the navigation itself. In the desktop site, I didn't do anything special with two inner elements. However, for the responsive site, I added the <code>flex-wrap</code> property to the navigation such that I could:</p>
+	<ol><li>have the navigation be aligned next to the image, and</li>
+		<li>use <code>flex-flow: row-reverse;</code> to invert the position of the navigation and the image (i.e. for the navigation to come before the image such that it appears on the left instead of the right of the image).</li>
+	</ol>
+	
+	<h3>version 1.0+++ › 2023 — ???</h3>
+	<p>Over time, I slowly refined my page. Modifying the content, reducing the font size, adding more links, changing out the main image, etc. I even changed how the links looked and added hover transitions. Overall though, the layout remained the same. I'm not sure I have any intention of changing it, as I am quite happy with how it looks and works right now. :-)</p>
+	
+	<figure>
+	<img src="images/mainpage-v1-plus.jpg">
+	<figcaption><span>Version 1.0+++ of my professional page,</span> screenshot taken on 24 December 2023. I'd added more content to the pages, but I'd also fixed some things I didn't quite like about my page like the font size and how the links looked.</figcaption>
+	</figure>
+	</main>
+</div>
+	
+  </body>
+</html>
+

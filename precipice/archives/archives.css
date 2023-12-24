@@ -4,18 +4,19 @@ body {
 }
 
 
-a:link, a:visited {
+a:link, a:visited  {
 	color: #000;
 	text-decoration: underline;
 	font-weight: 800;
 	border-bottom: 2px solid Chartreuse;
 }
 
-a:hover {
+a:hover, a:active {
 	color: Chartreuse;
 	transition: 0.5s;
 	text-decoration:underline;
 	border-bottom: 1px solid #000;
+	background-color: none;
 }
 
 .container {
@@ -72,26 +73,30 @@ a:hover {
 summary {
 	text-align: center;
 	transform-origin: top left;
-	padding-bottom: 2px;
+	height: 30px;
+	line-height: 30px;
 	rotate: 270deg;
 	position: fixed;
-	width: 98vh;
-	bottom: -10px;
+	width: 100vh;
+	bottom: -33px;
+	left: -2px;
+	padding-bottom: 2px;
 	border-bottom: 1px solid #000;
 	background-color: Chartreuse;
 }
 	
 nav {
 	position: fixed;
-	left: 30px;
+	left: 35px;
+	top: 0px;
 	padding: 10px;
-	height: 96vh;
-	width: 120px;
+	height: 100vh;
+	width: 180px;
 	border-right: 1px solid #000;
 	overflow-y: scroll;
 }
 
-nav > a:link, a:visited {
+nav > a:link, nav > a:visited {
 	display: block;
 	border: 1px solid #000;
 	background-color: Chartreuse;
@@ -101,8 +106,7 @@ nav > a:link, a:visited {
 	text-decoration: none;
 }
 
-nav > a:hover, a:active {
-	display: block;
+nav > a:hover, nav > a:active {
 	transition: 0.5s;
 	border: 1px solid #000;
 	background-color: #000;
@@ -114,13 +118,55 @@ nav > a:hover, a:active {
 main {
 	line-height: 140%;
 	padding: 20px;
-	margin-left: 160px;
 	max-width: 700px;
-
+	margin-left: 240px;
 }
 
 main > p { text-align: justify; }
 
 mark { background-color: Chartreuse; }
 
+figure { max-width: 100%; height: auto; margin-top: 30px; margin-bottom: 30px; text-align: center; }
+
+figure > img { max-width: 100%; height: auto; padding: 3px; box-shadow: 2px 2px 20px Chartreuse;}
+
+figcaption { font-style: italic; font-size: small; line-height: 100%; margin-top: 20px; text-align: center; }
+
+figcaption > span { background-color: Chartreuse; font-weight: 800; }
+
 h1 { line-height: 100%; }
+
+h3 { text-shadow: 2px 2px Chartreuse; margin-top: 2.2em; }
+
+h3::before { content: "▾  "; }
+
+code { border: 1px solid Chartreuse; padding: 2px 6px 2px 6px; border-radius: 10px; }
+
+/* Use a media query to add a break point at 750px: */
+@media screen and (max-width: 750px) {
+main { min-width: 90%; margin-left: 0; }
+
+summary {
+	rotate: 0deg;
+	position: fixed;
+	width: 100vw;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+nav {
+	position: fixed;
+	padding: 10px;
+	top: 50px;
+	left: 50%;
+	height: 70vh;
+	width: 80vw;
+	margin-left: -40vw;
+	overflow-y: scroll;
+	background: #fff;
+	z-index: 1;
+	border: 1px solid #000;
+}
+
+}	
