@@ -1,0 +1,62 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>archives › archives (!)</title>
+	
+	<link rel="stylesheet" href="archives.css" type="text/css" media="all">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+	
+	<div class="container">
+	<div class="left">
+	<details>
+	<summary>click for navigation</summary>
+	<nav>
+	<p><small>Click the links below to explore the different histories of each page & this website.</small></p>
+	 <a href="/precipice/archives/">prelude</a>
+	 <a href="mainpage.html">main page</a>
+	 <a href="404page.html">404 page</a>
+	 <a href="archives.html">archives</a>
+	 <a href="bookshelf.html">bookshelf</a>
+	 <a href="map.html">map of the internet</a>
+	 <a href="pen.html">pen collection</a>
+	 <a href="precipice.html">precipice</a>
+	 <a href="toybox.html">toybox</a>
+	 <a href="tsp.html">the slow press portfolio</a>
+	</nav>
+	 </details>
+	</div>
+	
+	<main>
+	<h1><span class="sketch-highlight">archives</span></h1>
+	<h2>aka <mark>this page!!!!</mark></h2>
+	
+	<p>Yes, hi, hello. As I mentioned in my prelude, this page is for me to not only document how this website changes across time, but also keep a record of the things I was inspired by and how I achieved certain aspects of my layouts on this webpage. I am not an expert coder, so much of it typically involves a lot of stackoverflow, web searching and reading guides.</p>
+	
+	<h3>version 1.0 › december 2023 — ???</h3>
+	<p>I took heavy inspiration from <a href="https://handmade-web.net/resources.html">Handmade Web's menu</a> on mobile (the rotated menu text, and clicking to open), as well as <a href="https://100r.co/site/home.html">100r.co</a>'s use of the <code>details</code> tag to implement their navigation. I wanted to combine this two, and see how I could implement a sideways navigation using the <code>details</code> tag. It took some fiddling, learning how the <code>rotate</code> and <code>transform-origin</code> properties work so I could rotate the navigation button (that's actually the <code>summary</code> tag) how I wanted.</p>
+	<figure>
+	<img src="images/archives-v1.jpg">
+	<figcaption><span>Version 1.0 of my archives page</span>, screenshot taken 25 December 2023.</figcaption>
+	</figure>
+	
+	<p>Overall, I took my main page code as a base code to building this page. The responsive design of this page was a little more involved, as it required me to reset the rotation of the <code>summary</code> tag. I also didn't want the navigation pane to pop up by the side anymore, since it would take up valuable space on the screen for mobile devices, so I coded it to appear above the main text using the <code>z-index</code> property.</p>
+	
+	<figure>
+	<img src="images/archives-v1-responsive.jpg">
+	<figcaption><span>Responsive version of the layout</span>, screenshot taken 25 December 2023. Achieving this required a bit more coding that my other layouts thus far.</figcaption>
+	</figure>
+	
+	<p>The choice of <code>Chartreuse</code> as a colour was frankly arbitrary; I'd initially wanted yellow but didn't quite like how it looked with the highlighting I used for the headers, so I went to look at the default list of CSS defined colours and picked this one! Though I almost went with a blue or pink instead. On the note of highlighted text, I took the sketch highlight code I used for the main header from <a href="https://alvarotrigo.com/blog/css-highlight-text/">a blog post on alvarotrigo</a> on how to highlight text with CSS (see example 7).</p>
+	</main>
+</div>
+	
+  </body>
+</html>
+

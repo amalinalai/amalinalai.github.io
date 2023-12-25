@@ -93,7 +93,7 @@ nav {
 	height: 100vh;
 	width: 180px;
 	border-right: 1px solid #000;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 nav > a:link, nav > a:visited {
@@ -122,13 +122,13 @@ main {
 	margin-left: 240px;
 }
 
-main > p { line-height: 200%; }
+main > p, main > ol, main > ul { line-height: 200%; }
 
 mark { background-color: Chartreuse; }
 
 figure { max-width: 100%; height: auto; margin-top: 30px; margin-bottom: 30px; text-align: center; }
 
-figure > img { max-width: 100%; height: auto; padding: 3px; box-shadow: 2px 2px 20px Chartreuse;}
+figure > img { max-width: 100%; height: auto; box-shadow: 1px 1px 20px Chartreuse; }
 
 figcaption { font-style: italic; font-size: small; line-height: 100%; margin-top: 20px; text-align: center; }
 
