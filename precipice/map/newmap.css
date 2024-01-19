@@ -57,3 +57,5 @@ body {
 			background: #b8c2b9;
 			color: #382b26;
 		}
+		
+		li { line-height: 180%; }
