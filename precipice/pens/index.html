@@ -1,0 +1,215 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>my fancy pen collection</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	
+	<style>
+		body { font-family: monospace; color: #5b79c9; font-size: 0.9rem; }
+		
+		.main {
+		  max-width: 600px;
+		  padding: 10px;
+		}
+		
+		a:link { color: #5b79c9; }
+		a:visited { color: #5b79c9; }
+		a:hover { color: #fff; background-color: #5b79c9; transition: 0.25s; }
+	
+		#lamy { background-image: url(lamy-note.png); background-size: cover; top: 20px; left: 600px; }
+		#inkstand { background-image: url(inkstand-note.png); background-size: cover; top: 200px; left: 400px; }
+		#twsbi { background-image: url(twsbi-note.png); background-size: cover; top: 150px; left: 800px; }
+		#tcbrass { background-image: url(tcbrass-note.png); background-size: cover; top: 440px; left: 637px; }
+		#artefuegoventura { background-image: url(artefuegoventura-note.png); background-size: cover; top: 328px; left: 467px; }
+	
+		.draggable {
+		  position: absolute;
+		  width: 600px;
+		  height: 402px;
+		  background-color: #f1f1f1;
+		  filter: drop-shadow(#ccc 3px 3px 2px);
+		  display: none;
+		}
+	
+		.pen {
+		  displat: block;
+		  margin: 10px;
+		  filter: drop-shadow(#ccc 3px 3px 2px);
+		}
+		
+		.close-toggle {
+		  position: absolute;
+		  right: 0;
+		  margin: 13px;
+		 }
+		 
+		 .note-button {
+		  font-family: monospace;
+		  border: 1px solid #5b79c9;
+		  cursor: pointer;
+		  background-color: #eeeef4;
+		  color: #5b79c9;
+		  padding: 5px;
+		  font-size: 0.9rem;
+		 }
+		 
+		 .note-button:hover {
+		   background-color: #5b79c9;
+		   color: #eeeef4;
+		   transition: 0.2s;
+		}
+		 
+		summary {
+		  position: absolute;
+		  display: inline-block;
+		  right: 105px;
+		}
+		
+		details {
+		  padding: 13px;
+		}
+		
+		details h2 {
+		  margin-top: 50px;
+		}
+		
+		details[open] {
+		   background-color: rgba(238, 238, 244, 0.95);
+		   height: 376px;
+		   overflow-y: auto;
+		}
+		
+		b { color: #fff; background-color: #5b79c9; }
+
+	</style>
+  </head>
+  <body>
+  <div class="main">
+	<section>
+	<h1>my fancy pen collection!!!</h1>
+	<p>Click on the pens to learn more about them — <b>you may have to double click on them the first time</b>! You can drag the index cards to move them around, or close them when you're done. Each index card also comes with a transcript, which is just a typed version of whatever is written on the index card.</p>
+	<p>This page is <u>not</u> optimized for mobile. This page also requires Javascript to run.</p>
+	<p>I've never formally learnt Javascript, so I owe it to <a href="https://stackoverflow.com/a/31799688">this solution for open/close div toggles</a> and <a href="https://stackoverflow.com/a/56450599">this solution for multiple draggable divs</a>, both on stackoverflow.</p>
+	</section>
+	<section>
+	<input type="image" class="pen" onMouseOver="this.src='lamy-open.png'" onMouseOut="this.src='lamy.png'" onclick="myFunction('lamy')" src="lamy.png">
+	<input type="image" class="pen" onMouseOver="this.src='inkstand-open.png'" onMouseOut="this.src='inkstand.png'" onclick="myFunction('inkstand')" src="inkstand.png">
+	<input type="image" class="pen" onMouseOver="this.src='twsbi-open.png'" onMouseOut="this.src='twsbi.png'" onclick="myFunction('twsbi')" src="twsbi.png">
+	<input type="image" class="pen" onMouseOver="this.src='tcbrass-open.png'" onMouseOut="this.src='tcbrass.png'" onclick="myFunction('tcbrass')" src="tcbrass.png">
+	<input type="image" class="pen" onMouseOver="this.src='artefuegoventura-open.png'" onMouseOut="this.src='artefuegoventura.png'" onclick="myFunction('artefuegoventura')" src="artefuegoventura.png">
+	</section>
+	<div id="lamy" class="draggable">
+		<div class="close-toggle"><button class="note-button" onclick="myFunction('lamy')">close [x]</button></div>
+		<details>
+			<summary class="note-button">transcript</summary>
+			<h2>Lamy Safari (Yellow!), Medium Nib (Black)</h2>
+			<p><u>Currently inked with:</u> Pilot Iroshizuku — Kiri-same</p>
+			<p>This Lamy Safari was my first proper investment in a fountain pen ($30 felt like a lot at that time). I remember the excitement of finding it in a bookstore in Geneva during my trip to CERN in June 2019, and I caved & bought it. I can still remember the weight of it in my hand as my heart fluttered with joy at finally owning a proper fountain pen.</p>
+			<p>It has been my daily pen ever since. It writes well, reliably and feels comfortable to hold, even during long amounts of writing. I've dropped it plenty, and it's still holding up wonderfully.</p>
+		</details>
+	</div>
+	
+	<div id="inkstand" class="draggable">
+		<div class="close-toggle"><button class="note-button" onclick="myFunction('inkstand')">close [x]</button></div>
+		<details>
+			<summary class="note-button">transcript</summary>
+			<h2>Inkstand (Kakimori) Aluminium Rollerball Pen</h2>
+			<p><u>Currently inked with:</u> Custom Inkstand ink, made in Dec 2018 in Tokyo</p>
+			<p>Although not a fountain pen, it also makes use of bottled ink. Instand inks are highly pigmented and will ruin other normal fountain pens, which I had to learn the hard way. :-( Although I had another rollerball pen from Inkstand which I bought when I made the ink in Tokyo in 2018, I had dropped it and it stopped writing.</p>
+			<p>Finally, in October 2021, I found out that inkstand has an online store and got this pen!!</p>
+			<p>I love this pen for casual writing. It has a nice body, if not slightly narrow, but (it) is still comfortable to write with.</p>
+		</details>
+	</div>
+	
+	<div id="twsbi" class="draggable">
+		<div class="close-toggle"><button class="note-button" onclick="myFunction('twsbi')">close [x]</button></div>
+		<details>
+			<summary class="note-button">transcript</summary>
+			<h2>TWSBI VAC700R (Iris), Fine Nib</h2>
+			<p><u>Currently inked with:</u> Dominant Industry Ink — Royal Azalea</p>
+			<p>This was a graduation gift I had bought for myself (in 2022)! Enamoured by the vacuum piston filling mechanism, and the transparent ink chamber, I decided to splurge and buy my most expensive pen (at that time). The colours of the pen are absolutely gorgeous and is a pen that sits on my desk as I dare not to bring it out of the house.</p>
+			<p>Although gorgeous, I have a hard time with writing long amounts of text with this pen due to my fingers digging into the cap screw threads while gripping the pen. It's still a very cool pen though, and I have fun refilling the ink when I get to. :-)</p>
+		</details>
+	</div>
+	
+	<div id="tcbrass" class="draggable">
+		<div class="close-toggle"><button class="note-button" onclick="myFunction('tcbrass')">close [x]</button></div>
+		<details>
+			<summary class="note-button">transcript</summary>
+			<h2>Traveler's Company Brass Fountain Pen, Fine Nib</h2>
+			<p><u>Currently inked with:</u> Monteverde Ink — Black</p>
+			<p>I was fascinated by the idea of the pen aging (through patina) depending on how you hold the pen. It's been interesting to see how the pen has oxidized more around where I grip the pen, despite it being only about a year old (I bought this in May 2023). I also absolutely adore how compact it is!</p>
+			<p>I find myself reaching out for this pen quite a bit as it writes so well. It does have a narrow grip, which makes it hard to hold comfortably for extended amounts of writing. Its nib also seems to keep unscrewing slightly for me, but I still really like this pen! I may consider changing out the nib in the future.</p>
+		</details>
+	</div>
+	
+	<div id="artefuegoventura" class="draggable">
+		<div class="close-toggle"><button class="note-button" onclick="myFunction('artefuegoventura')">close [x]</button></div>
+		<details>
+			<summary class="note-button">transcript</summary>
+			<h2>Artefuegoventura Glass Dip Pen</h2>
+			<p><u>Ink used here:</u> Vinta Inks — Liquid Sepia</p>
+			<p>My most expensive pen to date, I found this pen on Etsy & fell in love with the beautiful colours on its body. it sits right below my computer screen at my desk, and I'm happy to finally be able to support artisans & their craft ♡ Dip pens take a bit of fiddling (with) and I'm not 100% sure I've got a hang of writing with it just yet. I will keep practising! I bought this in Dec 2023 as a small gift for myself.</p>
+		</details>
+	</div>
+  </div>
+
+	<script>
+	//Make the DIV element draggable:
+	var draggableElements = document.getElementsByClassName("draggable");
+
+	for(var i = 0; i < draggableElements.length; i++){
+		dragElement(draggableElements[i]);
+	}
+
+	function dragElement(elmnt) {
+		var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+			elmnt.onmousedown = dragMouseDown;
+		function dragMouseDown(e) {
+			e = e || window.event;
+			pos3 = parseInt(e.clientX);
+			pos4 = parseInt(e.clientY);
+			document.onmouseup = closeDragElement;
+			document.onmousemove = elementDrag;
+			elmnt.style.zIndex = draggableElements.length;
+			var i = 1;
+			for (element of draggableElements) if (element != elmnt) element.style.zIndex = i++;
+			return false;
+		}
+
+		function elementDrag(e) {
+			e = e || window.event;
+			pos1 = pos3 - parseInt(e.clientX);
+			pos2 = pos4 - parseInt(e.clientY);
+			pos3 = parseInt(e.clientX);
+			pos4 = parseInt(e.clientY);
+			elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+			console.log(elmnt.offsetTop)
+			elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+		}
+
+		function closeDragElement() {
+			document.onmouseup = null;
+			document.onmousemove = null;
+		}
+	}
+	</script>
+
+	<script>
+	function myFunction(divID) {
+	  var x = document.getElementById(divID);  
+	  if (x.style.display == "none") {
+		x.style.display = "block";
+	  } 
+	  else {
+		x.style.display = "none";
+	  }  
+	}
+	</script>
+  </body>
+</html>
