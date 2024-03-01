@@ -12,7 +12,7 @@ body {
  a { color: #000; }
 
 .card {
-  width: clamp(45ch, 50%, 75ch);
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   background: white;
