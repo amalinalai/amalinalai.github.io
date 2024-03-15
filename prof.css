@@ -78,11 +78,46 @@ nav > a:visited {
 	border: solid 1px #000;
 }
 
+.skill {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill li {
+	padding: 4px;
+	font-size: 8pt;
+	display: inline;
+	margin-bottom: 2px;
+	cursor: default;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 1px solid #000;
+}
+
+.skill > .language { background: #000; 	color: #fff; }
+
 main {
 	padding: 20px;
 	float: left;
 	width: 500px;
 }
+
+
+summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 4px;
+	font-size: 8pt;
+	display: inline-flex;
+	cursor: default;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 1px solid #000;
+}
+
+summary:after { content: " ▾"; }
+
+details[open] summary:after { content: " ▴"; }
 
 main > p { text-align: justify; }
 
