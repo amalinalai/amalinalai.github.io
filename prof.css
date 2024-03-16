@@ -78,6 +78,26 @@ nav > a:visited {
 	border: solid 1px #000;
 }
 
+main {
+	padding: 20px;
+	float: left;
+	width: 500px;
+}
+
+main > p { text-align: justify; }
+
+h1 { line-height: 100%; }
+
+/* COMMON LIST STYLES */
+
+.standalone { padding-left: 15px; }
+
+.standalone > li + li { margin-top: 10px; }
+
+.sublist { font-size: 10pt; }
+
+/* PROJECTS SEGMENT */ 
+
 .skill {
     list-style: none;
     padding-left: 0;
@@ -95,13 +115,6 @@ nav > a:visited {
 }
 
 .skill > .language { background: #000; 	color: #fff; }
-
-main {
-	padding: 20px;
-	float: left;
-	width: 500px;
-}
-
 
 summary {
 	list-style: none;
@@ -133,10 +146,6 @@ details > div > ul { padding-left: 10px; font-size: 10pt; }
 details[open] summary { border-bottom: 1px solid #fff; }
 
 details[open] summary:after { content: "− LESS"; }
-
-main > p { text-align: justify; }
-
-h1 { line-height: 100%; }
 
 /* Use a media query to add a break point at 750px: */
 @media screen and (max-width: 750px) {
