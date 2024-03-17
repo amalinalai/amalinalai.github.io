@@ -116,6 +116,10 @@ h1 { line-height: 100%; }
 
 .skill > .language { background: #000; 	color: #fff; }
 
+.projlink { float: right; font-weight: 600; font-size: 8pt; text-transform: uppercase; }
+
+.projlink > a:link, .projlink > a:visited { border: none; }
+
 summary {
 	list-style: none;
 	cursor: pointer;
@@ -127,7 +131,6 @@ summary {
 	text-transform: uppercase;
 	font-weight: 600;
 	border: 1px solid #000;
-	cursor: pointer;
 }
 
 details > summary:hover {
