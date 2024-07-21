@@ -6,7 +6,7 @@ body {
 
 a:link, a:visited  {
 	color: #000;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: 800;
 	border-bottom: 2px solid Chartreuse;
 }
@@ -14,8 +14,8 @@ a:link, a:visited  {
 a:hover, a:active {
 	color: Chartreuse;
 	transition: 0.5s;
-	text-decoration:underline;
-	border-bottom: 1px solid #000;
+	text-decoration:none;
+	border-bottom: 2px solid #000;
 	background-color: none;
 }
 
@@ -140,7 +140,7 @@ h3 { text-shadow: 2px 2px Chartreuse; margin-top: 2.2em; text-decoration: underl
 
 h3::before { content: "▾  "; }
 
-code { border: 1px solid Chartreuse; padding: 2px 6px 2px 6px; border-radius: 10px; }
+code { border: 1px solid Chartreuse; padding: 2px 6px 2px 6px; border-radius: 10px; cursor: crosshair; }
 
 /* Use a media query to add a break point at 750px: */
 @media screen and (max-width: 750px) {
