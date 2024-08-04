@@ -1,0 +1,71 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noai, noimageai">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>breathe...</title>
+	<style>
+	body {
+	  display: grid;
+	  place-items: center;
+	  color: #393b33;
+	  height: 90vh;
+	  font-family: Arial, sans-serif;
+	  font-size: 11pt;
+	  line-height: 120%;
+	  background: #8f968c; 
+	}
+	
+	.main {
+	  max-width: 600px;
+	  display: flex;
+	  flex-direction: column;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	}
+	
+	a, a:active { color:#464c4b; }
+	a:visited { color:#665a5a; }
+	
+	#circle {
+	  position: relative;
+	  padding: 1rem;
+	  background: #f3eded;
+	  box-shadow: 1px 1px 20px #f3eded;
+	  margin-bottom: 10px;
+	  border-radius: 50%;
+	  width: 100px;
+	  height: 100px;
+	  animation-name: circle;
+	  animation-duration: 7s;
+	  animation-iteration-count: infinite;
+	}
+	
+	.credit {
+	  position: absolute;
+	  bottom: 0;
+	  right: 0;
+	  padding: 10px;
+	  text-align: right;
+	}
+	
+	@keyframes circle {
+	  0%   { transform: none;}
+	  50% { transform:scale(2,2);}
+	  100% { transform: none;}
+	}
+	
+	
+	</style>
+  </head>
+  <body>
+	<div class="main">
+	  <div id="circle"></div>
+	</div>
+	<div class="credit">a <a href="https://sundaysites.cafe/">sunday sites</a> by <a href="/precipice/sundaysites">lina</a>.<br>
+	colour palette adopted from <a href="https://lospec.com/palette-list/dreamhaze8">dreamhaze8</a> by 500poundsofnothing. <br>
+	4 august 2024.
+	</div>
+  </body>
+</html>
