@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>archives › pen collection</title>
+	
+	<link rel="stylesheet" href="archives.css" type="text/css" media="all">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+	
+	<div class="container">
+	<div class="left">
+	<details>
+	<summary>click for navigation</summary>
+	<nav>
+	<p><small>Click the links below to explore the different histories of each page & this website.</small></p>
+	 <a href="/precipice/archives/">prelude</a>
+	 <a href="mainpage.html">main page</a>
+	 <a href="404page.html">404 page</a>
+	 <a href="aboutpage.html">about me page</a>
+	 <a href="archives.html">archives</a>
+	 <a href="bookshelf.html">bookshelf</a>
+	 <a href="bus.html">bus stop</a>
+	 <a href="map.html">map of the internet</a>
+	 <a href="pen.html">pen collection</a>
+	 <a href="precipice.html">precipice</a>
+	 <a href="toybox.html">toybox</a>
+	 <a href="tsp.html">the slow press portfolio</a>
+	</nav>
+	 </details>
+	</div>
+	
+	<main>
+	<h1><span class="sketch-highlight">pen collection</span></h1>
+	<h2>aka <mark>the first "shrine"</mark></h2>
+	
+	<p>I like fountain (& dip) pens, and I wanted to create a special page to hold information on all the pens I have in my collection! I try to not lean into the excessive overconsumption that can come with this hobby, and choose to buy only pens that feel different enough from the rest of my other pens to justify its purchase.</p>
+	
+	<h3>version 1.0 › feb 2024 — ???</h3>
+	<p>I thought about how cute it would be to feature not only images of my pen, but the writing that comes out from it, particularly with the different inks that come with the hobby as well. I think I was partly inspired by the are.na channel <a href="https://www.are.na/shea/i-miss-knowing-what-everyone-s-handwriting-looks-like">"I miss knowing what everyone's writing looks like"</a>.</p>
+	
+	<figure>
+	<img src="images/pens-v1.gif" alt="A gif screen recording of the pen collection page. It features blue text on a white background, with an image of each pen. On hover, the pen image changes. On click, a flashcard shows up with handwritten text with a transcript that can be overlaid and toggled on and off. This flashcard can be closed.">
+	<figcaption><span>The first iteration of my pen collection</span>. This screen recording demonstrates the ability to hover and display a different image of a pen, and the ability to click to pull up a handwritten note on the pen. Screenshot taken 9 August 2024.</figcaption>
+	</figure>
+	
+	<p>The layout itself is simple pretty simple; it consists of all my pens arranged vertically on the page. On hover, the pen changes (e.g. uncaps, or is turned in a different direction) to feature another angle or perspective of the pen. On clicking, an image of a flashcard with handwritten information corresponding to that particular card will pop up. The cards can be dragged around or closed when done. Unfortunately, the only solutions to implement this feature required <code>javascript</code>. As I detail on the page, I had a lot of help from <a href="https://stackoverflow.com/a/31799688">this solution for open/close div toggles</a> and <a href="https://stackoverflow.com/a/56450599">this solution for multiple draggable divs</a> to implement the draggable cards.</p>
+	
+	<p>I also made use of the <code>details</code> element to add a transcript for each card in their corresponding <code>div</code> that can be overlayed when toggled on. This transcript can be toggled on and off thanks to this. Honestly, I was pretty proud of being able to implement this transcript feature with just the <code>details</code> element!</p>
+	
+	<p>At the moment, there is no mobile-friendly version yet. I am planning to get on it!</p>
+	
+	
+	</main>
+</div>
+	
+  </body>
+</html>
+
