@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 	body {
-	  color: #82939b;
+	  color: #5F6F77;
 	  font-family: 'VT323', monospace;
 	  font-size: 15pt;
 	}
 	
 	h1 {
-	  background: #fda9a9;
+	  background: #6F828B;
 	  color: #fff;
 	  font-size: 18pt;	
 	  padding-left: 4px;
@@ -39,11 +39,13 @@
 	
 	a:link, a:visited {
 		text-decoration: none;
-		color: #96BEB1;
+		color: #59917F;
 	}
 	
 	a:hover {
 		color: #ffc4b8;
 		transition: 0.2s;
 	}
+	
+	.textlink { border-bottom: 2px dashed; }
 	
