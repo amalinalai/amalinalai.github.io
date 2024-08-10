@@ -86,7 +86,7 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv" class="c-area">
-        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true; showHide()" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true; showHide(); return false;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
@@ -166,17 +166,6 @@ let c_hiddenIframe = document.createElement('iframe');
 c_hiddenIframe.id = 'c_hiddenIframe'; c_hiddenIframe.name = 'c_hiddenIframe'; c_hiddenIframe.style.display = 'none'; c_hiddenIframe.setAttribute('onload', 'if(v_submitted){fixFrame()}');
 c_form.appendChild(c_hiddenIframe);
 c_hiddenIframe = document.getElementById('c_hiddenIframe');
-
-function showHide() {
-   var div = document.getElementById("success_alert");
-   if (div.style.display == 'none') {
-     div.style.display = '';
-   }
-   else {
-     div.style.display = 'none';
-   }
- }
-
 
 // Fix the invisible iFrame so it doesn't keep trying to load stuff
 function fixFrame() {
