@@ -1,0 +1,190 @@
+/**
+ * Author: Vera Konigin
+ * Site: https://groundedwren.neocities.org
+ * Contact: vera@groundedwren.com
+ * 
+ * File Description: Styles for the guestbook control
+ * CSS variables come from https://groundedwren.neocities.org/styles/gwBoilerPlatePersonalization.css
+ */
+ 
+gw-comment-form, gw-comment-list {
+  .input-horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 4px;
+  }
+  
+  .input-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    > label {
+      padding-bottom: 2px;
+    }
+  }
+  
+  .sr-only {
+    position: absolute;
+    left: -99999999px;
+  }
+}
+
+gw-comment-form {
+  .comment-form input {
+    width: 135px;
+  }
+  
+  .comment-box-container {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  
+  .comment-form-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 1.25em;
+  }
+  
+  .inline-banner-wrapper {
+    display: flex;
+    
+    > .inline-banner {
+      width: 100%;
+    }
+  }
+  
+  .inline-banner {
+    margin: 10px;
+    border: 1px solid var(-border-color, black);
+    background-color: var(--banner-color, lightgrey);
+    color: var(--text-color, black);
+    padding: 10px;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    &.warning {
+      background-color: var(--banner-warn-color, #EDC200);
+    }
+  }
+
+  form {
+    border: 1px solid;
+    padding: 5px;
+    border-color: var(--border-color, black);
+    width: fit-content;
+    background-color: var(--background-color, white);
+    
+    > h1, > h2, > h3, > h4, > h5, > h6 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  
+  .form-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    > * {
+      margin: 3px;
+      min-height: 30px;
+    }
+  }
+}
+
+gw-comment-list {
+ .comments-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 500px;
+    gap: 5px;
+  }
+}
+
+gw-comment-card {
+  .comment-article {
+    border-left: 2px solid var(--border-color, black);
+    padding: 4px;
+    background-color: var(--background-color, white);
+    display: flex;
+    flex-direction: column;
+    
+    blockquote {
+      max-width: unset !important;
+      overflow-wrap: break-word;
+    }
+    
+    button {
+      max-width: fit-content;
+      height: 30px;
+    }
+    
+    .comment-article {
+      margin-inline-start: 10px;
+      margin-block-start: 10px;
+      padding-inline-end: 0px;
+    }
+  }
+  
+  .comment-header {
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    gap: 5px;
+    align-items: baseline;
+  }
+  
+  .comment-id, .comment-header-right > time  {
+    font-size: 0.85em;
+    font-weight: lighter;
+    font-style: italic;
+    word-break: keep-all;
+  }
+  
+  .comment-header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .commenter-name {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .comment-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  &:not(.collapsed) .show-comment {
+    display: none;
+  }
+  
+  &.collapsed {
+    .comment-article > *:not(.comment-header) {
+      display: none !important;
+    }
+    
+    .show-comment {
+      display: block;
+    }
+    
+    .comment-header-right time {
+      display: none;
+    }
+  }
+}

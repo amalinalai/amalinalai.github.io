@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noai, noimageai">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Icons -->
+    <script src="svgIconControl.js"></script>
+    
+    <!-- Google Sheets Reader -->
+    <script src="googleSheetsReaderGizmo.js"></script>
+    
+    <!-- Comments Control -->
+    <link href="comments.css" rel="stylesheet" type="text/css">
+    <script src="comments.js"></script>
+    
+	
+	<style>
+	body { font-family: arial, sans-serif;  color: #222; }
+	.main { max-width: 600px; padding: 10px; }
+	</style>
+	
+    <title>lina's sunday sites</title>
+
+  </head>
+<body>
+  <div class="main">
+  <h1>title</h1>
+  <noscript>Javascript needed</noscript>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeP9WX1oxQteg9BkXtsyzWHXw56i8y9yTD-0WCpDitkIXN45w/formResponse" method="POST" onsubmit="alert('success');" target="succ">
+		<section>
+		<label for="name">Display Name</label>
+		<input name="entry.1481947837" type="text" id="name" required>
+		</section>
+
+		<section>
+		<label for="email">Email</label>
+		<input name="entry.2120040718" id="email">
+		</section>
+
+		<section>
+		<label for="website">Website</label>
+		<input name="entry.1048918834"  type="text" id="website">
+		</section>
+		
+		<section>
+		<label for="comment">Comment</label>
+		<textarea name="entry.565441684"  type="message" id="comment" required></textarea>
+		</section>
+		
+		<section>
+		<label for="reply">Reply</label>
+		<input name="entry.1602657806"  type="message" id="reply">
+		</section>
+		
+		<button type="submit">Submit</button>
+		</form>
+        <gw-comment-list
+          gSpreadsheetId="1N-btee_uhQoFkXac9sw4Lo6JgJqUOT58wMvBsmeiuKA"
+          gSheetId="Filtered"
+          isNewestFirst="true"
+          gwCommentFormId="commentForm"
+        ></gw-comment-list>
+		
+		<iframe name="succ" style="display:none;"></iframe>
+  </div>
+</body>
+</html>
+    
