@@ -9,31 +9,38 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
     
-    <!-- Icons -->
-    <script src="svgIconControl.js"></script>
-    
-    <!-- Google Sheets Reader -->
-    <script src="googleSheetsReaderGizmo.js"></script>
-    
-    <!-- Comments Control -->
-    <link href="comments.css" rel="stylesheet" type="text/css">
-    <script src="comments.js"></script>
-    
-	
 	<style>
-	body { font-family: arial, sans-serif;  color: #222; }
-	.main { max-width: 600px; padding: 10px; }
+	body { background-color: #84a3a5 ; font-family: Courier New, monospace, sans-serif;  color: #1e1610; font-size: 12pt; }
+	.main { max-width: 700px; padding: 10px; margin: auto; }
+	.note { margin-left: 10px; border-left: 2px solid #f95142; padding-left: 10px; }
+	a { color: #405987; }
+	a:hover { color: #f95142; }
+	.alert { background-color: #1e1610; padding: 10px; margin-bottom: 10px; display: flex; justify-content:space-between; color: #f3ede3 ; font-size:11pt; font-weight: 600; }
+	.closebtn { text-transform: uppercase; cursor: pointer; }
 	</style>
 	
-    <title>lina's sunday sites</title>
+    <title>lina's guestbook!!</title>
 
   </head>
 <body>
   <div class="main">
-  <h1>title</h1>
-  <noscript>Javascript needed</noscript>
+  <div class="c-area">
+  <h1>Send me a note?</h1>
+  <noscript><strong>This site may not function properly without JavaScript enabled.</strong></noscript>
+  <div class="navigate-back"><a href="/precipice">← back to the home page & navigation?</a></div>
+  <p>Have a question, concern, or simply want to leave a note? Here's the place to do it. Do note that responses are <strong>manually moderated</strong>— I mean, sent via carrier pigeon. So your message may take some time to reach me and show up here!</p>
+  <p class="note"><b>Note:</b> This page requires Javascript to run. It also makes use of Google Forms & Sheets as a way to gather your messages. This guestbook uses <a href="https://virtualobserver.moe/ayano/comment-widget">Kiki's (Virtual Observer) framework</a>, with some minor tweaks based on <a href="https://groundedwren.neocities.org/pages/gizmos/googleSheetsReaderDemo">Vera's (GroundedWren) Google Sheets reader</a>.</p>
+  </div>
+  
+  <div id="success-alert" class="alert" style="display:none;">
+  <div>Your letter has been carried away by a carrier pigeon!</div>
+  <div class="closebtn" onclick="this.parentElement.style.display='none';">[close]</div>
+  </div>
+  
   <div id="c_widget"></div>
   <script src="comment-widget.js"></script>
+  
+  <div id="c_container" style="pointer-events: auto;"><div id="hello!|--|8/10/2024 0:59:05" style="display: block; pointer-events: auto;" class="c-comment"><h3 class="c-name">hello!</h3><span class="c-timestamp">09/08/2024</span><p class="c-text" style="pointer-events: auto;">testing this guestbook.</p><button value="hello!|--|8/10/2024 0:59:05" onclick="openReply(this.value)" class="c-replyButton">Reply</button><button onclick="expandReplies(this.parentElement.id)" class="c-expandButton">Show Replies (1)</button><div id="hello!|--|8/10/2024 0:59:05-replies" style="display: block;" class="c-replyContainer"><div id="test reply|--|8/10/2024 1:24:19" class="c-reply"><h3 class="c-name">test reply</h3><span class="c-timestamp">10/08/2024</span><a href="https://amalinalai.github.io/precipice/guestbook" class="c-site">Return Address (Website)</a><p class="c-text">here is a test reply :)</p></div></div></div></div>
   </div>
 </body>
 </html>

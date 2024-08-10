@@ -17,7 +17,7 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = 'comment-widget-pink.css';
+const s_stylePath = 'comment-widget.css';
 const s_formId = '1FAIpQLSeP9WX1oxQteg9BkXtsyzWHXw56i8y9yTD-0WCpDitkIXN45w';
 const s_nameId = '1481947837';
 const s_websiteId = '1048918834';
@@ -35,9 +35,9 @@ const s_dstStart = ['March', 'Sunday', 2, 2]; // Example shown is the second Sun
 const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sunday of November at 2:00 am
 
 // Misc - Other random settings
-const s_commentsPerPage = 5; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
-const s_maxLength = 500; // The max character length of a comment
-const s_maxLengthName = 16; // The max character length of a name
+const s_commentsPerPage = 10; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
+const s_maxLength = 1000; // The max character length of a comment
+const s_maxLengthName = 20; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = false; // True for a date + time, false for just the date
@@ -52,17 +52,17 @@ const s_filteredWords = [ // Add words to filter by putting them in quotes and s
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
-const s_widgetTitle = 'Leave a comment!';
-const s_nameFieldLabel = 'Name';
-const s_websiteFieldLabel = 'Website (Optional)';
-const s_textFieldLabel = '';
-const s_submitButtonLabel = 'Submit';
+const s_widgetTitle = 'Dear lina,';
+const s_nameFieldLabel = 'Display Name*';
+const s_websiteFieldLabel = 'Website URL';
+const s_textFieldLabel = 'Your Letter';
+const s_submitButtonLabel = 'Sign off & send!';
 const s_loadingText = 'Loading comments...';
 const s_noCommentsText = 'No comments yet!';
 const s_closedCommentsText = 'Comments are closed temporarily!';
-const s_websiteText = 'Website'; // The links to websites left by users on their comments
+const s_websiteText = 'Return Address (website)'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
-const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
+const s_replyingText = 'Replying to:'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
 const s_leftButtonText = '<<';
 const s_rightButtonText = '>>';
@@ -85,14 +85,15 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 
 // HTML Form
 const v_mainHtml = `
-    <div id="c_inputDiv">
-        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+    <div id="c_inputDiv" class="c-area">
+        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true; showHide()" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
     <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
-
+	
+	<div class="c-inputWrapper-horizontal">
     <div id="c_nameWrapper" class="c-inputWrapper">
         <label class="c-label c-nameLabel" for="entry.${s_nameId}">${s_nameFieldLabel}</label>
         <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
@@ -102,6 +103,7 @@ const v_formHtml = `
         <label class="c-label c-websiteLabel" for="entry.${s_websiteId}">${s_websiteFieldLabel}</label>
         <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
+	</div>
 
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
@@ -164,6 +166,17 @@ let c_hiddenIframe = document.createElement('iframe');
 c_hiddenIframe.id = 'c_hiddenIframe'; c_hiddenIframe.name = 'c_hiddenIframe'; c_hiddenIframe.style.display = 'none'; c_hiddenIframe.setAttribute('onload', 'if(v_submitted){fixFrame()}');
 c_form.appendChild(c_hiddenIframe);
 c_hiddenIframe = document.getElementById('c_hiddenIframe');
+
+function showHide() {
+   var div = document.getElementById("success_alert");
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }
+
 
 // Fix the invisible iFrame so it doesn't keep trying to load stuff
 function fixFrame() {
