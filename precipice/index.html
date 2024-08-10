@@ -112,11 +112,9 @@
 			color: #fff;
 		}
 		
-		b {
-			color: #A45E37;
-		}
-			
-		
+		.sublist { list-style: none; }
+		.sublist > li::before { content:"⤷"; margin-right: 5px;}
+
 	</style>
   </head>
   <body>
@@ -129,7 +127,7 @@
 	  </div>
 	  </div>
 	  <div class="main-content">
-	  <h2>what is this place?</h2>
+	  <h2 id="top">what is this place?</h2>
 	  <p><b>Hello visitor!</b> Out of boredom, a desire to learn CSS and HTML, and to have a home for me to safely navigate a web that is increasingly driven by profits and ads, this (part of the) website was born. Moreover, for the longest time I've been plagued by a huge nostalgia for the old web I grew up with: vast amounts of personal blogs where people would code and design their own web layouts and a multitude of different pages that reflected the interests of their owners. This website is an ode to the old web and the resurgence of similar websites in the current landscape of rigid, centralized social media companies used to house personal memories.</p>
 	  	  
 	  <p>I'm coding aspects of this website in purely HTML and CSS as much as possible, inspired by websites such as <a href="https://solar.lowtechmagazine.com/about.html">Low Tech Magazine</a>, <a href="https://idlewords.com/talks/website_obesity.htm">The Website Obesity Crisis</a> and <a href="https://html.energy/">The Energy of HTML</a>. Plus, it's a great relief for a beginner web coder like me. :-) </p>
@@ -141,13 +139,14 @@
 	  
 	  <p><b>BIG DISCLAIMER!!!</b> I do not, in any way, optimize coding my web pages. They're a mixture of trial and error, figuring out how I can do something in purely CSS and HTML, and probably don't check all the "best practices" boxes. I'm here to have fun, experiment and play. In any case, feel free to view source on any page, and hope you enjoy your stay on this website!</p>
 
-	  <h2>quick links</h2>
+	  <h2 id="quick">quick links</h2>
 	  <div class="navigate">
 	  <a href="https://www.are.na/lina-l" target="_blank">my are.na (external)</a>
 	  <a href="/precipice/about">about me</a>
 	  <a href="/precipice/archives">archives</a>
 	  <a href="/precipice/bookshelf">bookshelf</a>
 	  <a href="/precipice/busstop">bus stop</a>
+	  <a href="/precipice/guestbook">guestbook</a>
 	  <a href="/">main page</a>
 	  <a href="/precipice/map">map of the internet</a>
 	  <a href="/precipice/pens">pen collection</a>
@@ -157,38 +156,42 @@
 	  </div>
 
 	  <h2>(sort of) sitemap</h2>
-	  <p>I didn't include deeper pages just because it would become excessively long, but I think this should help with navigating to all possible pages on this website. I might some day try using the details tag to make a more comprehensive, but collapsible, sitemap.</p> 
+	  <p>I've chosen to omit certain subpages for brevity, so this isn't technically a full sitemap. Those denoted with an asterisk (*) contains subpages that have not been listed.</p> 
+	  <b>Professional</b>
 	  <ul>
-	  <li><a href="/">Main page (professional site)</a>
-	  <ul>
-		<li><a href="/cv">CV</a></li>
-		<li><a href="/presentations">Presentations</a></li>
-		<li><a href="/projects">Projects</a></li>
+	  <li><a href="/">Main page (root)</a> — my professional biography, and links to other means of contact.
+	  <ul class="sublist">
+		<li><a href="/cv">CV</a> — my curriculum vitae.</li>
+		<li><a href="/presentations">Presentations</a> — all my scientific presentations.</li>
+		<li><a href="/projects">Projects</a> — all my academic projects.</li>
 	  </ul>
 	  </li>
-	  <li><a href="/tsp">The Slow Press portfolio</a></li>
-	  <li><a href="/precipice">Precipice (personal site)</a>
+	  </ul>
+	  <b>Personal</b>
 	  <ul>
-		<li><a href="/precipice/about">About me!</a></li>
-		<li><a href="/precipice/archives">Archives</a></li>
-		<li><a href="/precipice/bookshelf">Bookshelf</a></li>
-		<li><a href="/precpice/busstop">Bus stop (under construction...)</a></li>
-		<li><a href="/precipice/map">Map of the internet</a></li>
-		<li><a href="/precipice/pens">Pen collection</a></li>
-		<li><a href="/precipice/sundaysites">Sunday sites</a></li>
-		<li><a href="/precipice/toybox">Toybox</a></li>
+	  <li><a href="/precipice">Precipice</a> — landing page for personal site.
+	  <ul class="sublist">
+		<li><a href="/precipice/about">About me!</a> — cozy, informal introduction of myself.</li>
+		<li><a href="/precipice/archives">Archives</a> — archive of all previous designs of the pages on this site. *</li>
+		<li><a href="/precipice/bookshelf">Bookshelf</a> — books that have left an impact on me.</li>
+		<li><a href="/precpice/busstop">Bus stop</a> — webrings and outgoing links to other sites.</li>
+		<li><a href="/precipice/guestbook">Guestbook</a> — guestbook you can sign.</li>
+		<li><a href="/precipice/map">Map of the internet</a> — collection of links to my important places on the internet. *</li>
+		<li><a href="/precipice/pens">Pen collection</a> — display of my pen collection.</li>
+		<li><a href="/precipice/sundaysites">Sunday sites</a> — index page for my submissions for the Sunday sites project. *</li>
+		<li><a href="/precipice/toybox">Toybox</a> — my pixel adoptables. *</li>
 	  </ul>
 	  </li>
-	  <li><a href="/dnd">Quantum Hub Dungeons & Dragons</a>
+	  </ul>
+	  <b>Miscellaneous / Others on this website</b>
 	  <ul>
-		<li><a href="/dnd/Archives">Quest archives</a></li>
-		<li><a href="/dnd/cc">Character creation</a></li>
-		<li><a href="/dnd/rules">Campaign rules</a></li>
+	  <li><a href="/tsp">The Slow Press portfolio</a> — my design portfolio for the indie zine, The Slow Press.</li>
+	  <li><a href="/dnd">Quantum Hub Dungeons & Dragons</a> — landing page for my office's dungeons & dragons campaign [retired] *</li>
+	  <li><a href="/compost">Compost pile</a> *</li>
+	  <li><a href="/404">404 page adventure</a> *</li>
 	  </ul>
-	  </li>
-	  <li><a href="/compost">Compost pile</a></li>
-	  <li><a href="/404">404 page adventure</a></li>
-	  </ul>
+	  <br>
+	  <p style="text-align:center;"><a href="#top">Back to top</a> | <a href="#quick">Quick links</a></p>
 	</div>
   </body>
 </html>
