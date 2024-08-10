@@ -59,7 +59,7 @@
 }
 
 #c_widget button, #c_widget input[type=submit] {
-    padding: 4px;
+    padding: 5px;
     text-decoration: none;
 	text-align: center;
     background-color: white;
@@ -148,7 +148,6 @@
     color: #1e1610;
     border: 1px solid #1e1610;
 	border-radius: 0;
-	padding: 4px;
 	border-radius: 5px;
 	padding: 5px;
 }
