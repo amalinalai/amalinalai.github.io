@@ -32,42 +32,8 @@
   <div class="main">
   <h1>title</h1>
   <noscript>Javascript needed</noscript>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeP9WX1oxQteg9BkXtsyzWHXw56i8y9yTD-0WCpDitkIXN45w/formResponse" method="POST" onsubmit="alert('success');" target="succ">
-		<section>
-		<label for="name">Display Name</label>
-		<input name="entry.1481947837" type="text" id="name" required>
-		</section>
-
-		<section>
-		<label for="email">Email</label>
-		<input name="entry.2120040718" id="email">
-		</section>
-
-		<section>
-		<label for="website">Website</label>
-		<input name="entry.1048918834"  type="text" id="website">
-		</section>
-		
-		<section>
-		<label for="comment">Comment</label>
-		<textarea name="entry.565441684"  type="message" id="comment" required></textarea>
-		</section>
-		
-		<section>
-		<label for="reply">Reply</label>
-		<input name="entry.1602657806"  type="message" id="reply">
-		</section>
-		
-		<button type="submit">Submit</button>
-		</form>
-        <gw-comment-list
-          gSpreadsheetId="1N-btee_uhQoFkXac9sw4Lo6JgJqUOT58wMvBsmeiuKA"
-          gSheetId="Filtered"
-          isNewestFirst="true"
-          gwCommentFormId="commentForm"
-        ></gw-comment-list>
-		
-		<iframe name="succ" style="display:none;"></iframe>
+  <div id="c_widget"></div>
+  <script src="comment-widget.js"></script>
   </div>
 </body>
 </html>
