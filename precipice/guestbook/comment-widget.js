@@ -86,8 +86,13 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv" class="c-area">
+		<img src="stamp.png" class="stamp" onmouseover="this.src='stamp-2.png';" onmouseout="this.src='stamp.png';">
         <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
+	<div id="success-alert" style="display:none;" class="textbox alert">
+		<div>Your message has been taken away by a carrier pigeon!</div>
+		<div class="closebtn" nclick="this.parentElement.style.display='none';">[ close ]</div>
+	</div>
     <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
@@ -171,9 +176,17 @@ c_hiddenIframe = document.getElementById('c_hiddenIframe');
 
 // Fix the invisible iFrame so it doesn't keep trying to load stuff
 function fixFrame() {
+	showAlert();
     v_submitted = false;
     c_hiddenIframe.srcdoc = '';
-    getComments(); // Reload comments after submission
+    // getComments(); // Reload comments after submission - no need since comments are moderated
+}
+
+// Show success Alert
+function showAlert() {
+	const alertDiv = document.getElementById('success-alert');
+	if (v_submitted == true) { alertDiv.style.display = ''; }
+	else { alertDiv.style.display = 'none'; }
 }
 
 // Processes comment data with the Google Sheet ID

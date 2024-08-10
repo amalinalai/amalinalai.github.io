@@ -96,6 +96,7 @@
 	border-image-slice: 12 10 6 4 fill;
 	border-image-repeat: round;
 	margin-bottom: 10px;
+	position: relative;
 }
 
 #c_container {margin-top: 10px;}
