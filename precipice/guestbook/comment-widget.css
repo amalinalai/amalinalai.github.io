@@ -65,7 +65,7 @@
     color: #1e1610;
     border: 1px solid #1e1610;
     border-radius: 5px;
-	margin: auto;
+	margin: 10px auto 0 auto;
 }
 
 #c_widget button:hover, #c_widget input[type=submit]:hover {
@@ -146,6 +146,7 @@
     border: 1px solid #1e1610;
 	border-radius: 0;
 	border-radius: 5px;
+	margin-top: 10px;
 }
 
 .c-replyButton:hover, .c-expandButton:hover {
