@@ -59,7 +59,6 @@
 }
 
 #c_widget button, #c_widget input[type=submit] {
-    padding: 5px;
     text-decoration: none;
 	text-align: center;
     background-color: white;
@@ -74,15 +73,13 @@
     color: white;
     border: 1px solid #1e1610;
 	border-radius: 5px;
-	padding:5px;
 }
-#c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%; border-radius: 5px; padding:5px;}
+#c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%; border-radius: 5px;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
     background-color: white;
     color: #1e1610;
     border: 1px solid #1e1610;
 	border-radius: 5px;
-	padding: 5px;
 }
 
 /* Input section */
@@ -149,7 +146,6 @@
     border: 1px solid #1e1610;
 	border-radius: 0;
 	border-radius: 5px;
-	padding: 5px;
 }
 
 .c-replyButton:hover, .c-expandButton:hover {
