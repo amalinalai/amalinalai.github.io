@@ -55,7 +55,7 @@ const s_filteredWords = [ // Add words to filter by putting them in quotes and s
 const s_widgetTitle = 'Dear lina,';
 const s_nameFieldLabel = 'Display Name*';
 const s_websiteFieldLabel = 'Website URL';
-const s_textFieldLabel = 'Your Letter';
+const s_textFieldLabel = 'Your Letter*';
 const s_submitButtonLabel = 'Sign off & send!';
 const s_loadingText = 'Loading comments...';
 const s_noCommentsText = 'No comments yet!';
@@ -111,6 +111,8 @@ const v_formHtml = `
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
+	
+	<p style="text-align:right; font-size: 0.9em; font-style: italic;">* Denotes required fields</p>
 `;
 
 // Insert main HTML to page

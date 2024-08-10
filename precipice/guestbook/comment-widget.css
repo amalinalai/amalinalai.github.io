@@ -91,6 +91,7 @@
 	padding: 20px;
     border-width: 12 10 6 4;
 	border-style: solid;
+	border-color: #84a3a5;
     border-image-source: url(paper.gif);
 	border-image-slice: 12 10 6 4 fill;
 	border-image-repeat: round;
@@ -125,16 +126,19 @@
     border: 1px solid #1e1610;
 	outline: none;
 	border-radius: 0;
+	font-family: Courier New, monospace;
+	font-size: 0.95em;
 }
 .c-input:focus {border: 1px solid #f95142;}
 
 .c-nameInput, .c-websiteInput { width: 100%; }
 
 .c-textInput {
-    width: calc(100% - 10px);
+    width: 100%;
     max-width: 900px;
     resize: none;
 }
+
 #c_submitButton {display: block; }
 #c_replyingText {margin-top: 10px; text-align: center; font-size: 10pt; text-transform: uppercase; }
 
@@ -146,7 +150,7 @@
     border: 1px solid #1e1610;
 	border-radius: 0;
 	border-radius: 5px;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .c-replyButton:hover, .c-expandButton:hover {
@@ -163,6 +167,7 @@
 	border-width: 20 20 14 18;
 	border-style: solid;
     border-image-source: url(airmail.gif);
+	border-color: #84a3a5;
 	border-image-slice: 20 20 14 18 fill;
 	border-image-repeat: round;
 }
@@ -172,6 +177,7 @@
     padding: 10px;
     border-width: 12 10 6 4;
 	border-style: solid;
+	border-color: #84a3a5;
     border-image-source: url(paper-reply.gif);
 	border-image-slice: 12 10 6 4 fill;
 	border-image-repeat: round;
@@ -188,7 +194,7 @@
 	font-weight: 600;
 }
 
-.c-name::before { content:"SENDER: "; font-size: 10pt; color:#1f2f49; text-transform: uppercase; }
+.c-name::before { content:"FROM: "; font-size: 10pt; color:#1f2f49; text-transform: uppercase; }
 
 .c-site {
 	display: block;
@@ -210,19 +216,18 @@
     opacity: 80%;
 }
 .c-text {
-    margin: 0;
-    margin-top: 20px;
-    padding-top: 20px;
+
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
     text-align: justify;
 	border-top: 1px dashed;
 }
 
 /* Pagination */
 #c_pagination {text-align: center;}
-.c-replyButton {margin-top: 10px;}
+
 .c-expandButton {
     float: right;
-    margin-top: 10px;
 }
 .c-paginationButton {
     margin-right: 4px;
