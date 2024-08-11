@@ -91,7 +91,7 @@ const v_mainHtml = `
     </div>
 	<div id="success-alert" style="display:none;" class="textbox alert">
 		<div>Your message has been taken away by a carrier pigeon!</div>
-		<div class="closebtn" nclick="this.parentElement.style.display='none';">[ close ]</div>
+		<div class="closebtn" onclick="this.parentElement.style.display='none';">[ X ]</div>
 	</div>
     <div id="c_container">${s_loadingText}</div>
 `;
