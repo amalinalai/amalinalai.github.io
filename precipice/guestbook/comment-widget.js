@@ -179,7 +179,7 @@ function fixFrame() {
 	showAlert();
     v_submitted = false;
     c_hiddenIframe.srcdoc = '';
-    // getComments(); // Reload comments after submission - no need since comments are moderated
+    getComments(); // Reload comments after submission - needed to clear form
 }
 
 // Show success Alert
