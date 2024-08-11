@@ -86,12 +86,12 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv" class="c-area">
-		<img src="stamp.png" class="stamp" onmouseover="this.src='stamp-2.png';" onmouseout="this.src='stamp.png';">
+		<img src="stamp.png" class="stamp" onmouseover="this.src='stamp-2.png';" onmouseout="this.src='stamp.png';" alt="">
         <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
 	<div id="success-alert" style="display:none;" class="textbox alert">
 		<div>Your message has been taken away by a carrier pigeon!</div>
-		<div class="closebtn" onclick="this.parentElement.style.display='none';">[ X ]</div>
+		<div class="closebtn" onclick="this.parentElement.style.display='none';">[X]</div>
 	</div>
     <div id="c_container">${s_loadingText}</div>
 `;
