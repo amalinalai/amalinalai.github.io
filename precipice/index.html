@@ -111,8 +111,15 @@
 			color: #fff;
 		}
 		
-		.sublist { list-style: none; }
-		.sublist > li::before { content:"⤷"; margin-right: 5px;}
+		.sitemap { line-height: 150%; }
+		.sublist { list-style: none; margin-left: -12px; }
+		.sublist > li::before { content:"⤷"; margin-right: 5px; }
+		.category { font-weight: 600; }
+		.subcategory { margin-left: 5px; font-weight: 600; font-style: italic; border-bottom:1px dashed #879164; padding: 2px; }
+		.subcategory::before {
+		  content:"🡒 ";
+		  font-style: normal;
+		}
 
 	</style>
   </head>
@@ -126,7 +133,7 @@
 	  </div>
 	  </div>
 	  <div class="main-content">
-	  <h2 id="top">what is this place?</h2>
+	  <h2>what is this place?</h2>
 	  <p><b>Hello visitor!</b> Out of boredom, a desire to learn CSS and HTML, and to have a home for me to safely navigate a web that is increasingly driven by profits and ads, this (part of the) website was born. Moreover, for the longest time I've been plagued by a huge nostalgia for the old web I grew up with: vast amounts of personal blogs where people would code and design their own web layouts and a multitude of different pages that reflected the interests of their owners. This website is an ode to the old web and the resurgence of similar websites in the current landscape of rigid, centralized social media companies used to house personal memories.</p>
 	  	  
 	  <p>I'm coding aspects of this website in purely HTML and CSS as much as possible, inspired by websites such as <a href="https://solar.lowtechmagazine.com/about.html">Low Tech Magazine</a>, <a href="https://idlewords.com/talks/website_obesity.htm">The Website Obesity Crisis</a> and <a href="https://html.energy/">The Energy of HTML</a>. Plus, it's a great relief for a beginner web coder like me. :-) </p>
@@ -151,13 +158,12 @@
 	  <a href="/precipice/pens">pen collection</a>
 	  <a href="/precipice/sundaysites">sunday sites</a>
 	  <a href="/precipice/toybox">toybox</a>
-	  <a href="/tsp">the slow press portfolio</a>
 	  </div>
 
 	  <h2>(sort of) sitemap</h2>
-	  <p>I've chosen to omit certain subpages for brevity, so this isn't technically a full sitemap. Those denoted with an asterisk (*) contains subpages that have not been listed.</p> 
-	  <b>Professional</b>
-	  <ul>
+	  <p>I've preserved the hierarchical arrangement of the pages on this site, while still attempting to categorize these pages in some semblance of organization. I've chosen to omit certain subpages for brevity, so this isn't technically a full sitemap.</p> <p>Those denoted with an asterisk (*) contains subpages that have not been listed.</p>
+	  <span class="category">Professional</span>
+	  <ul class="sitemap">
 	  <li><a href="/">Main page (root)</a> — my professional biography, and links to other means of contact.
 	  <ul class="sublist">
 		<li><a href="/cv">CV</a> — my curriculum vitae.</li>
@@ -166,28 +172,42 @@
 	  </ul>
 	  </li>
 	  </ul>
-	  <b>Personal</b>
-	  <ul>
-	  <li><a href="/precipice">Precipice</a> — landing page for personal site.
+	  
+	  <span class="category">Personal</span>
+	  <ul class="sitemap">
+	  <li><a href="/precipice">Precipice</a> — landing page for personal site.<br>
+	  <span class="subcategory">Me</span>
 	  <ul class="sublist">
 		<li><a href="/precipice/about">About me!</a> — cozy, informal introduction of myself.</li>
-		<li><a href="/precipice/archives">Archives</a> — archive of all previous designs of the pages on this site. *</li>
 		<li><a href="/precipice/bookshelf">Bookshelf</a> — books that have left an impact on me.</li>
-		<li><a href="/precipice/busstop">Bus stop</a> — webrings and outgoing links to other sites.</li>
-		<li><a href="/precipice/guestbook">Guestbook</a> — guestbook you can sign.</li>
 		<li><a href="/precipice/map">Map of the internet</a> — collection of links to my important places on the internet. *</li>
-		<li><a href="/precipice/pens">Pen collection</a> — display of my pen collection.</li>
 		<li><a href="/precipice/sundaysites">Sunday sites</a> — index page for my submissions for the Sunday sites project. *</li>
-		<li><a href="/precipice/toybox">Toybox</a> — my pixel adoptables. *</li>
+	  </ul>
+	  <span class="subcategory">Shrines and collections</span>
+	  <ul class="sublist">
+		<li><a href="/precipice/pens">Pen collection</a> — display of my pen collection.</li>
+		<li>Tamagotchi — page for my tamagotchis. [Under construction.]</li>
+		<li><a href="/precipice/toybox">Toybox</a> — my pixel adoptables. [New layout in progress.] *</li>
+	  </ul>
+	  <span class="subcategory">For you</span>
+	  <ul class="sublist">
+		<li>Gift store — web sozai and adoptables. [Under construction.]</li>
+	  </ul>
+	  <span class="subcategory">Site</span>
+	  <ul class="sublist">
+		<li><a href="/precipice/archives">Archives</a> — documentation of the existing and previous designs of different pages of this site, with background and inspiration notes. *</li>
+		<li><a href="/precipice/busstop">Bus stop</a> — webrings and outgoing links to other sites. [Under construction.]</li>
+		<li><a href="/precipice/guestbook">Guestbook</a> — guestbook you can sign.</li>
 	  </ul>
 	  </li>
 	  </ul>
-	  <b>Miscellaneous / Others on this website</b>
-	  <ul>
+	  
+	  <span class="category">Miscellaneous / Others on this website</span>
+	  <ul class="sitemap">
 	  <li><a href="/tsp">The Slow Press portfolio</a> — my design portfolio for the indie zine, The Slow Press.</li>
-	  <li><a href="/dnd">Quantum Hub Dungeons & Dragons</a> — landing page for my office's dungeons & dragons campaign [retired] *</li>
-	  <li><a href="/compost">Compost pile</a> *</li>
-	  <li><a href="/404">404 page adventure</a> *</li>
+	  <li><a href="/dnd">Quantum Hub Dungeons & Dragons</a> — landing page for my office's dungeons & dragons campaign [retired]. *</li>
+	  <li><a href="/compost">Compost pile</a> — archive of all past major designs of pages that have been phased out.*</li>
+	  <li><a href="/404">404 page adventure</a> — an error page-turned short text adventure. *</li>
 	  </ul>
 	  <br>
 	  <p style="text-align:center;"><a href="#top">Back to top</a> | <a href="#quick">Quick links</a></p>
