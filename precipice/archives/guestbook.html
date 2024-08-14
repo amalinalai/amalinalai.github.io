@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>archives › guestbook</title>
+	
+	<link rel="stylesheet" href="archives.css" type="text/css" media="all">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+	
+	<div class="container">
+	<div class="left">
+	<details>
+	<summary>click for navigation</summary>
+	<nav>
+	<p><small>Click the links below to explore the different histories of each page & this website.</small></p>
+	 <a href="/precipice" class="navigate-back">← back to the home page & navigation?</a>
+	 <a href="/precipice/archives/">prelude</a>
+	 <a href="mainpage.html">main page</a>
+	 <a href="404page.html">404 page</a>
+	 <a href="aboutpage.html">about me page</a>
+	 <a href="archives.html">archives</a>
+	 <a href="bookshelf.html">bookshelf</a>
+	 <a href="bus.html">bus stop</a>
+	 <a href="guestbook.html">guestbook</a>
+	 <a href="map.html">map of the internet</a>
+	 <a href="pen.html">pen collection</a>
+	 <a href="precipice.html">precipice</a>
+	 <a href="toybox.html">toybox</a>
+	 <a href="tsp.html">the slow press portfolio</a>
+	 <br>
+	</nav>
+	 </details>
+	</div>
+	<a href="#top" title="back to top?" alt="back to top?"><div class="backtop">top?</div></a>
+	
+	<main>
+	<h1><span class="sketch-highlight">guestbook</span></h1>
+	<h2>aka <mark>leave your mark!</mark></h2>
+	
+	<p>A guestbook was something I remember being too afraid to use whenever I saw it on websites when I was younger. I don't know, somehow it was more daunting than Chatterbox, but maybe it's an exposure thing. Anyway, I'm less afraid now, and I wanted to install a little guestbook of my own for people who happen to chance across my site to leave a note!</p>
+	
+	<p>Unfortunately, Github pages (my current host), only allows for static pages, so traditional php guestbooks weren't going to work. I had to use some other solution, and thankfully people smarter than me had already figured it out! Despite the fact that I wanted this website to be mostly HTML & CSS based, unfortunately Javascript still allows for some pretty nifty, interaction-based things, so I had to concede for this page.</p>
+	
+	<h3>version 1.0 › august 2024 — ???</h3>
+	<p>Creating the guestbook took longer than I expected, to be honest. I originally was going to use Vera/GroundedWren's guestbook framework, but it required manually transferring information from a Discord channel to a Google sheets as a means to verify information, which I thought would be too cumbersome. Instead, I knew that Google forms would be a much simpler way to collect information directly, and I also knew that it was possible to somehow filter out entries from one sheet to another automatically using Google Sheet formulas.</p>
+	
+	<p>I want to say here: <b>big thank you to my dad</b> who helped me with filters on Google Sheets. He's an Excel whiz, and he was pretty excited to be helping me solve my little problem, which I'm happy about! (He even asked me after if I had anything else I needed help with on Excel, how cute.)</p>
+	
+	<p>Originally, I meant to modify <a href="https://groundedwren.neocities.org/pages/controls/guestbookDemo">GroundedWren's guestbook code</a> to fit in the Google sheets element to the form, but because of my lacklustre Javascript knowledge, I didn't really get far. That's when, after some searching, I found <a href="https://virtualobserver.moe/ayano/comment-widget">Kiki/Virtual Observer's code for a guestbook</a> that uses Google forms as a means of collecting input. However, it didn't have a moderation feature (if I had read a little more... I would've seen someone else provide a guide for moderation...), but it was pretty quick to change the original code to look at a specific sheet of a Google Sheets document, thanks to inspecting <a href="https://groundedwren.neocities.org/pages/gizmos/googleSheetsReaderDemo">GroundedWren's Google Sheets reader</a>!</p>
+	
+	<p>After a whole load of tinkering, and reading Kiki's code to understand Javascript syntax and what was going on, I finally added some extra code to have a little alert pop up after someone submits a message to provide some feedback and affirmation that their message has been received, since new comments don't automatically show up immediately anymore due to the moderation feature.</p>
+	
+	<p>Glad to say I understand Javascript a tiny bit better now!</p>
+	
+	<figure>
+	<img src="images/guestbook-v1.jpg" alt="A screenshot of the guestbook page. It has blue background, with cream coloured sections. The guestbook input form looks like it is written on paper, while the guestbook comments below look like they're airmail envelopes. Replies to guestbook comments look like white paper.">
+	<figcaption><span>Version 1.0 of my guestbook.</span> Screenshot taken on 12 August 2024. It's a design inspired by receiving letters through snail mail.</figcaption>
+	</figure>
+	
+	<p>Sorry I'm yapping so much, but we're finally talking about the design! I'm actually super proud of how it looks, I used the <code>border-image</code> property I learnt from making my <a href="aboutme.html">"about me" V1.0 page</a> to make the guestbook comments look like little airmail envelopes! I made all the pixel art for the papers, airmail envelope and stamp using the <a href="https://lospec.com/palette-list/70s-zine">70s Zine Palette by polyducks</a>. At some point I'd love to make more complex designs, e.g. the 'stamped' ink when a letter gets sent through post. I actually had a failed design iteration for the guestbook form that I passed on because it looked too wonky to me. Surprisingly, I managed to save a screenshot (below).</p>
+	
+	<figure>
+	<img src="images/guestbook-v0.jpg" alt="">
+	<figcaption><span>Rejected design for the guestbook form background.</span> It was meant to look like a paper being inserted into an airmail envelope, ready to be sent off, but the scale of it looks too weird!</figcaption>
+	</figure>
+	</main>
+</div>
+	
+  </body>
+</html>
+
