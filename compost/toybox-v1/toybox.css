@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+	body {
+	  color: #5F6F77;
+	  font-family: 'VT323', monospace;
+	  font-size: 15pt;
+	}
+	
+	h1 {
+	  background: #6F828B;
+	  color: #fff;
+	  font-size: 18pt;	
+	  padding-left: 4px;
+	  font-weight: normal;
+	  line-height: 120%;
+	  text-transform: uppercase;
+	  text-align: center;
+	}
+	
+	h1::before {
+		content: "> ";
+	}
+	
+	/* width */
+	::-webkit-scrollbar {
+	  width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: none; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #82939b; 
+	  border-radius: 10px;
+	}
+	
+	a:link, a:visited {
+		text-decoration: none;
+		color: #59917F;
+	}
+	
+	a:hover {
+		color: #ffc4b8;
+		transition: 0.2s;
+	}
+	
+	.textlink { border-bottom: 2px dashed; }
+	
