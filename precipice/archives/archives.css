@@ -1,6 +1,6 @@
 body {
 	font-family: Courier New, monospace;
-	line-height: 120%;
+	line-height: 200%;
 }
 
 
@@ -22,11 +22,102 @@ a:hover, a:active {
 .container {
 	display: flex;
 	flex-wrap: nowrap;
+	background: white;
 }
 
 .left {
 	height: 100vh;
 }
+
+summary {
+	text-align: center;
+	transform-origin: top left;
+	height: 30px;
+	line-height: 30px;
+	rotate: 270deg;
+	position: fixed;
+	width: 100vh;
+	bottom: -33px;
+	left: -2px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #000;
+	background-color: Chartreuse;
+}
+	
+nav {
+	position: fixed;
+	left: 35px;
+	top: 0px;
+	height: 100vh;
+	width: 200px;
+	border-right: 1px solid #000;
+	overflow: hidden;
+}
+
+.nav { line-height: 120%; }
+
+.nav > a:link, .nav > a:visited {
+	display: block;
+	border: 1px solid #000;
+	background-color: Chartreuse;
+	margin-bottom: 3px;
+	color: #000;
+	padding: 5px;
+}
+
+.nav > a:hover, .nav > a:active {
+	transition: 0.5s;
+	border: 1px solid #000;
+	background-color: #000;
+	margin-bottom: 3px;
+	color: Chartreuse;
+	padding: 5px;
+}
+
+.frame { width: 100%; height: 100%; border:0; }
+
+main {
+	padding: 20px;
+	width: 700px;
+	margin-left: 240px;
+}
+
+.backtop {
+	width: 50px;
+	height:50px;
+	z-index:2;
+	position: fixed;
+	bottom: 15px; right: 15px;
+	background: black;
+	color:white;
+	display: block;
+	border-radius:50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:1px solid black;
+	text-align: center;
+	font-size: 13pt;
+	}
+.backtop:hover { background: Chartreuse; color: black; }
+
+mark { background-color: Chartreuse; }
+
+figure { max-width: 100%; height: auto; margin-top: 30px; margin-bottom: 30px; text-align: center; }
+
+figure > img { max-width: 100%; height: auto; box-shadow: 1px 1px 20px Chartreuse; }
+
+figcaption { font-style: italic; font-size: small; line-height: 100%; margin-top: 20px; text-align: center; }
+
+figcaption > span { background-color: Chartreuse; font-weight: 800; }
+
+h1 { line-height: 100%; }
+
+h3 { text-shadow: 2px 2px Chartreuse; margin-top: 2.2em; text-decoration: underline; }
+
+h3::before { content: "▾  "; }
+
+code { border: 1px solid Chartreuse; padding: 2px 6px 2px 6px; border-radius: 10px; cursor: crosshair; }
 
 /* The following sketch highlight code is taken from https://alvarotrigo.com/blog/css-highlight-text/ */
 
@@ -70,97 +161,6 @@ a:hover, a:active {
   border-radius:0.25em;
 }
 
-summary {
-	text-align: center;
-	transform-origin: top left;
-	height: 30px;
-	line-height: 30px;
-	rotate: 270deg;
-	position: fixed;
-	width: 100vh;
-	bottom: -33px;
-	left: -2px;
-	padding-bottom: 2px;
-	border-bottom: 1px solid #000;
-	background-color: Chartreuse;
-}
-	
-nav {
-	position: fixed;
-	left: 35px;
-	top: 0px;
-	padding: 10px;
-	height: 100vh;
-	width: 180px;
-	border-right: 1px solid #000;
-	overflow-y: auto;
-}
-
-nav > a:link, nav > a:visited {
-	display: block;
-	border: 1px solid #000;
-	background-color: Chartreuse;
-	margin-bottom: 3px;
-	color: #000;
-	padding: 5px;
-	text-decoration: none;
-}
-
-nav > a:hover, nav > a:active {
-	transition: 0.5s;
-	border: 1px solid #000;
-	background-color: #000;
-	margin-bottom: 3px;
-	color: Chartreuse;
-	padding: 5px;
-}
-
-main {
-	line-height: 140%;
-	padding: 20px;
-	max-width: 700px;
-	margin-left: 240px;
-}
-
-.backtop {
-	width: 50px;
-	height:50px;
-	z-index:2;
-	position: fixed;
-	bottom: 15px; right: 15px;
-	background: black;
-	color:white;
-	display: block;
-	border-radius:50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border:1px solid black;
-	text-align: center;
-	font-size: 13pt;
-	}
-.backtop:hover { background: Chartreuse; color: black; }
-
-main > p, main > ol, main > ul { line-height: 200%; }
-
-mark { background-color: Chartreuse; }
-
-figure { max-width: 100%; height: auto; margin-top: 30px; margin-bottom: 30px; text-align: center; }
-
-figure > img { max-width: 100%; height: auto; box-shadow: 1px 1px 20px Chartreuse; }
-
-figcaption { font-style: italic; font-size: small; line-height: 100%; margin-top: 20px; text-align: center; }
-
-figcaption > span { background-color: Chartreuse; font-weight: 800; }
-
-h1 { line-height: 100%; }
-
-h3 { text-shadow: 2px 2px Chartreuse; margin-top: 2.2em; text-decoration: underline; }
-
-h3::before { content: "▾  "; }
-
-code { border: 1px solid Chartreuse; padding: 2px 6px 2px 6px; border-radius: 10px; cursor: crosshair; }
-
 /* Use a media query to add a break point at 750px: */
 @media screen and (max-width: 750px) {
 	
@@ -177,13 +177,12 @@ summary {
 
 nav {
 	position: fixed;
-	padding: 10px;
 	top: 50px;
 	left: 50%;
 	height: 50vh;
 	width: 80vw;
 	margin-left: -43vw;
-	overflow-y: scroll;
+	overflow:none;
 	background: #fff;
 	z-index: 1;
 	border: 1px solid #000;
