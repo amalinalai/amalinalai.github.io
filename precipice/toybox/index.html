@@ -94,18 +94,22 @@
 	.footer > a:hover { color: #ddc982; }
 	
   </style>
-  
+  <script src="https://melonking.net/scripts/frame-link.js"></script>
+        <script>
+            updateTitle = false; //if you want to disable title updating. (Default is true)
+            //pageParam = "z"; //if you want to change the url path of your pages. (Default is z)
+        </script>
   </head>
   
   <body>
   <div class="main">
 	  <div class="nav">
 	  <a href="home.html" target="mainframe">welcome</a>
-	  <a href="char.html" target="mainframe">characters</a>
-	  <a href="edibles.html" target="mainframe">edibles</a>
-	  <a href="misc.html" target="mainframe">misc</a>
-	  <a href="cliques.html" target="mainframe">cliques</a>
-	  <a href="special.html" target="mainframe">special*</a>
+	  <a href="/char" target="mainframe">characters</a>
+	  <a href="/edibles" target="mainframe">edibles</a>
+	  <a href="/misc" target="mainframe">misc</a>
+	  <a href="/cliques" target="mainframe">cliques</a>
+	  <a href="/special" target="mainframe">special*</a>
 	  </div>
 	  <iframe class="frame" src="home.html" name="mainframe" title="main content"></iframe>
 	  <div class="footer"><a href="/precipice">home page</a></div>
