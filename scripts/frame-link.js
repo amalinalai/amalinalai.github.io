@@ -61,10 +61,14 @@ async function updateHistory() {
     }
 	
 	var fullPathArray = mainFrame.contentWindow.location.pathname.split('/'); // split the path into an array
+	const substring = ".html";
 	if(fullPathArray[fullPathArray.length-1] == "" ) {  // for folders i.e. "/path/index.html" that renders as "/path/", last item in array is "". Remove this item.
 		fullPathArray.splice(fullPathArray.length-1, 1);
 	}
 	var pagePath = fullPathArray[fullPathArray.length-1]; // get the last item in the array 
+	if(pagePath.includes(substring)) { // checks if item ends in ".html"
+		pagePath = pagePath.replace(".html",""); // remove ".html" (just for aesthetics lol)
+	}
 	// pagePath = mainFrame.contentWindow.location.pathname;
     history.replaceState({}, title, "?" + pageParam + "=" + pagePath);
 
