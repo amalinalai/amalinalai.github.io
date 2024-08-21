@@ -60,8 +60,9 @@ async function updateHistory() {
         return;
     }
 	
-	var fullPathArray = mainFrame.contentWindow.location.pathname.split('/'); // split the path into an array
-	var pagePath = fullPathArray[ fullPathArray.length -1]; // get the last item in the array 
+	//var fullPathArray = mainFrame.contentWindow.location.pathname.split('/'); // split the path into an array
+	//var pagePath = fullPathArray[ fullPathArray.length -1]; // get the last item in the array 
+	pagePath = mainFrame.contentWindow.location.pathname;
     history.replaceState({}, title, "?" + pageParam + "=" + pagePath);
 
     if (updateTitle) {
