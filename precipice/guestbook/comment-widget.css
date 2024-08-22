@@ -89,7 +89,7 @@
 
 .c-area {
 	padding: 20px;
-    border-width: 12 10 6 4;
+    border-width: 12px 10px 6px 4px;
 	border-style: solid;
 	border-color: #84a3a5;
     border-image-source: url(paper.gif);
@@ -118,7 +118,7 @@
     margin-bottom: 5px;
 }
 
-.c-inputWrapper-horizontal { display: flex; }
+.c-inputWrapper-horizontal { display: flex; column-gap: 10px; }
 
 .c-input {
     padding: 4px;
@@ -165,7 +165,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-	border-width: 20 20 14 18;
+	border-width: 20px 20px 14px 18px;
 	border-style: solid;
     border-image-source: url(airmail.gif);
 	border-color: #84a3a5;
@@ -176,7 +176,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    border-width: 12 10 6 4;
+    border-width: 12px 10px 6px 4px;
 	border-style: solid;
 	border-color: #f3ede3;
     border-image-source: url(paper-reply.gif);
