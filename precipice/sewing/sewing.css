@@ -1,5 +1,5 @@
 body { 
-  font-family: serif;  
+  font-family: "Times New Roman", Times, serif;  
   background-color:#211912; 
   color:#c0aa8f; 
 }
@@ -122,7 +122,7 @@ blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
 
 .firstcharacter {
   float: left;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-size: 40px;
   line-height: 36px;
   padding-top: 2px;
@@ -138,5 +138,5 @@ blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
 
 @media screen and (max-width: 500px) { 
 	.content { padding: 20px 50px 0px 50px; }
-	.header-img { padding-bottom: 2px; }
+	.header-img { padding-bottom: 2px; font-size: 0.9em; }
 }
