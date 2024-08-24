@@ -10,7 +10,7 @@ a:hover { background-color:#c0aa8f; color:#211912; }
 h1 { text-align: center; }
 summary { font-weight: 600; cursor: pointer; }
 hr { background-image:url('images/sewing_09.png'); max-width: 190px; aspect-ratio: 190/22; border: 0; background-size: contain; background-repeat: no-repeat; margin: 40px auto; }
-blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
+blockquote { padding: 2px 10px; border-left: 3px solid; font-style: italic; }
 .divider { margin: 30px; aspect-ratio: 384/67; width: 70%; max-width: 384px; }
 
 .wrapper {
@@ -20,7 +20,7 @@ blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
   column-gap: 40px;
 }
 
-.main { max-width: 600px; width: 100%; line-height: 130%; }
+.main { max-width: 600px; width: 100%; line-height: 150%; }
 
 .sidebar {
   width: 200px;
@@ -97,12 +97,14 @@ blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
   background-size: 100%;
   background-repeat: repeat-y;
   width: 100%; 
-  padding: 20px 70px 0px 70px; 
+  padding: 20px 70px 5px 70px; 
   text-align: justify; 
   background-position-y: bottom;
 }
 
 .footer { 
+  box-sizing: border-box;
+  padding-top: 5px;
   background-image:url('images/sewing_03.png'); 
   background-repeat:no-repeat; 
   background-size: contain; 
@@ -130,10 +132,19 @@ blockquote { padding: 5px 20px; border-left: 5px solid; font-style: italic; }
   padding-left: 3px;
 }
 
+figure { margin-top: 30px; margin-bottom: 30px; }
+figure > img { border-radius: 15px; width: 100%; box-shadow: 0px 0px 5px; transition: 0.5s; }
+figure > figcaption { margin: 10px 5px 0px 5px; font-style: italic; padding: 2px 10px; border-left: 3px solid; line-height: 120%; }
+figure > img:hover { box-shadow: 0px 0px 15px; }
+
 @media screen and (max-width: 1200px) { 
 	.sidebar, .pseudo-sidebar { display: none; }
 	.mobile-nav, .mobile-btt { display: unset; }
 	.main { max-width: 600px; width: 100%; }
+}
+
+@media screen and (max-width: 600px) { 
+	figure { margin: 30px 10px; }
 }
 
 @media screen and (max-width: 500px) { 
