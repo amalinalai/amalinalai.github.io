@@ -97,20 +97,21 @@ blockquote { padding: 2px 10px; border-left: 3px solid; font-style: italic; }
   background-size: 100%;
   background-repeat: repeat-y;
   width: 100%; 
-  padding: 20px 70px 5px 70px; 
+  padding: 20px 70px; 
   text-align: justify; 
   background-position-y: bottom;
 }
 
 .footer { 
   box-sizing: border-box;
-  padding-top: 5px;
+  padding: 10px 70px;
   background-image:url('images/sewing_03.png'); 
   background-repeat:no-repeat; 
   background-size: contain; 
   width:100%; 
   aspect-ratio: 600/340; 
   text-align: center; 
+  font-style: italic;
 }
 
 .frame {
@@ -148,6 +149,7 @@ figure > img:hover { box-shadow: 0px 0px 15px; }
 }
 
 @media screen and (max-width: 500px) { 
-	.content { padding: 20px 50px 0px 50px; }
+	.content { padding: 20px 50px; }
+	.footer { padding: 10px 50px; }
 	.header-img { padding-bottom: 2px; font-size: 0.9em; }
 }
