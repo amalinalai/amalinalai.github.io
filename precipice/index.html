@@ -115,13 +115,15 @@
 		.sitemap { line-height: 150%; }
 		.sublist { list-style: none; margin-left: -12px; }
 		.sublist > li::before { content:"⤷"; margin-right: 5px; }
-		.category { font-weight: 600; }
-		.subcategory { margin-left: 5px; font-weight: 600; font-style: italic; border-bottom:1px dashed #879164; padding: 2px; }
+		.hoverable > li:hover { font-weight: 600; cursor: crosshair; }
+		.hoverable-span:hover { font-weight: 600; cursor: crosshair; }
+		.category { font-weight: 600; font-size:1.1em; }
+		.subcategory { margin-left: 5px; font-weight: 600; font-style: italic; border-bottom:1px dashed #879164; padding: 2px;  }
 		.subcategory::before {
 		  content:"› ";
 		  font-style: normal;
 		}
-		.changelog { width: 100%; border: 1px dashed; margin-top: 0px; padding: 0px; }
+		.changelog { width: 100%; border: 1px dashed; margin-top: 0px; padding: 0px; height: 250px; }
 	</style>
   </head>
   <body>
@@ -164,15 +166,15 @@
 	  <p><b>BIG DISCLAIMER!!!</b> I do not, in any way, optimize coding my web pages. They're a mixture of trial and error, figuring out how I can do something in purely CSS and HTML, and probably don't check all the "best practices" boxes. I'm here to have fun, experiment and play. In any case, feel free to view source on any page, and hope you enjoy your stay on this website!</p>
 	  
 	  <h2>change log</h2>
-	  <p>Overview of major changes to this website by months. Started record keeping in August 2024. May someday retroactively add old updates, but it's unlikely to happen.</p>
+	  <p>Overview of major changes to this website by months. Started record keeping in August 2024.</p>
 	  <iframe src="changelog.html" title="changelog" name="changelog" class="changelog"></iframe>
 
 	  <h2 id="sitemap">(sort of) sitemap</h2>
 	  <p>I've preserved the hierarchical arrangement of the pages on this site, while still attempting to categorize these pages in some semblance of organization. I've chosen to omit certain subpages for brevity, so this isn't technically a full sitemap.</p> <p>Those denoted with an asterisk (*) contains subpages that have not been listed.</p>
 	  <span class="category">Professional</span>
 	  <ul class="sitemap">
-	  <li><a href="/">Main page (root)</a> — my professional biography, and links to other means of contact.
-	  <ul class="sublist">
+	  <li><span class="hoverable-span"><a href="/">Main page (root)</a> — my professional biography, and links to other means of contact.</span>
+	  <ul class="sublist hoverable">
 		<li><a href="/cv">CV</a> — my curriculum vitae.</li>
 		<li><a href="/presentations">Presentations</a> — all my scientific presentations.</li>
 		<li><a href="/projects">Projects</a> — all my academic projects.</li>
@@ -182,27 +184,27 @@
 	  
 	  <span class="category">Personal</span>
 	  <ul class="sitemap">
-	  <li><a href="/precipice">Precipice</a> — landing page for personal site.<br>
+	  <li><span class="hoverable-span"><a href="/precipice">Precipice</a> — landing page for personal site.</span><br>
 	  <span class="subcategory">Me</span>
-	  <ul class="sublist">
+	  <ul class="sublist hoverable">
 		<li><a href="/precipice/about">About me!</a> — cozy, informal introduction of myself.</li>
 		<li><a href="/precipice/bookshelf">Bookshelf</a> — books that have left an impact on me.</li>
 		<li><a href="/precipice/map">Map of the internet</a> — collection of links to my important places on the internet. *</li>
 		<li><a href="/precipice/sundaysites">Sunday sites</a> — index page for my submissions for the Sunday sites project. *</li>
 	  </ul>
 	  <span class="subcategory">Shrines and collections</span>
-	  <ul class="sublist">
+	  <ul class="sublist hoverable">
 		<li><a href="/precipice/pens">Pen collection</a> — display of my pen collection.</li>
 		<li>Tamagotchi — page for my tamagotchis. [Under construction.]</li>
 		<li><a href="/precipice/toybox">Toybox</a> — my adoptables (pixel or not), including pixel cliques. *</li>
 		<li><a href="/precipice/sewing">Sewing room</a> — my sewing. *</li>
 	  </ul>
 	  <span class="subcategory">For you</span>
-	  <ul class="sublist">
+	  <ul class="sublist hoverable">
 		<li>Gift store — web sozai and adoptables. [Under construction.]</li>
 	  </ul>
 	  <span class="subcategory">Site</span>
-	  <ul class="sublist">
+	  <ul class="sublist hoverable">
 		<li><a href="/precipice/archives">Archives</a> — documentation of the existing and previous designs of different pages of this site, with background and inspiration notes. *</li>
 		<li><a href="/precipice/busstop">Bus stop</a> — webrings and outgoing links to other sites.</li>
 		<li><a href="/precipice/guestbook">Guestbook</a> — guestbook you can sign.</li>
@@ -211,7 +213,7 @@
 	  </ul>
 	  
 	  <span class="category">Miscellaneous / Others on this website</span>
-	  <ul class="sitemap">
+	  <ul class="sitemap hoverable">
 	  <li><a href="/tsp">The Slow Press portfolio</a> — my design portfolio for the indie zine, The Slow Press.</li>
 	  <li><a href="/dnd">Quantum Hub Dungeons & Dragons</a> — landing page for my office's dungeons & dragons campaign [retired]. *</li>
 	  <li><a href="/compost">Compost pile</a> — archive of all past major designs of pages that have been phased out.*</li>
