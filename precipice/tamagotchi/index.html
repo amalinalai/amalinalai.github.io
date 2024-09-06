@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noai, noimageai">
+	<title>a little tamagotchi shrine!</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link href="tama.css" rel="stylesheet" type="text/css" media="all">
+	
+	<style>
+	body { height: 95vh; color: #222; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image:url(graph-paper.png); }
+	
+	.wrapper { position: relative; max-width:1047px; width: 100%; }
+	.decor-wrapper { position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+	.sparkles { position: fixed; background-image:url(sparkles.png); width: 500px; height: 478px; filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 1px); background-repeat: no-repeat; }
+	.rotated { rotate: 65deg; right: 0px; bottom: 0px; }
+	.background { filter: drop-shadow(rgba(0, 0, 0, 0.3) 4px 4px 4px); width: 100%; height: auto; }
+	
+	.nav {
+		font-family:'Sunbright', monospace;
+		font-size: 20pt;
+		text-align: center;
+		rotate: 90deg;
+		z-index:2;
+		position: absolute; 
+		left: 86.3%;
+		width: 11%;
+		height: 6%;
+		color: #000;
+		text-decoration:none;
+	}
+	
+	.nav:hover { text-shadow: 3px 3px 1px #fae79f; }
+	.nav-one:hover { rotate: 94deg; }
+	.nav-two:hover { rotate: 84deg; }
+	.nav-three:hover { rotate: 93deg; }
+	
+	.frame { box-sizing: border-box; position: absolute; left: 50%; top: 4.5%; width: 37.01%; height: 82%; z-index: 2; border: 0px; padding: 8px; }
+	.current { position: absolute; left: 50%; top: 87.5%; width: 35%; height: 5%; z-index: 2; display: flex; justify-content: space-evenly; align-items: center; }
+	.tablet-notice { display: none; width: 70%; background: #fff; padding: 3px; }
+	.mobile { display: none; }
+	
+	.post-it { box-sizing: border-box; position: absolute; left: 2.7%; top: 5%; width: 19%; height: 29%; rotate:4.7deg; z-index: 2; }
+	.post-text { height: 62%; scrollbar-width: thin; overflow-y:auto; padding: 10px; }
+	.post-it > h1 { font-family:'Sunbright',monospace; padding-right: 15px; margin-bottom: 5px; margin-top: 10px; border: 0px; }
+	
+	/* Use a media query to add a break point at 799px: */
+	@media screen and (max-width: 799px) {
+		.desktop { display: none; }
+		.mobile { display: unset; }
+		
+		.nav {
+		font-size: 17pt;
+		left: 81%;
+		width: 21%;
+		height: 5.9%;
+		color: #000;
+		text-decoration:none;
+		}
+		
+		.frame { left: 8%; top: 4.5%; width: 73.67%; height: 82%; }
+		.current { left: 8%; top: 87.5%; width: 68.5%; }
+	}
+	
+	/* Use a media query to target between 599px and 799px (tablets): */
+	@media screen and (min-width: 599px) and (max-width: 799px) {
+		.tablet-notice { display: unset; }
+	}
+	</style>
+	<script src="/scripts/frame-link.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+	 <img src="notebook.png" class="background desktop" alt="">
+	 <img src="notebook-res2.png" class="background mobile" alt="">
+	 <div class="post-it desktop">
+	 <h1>updates!</h1>
+	 <div class="post-text">
+	 <b>24/09/03:</b> Added my tama info and published page :)<br>
+	 <b>24/09/03:</b> Created this new tamagotchi shrine!
+	 </div>
+	 </div>
+	 <iframe class="frame" src="home.html" id="mainframe" name="mainframe" title="main content"></iframe>
+	 <a href="owned.html" target="mainframe" class="nav nav-one" style="top: 17%;">owned ></a>
+	 <a href="raised.html" target="mainframe" class="nav nav-two" style="top: 35.7%;">raised!</a>
+	 <a href="wishlist.html" target="mainframe" class="nav nav-three" style="top: 53%;">wishlist</a>
+	 
+	 <div class="current">
+	 <b>currently playing:</b> tamagotchi uni
+	 </div>
+    </div>
+	<div class="tablet-notice">if you're currently using a tablet in portrait mode, I recommend turning it landscape wise to view this site!</div>
+ 
+    <div class="decor-wrapper">
+	 <div class="sparkles"></div>
+	 <div class="sparkles rotated"></div>
+   </div>
+  </body>
+</html>
+    
