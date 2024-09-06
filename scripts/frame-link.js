@@ -15,7 +15,7 @@
 
 var mainFrame;
 var firstLoad = true;
-var updateTitle = false; // default is true
+var updateTitle = true; // default is true
 var pageParam = "z";
 var titlePrefix = "";
 var hitCounterFunction = undefined;
