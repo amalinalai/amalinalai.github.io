@@ -15,7 +15,7 @@ p { line-height: 150%; }
 .tama-listing { box-sizing: border-box; display: inline-grid; grid-template-columns: 80px auto; margin: 10px; padding: 10px; border: 1px dashed; width: 95%; }
 
 .device { position: relative; margin: 10px; }
-.device > img { box-shadow: 1px 1px 1px #aaa; }
+.device > img { box-shadow: 1px 1px 1px #aaa; width: 100%; max-width:300px; }
 .device:before {
     content: "";
     height: 20px;
@@ -30,7 +30,7 @@ p { line-height: 150%; }
 .left { float: left; }
 .right { float: right; }
 
-.bottom-wrapper { position: fixed; padding: 15px 0px 1px 0px; bottom: 0px; width: 96%; display: flex; justify-content: space-between; background: rgb(238,238,221); background: linear-gradient(0deg, rgba(238,238,221,1) 75%, rgba(238,238,221,0) 100%); }
+.bottom-wrapper { position: fixed; padding: 15px 0px 1px 0px; bottom: 0px; width: 96%; display: flex; justify-content: space-between; background: rgb(238,238,221); background: linear-gradient(0deg, rgba(238,238,221,0.9) 75%, rgba(238,238,221,0) 100%); }
 .bottom-nav { margin-top: 5px; text-decoration: none; color: #000; border: 1px solid; padding: 5px; cursor: pointer; transition: 0.2s; display: inline-block; }
 .bottom-nav:hover, .bottom-nav > details[open] > summary { background: #000; color: #fff; border: 1px solid #000; }
 .bottom-nav > summary { list-style-type: none; }
@@ -39,3 +39,10 @@ section { padding-bottom: 30px; }
 
 .navigate-back { text-align: center; margin-bottom: 15px; }
 summary { cursor: pointer; }
+
+/* Use a media query to add a break point at 400px: */
+	@media screen and (max-device-width: 400px) {
+		.left, .right { float: none; margin-top: 30px; }
+		.device { text-align: center; }
+		.device:before { transform:rotate(-10deg) translateY(-10%) translateX(150%); }
+	}
