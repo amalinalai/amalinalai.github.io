@@ -41,6 +41,8 @@
 		  displat: block;
 		  margin: 10px;
 		  filter: drop-shadow(#ccc 3px 3px 2px);
+		  width: 100%;
+		  max-width: 500px;
 		}
 		
 		.close-toggle {
@@ -85,18 +87,27 @@
 		   overflow-y: auto;
 		}
 		
+		.mobile-wrapper { display: none; }
+		.line { height: 10px; border-bottom: 1px solid; }
+		
 		b { color: #fff; background-color: #5371C6; }
+		
+		/* Use a media query to add a break point at 900px: */
+		@media screen and (max-width: 900px) {
+			.wrapper { display: none; }
+			.mobile-wrapper { display: unset; }
+		}
 
 	</style>
   </head>
   <body>
   <div class="main">
-	<section>
 	<h1>my fancy pen collection!!!</h1>
 	<div class="navigate-back"><a href="/precipice">← back to the home page & navigation?</a></div>
+	<div class="wrapper">
+	<section>
 	<p>Note: This page requires Javascript to run. </p>
 	<p>Click on the pens to learn more about them — <b>you may have to double click on them the first time</b>! You can drag the index cards to move them around, or close them when you're done. Each index card also comes with a transcript, which is just a typed version of whatever is written on the index card.</p>
-	<p>I am so sorry, but this page is <i>not</i> optimized for mobile at the moment. A mobile-friendly version is on my to-do list!</p>
 	<p>I've never formally learnt Javascript, so I owe it to <a href="https://stackoverflow.com/a/31799688">this solution for open/close div toggles</a> and <a href="https://stackoverflow.com/a/56450599">this solution for multiple draggable divs</a>, both on stackoverflow.</p>
 	</section>
 	<section>
@@ -159,6 +170,49 @@
 			<p><u>Ink used here:</u> Vinta Inks — Liquid Sepia</p>
 			<p>My most expensive pen to date, I found this pen on Etsy & fell in love with the beautiful colours on its body. it sits right below my computer screen at my desk, and I'm happy to finally be able to support artisans & their craft ♡ Dip pens take a bit of fiddling (with) and I'm not 100% sure I've got a hang of writing with it just yet. I will keep practising! I bought this in Dec 2023 as a small gift for myself.</p>
 		</details>
+	</div>
+	</div>
+	<div class="mobile-wrapper">
+		<section>
+		<p>Read on to learn more about my pens! Mouse over or click on them to see a different perspective of the pen.</p>
+		</section>
+		<section>
+		<input type="image" class="pen" onMouseOver="this.src='lamy-open.png'" onMouseOut="this.src='lamy.png'" src="lamy.png" title="my Lamy Safari" alt="An image of a bright yellow capped fountain pen that is rather thick in width. It has a small plastic opening midway that shows the ink level. Its cap has a metal clip. On hover, the pen cap is placed on the back of the body. The black nib is exposed.">
+		<h2>Lamy Safari (Yellow!), Medium Nib (Black)</h2>
+			<p><u>Currently inked with:</u> Pilot Iroshizuku — Kiri-same</p>
+			<p>This Lamy Safari was my first proper investment in a fountain pen ($30 felt like a lot at that time). I remember the excitement of finding it in a bookstore in Geneva during my trip to CERN in June 2019, and I caved & bought it. I can still remember the weight of it in my hand as my heart fluttered with joy at finally owning a proper fountain pen.</p>
+			<p>It has been my daily pen ever since. It writes well, reliably and feels comfortable to hold, even during long amounts of writing. I've dropped it plenty, and it's still holding up wonderfully.</p>
+		</section>
+		<section>
+		<input type="image" class="pen" onMouseOver="this.src='inkstand-open.png'" onMouseOut="this.src='inkstand.png'" src="inkstand.png" title="my Inkstand Aluminium rollerball pen" alt="An image of a narrow black, capped rollerball pen with the partially obscured word, 'inkstand' written along the circumference of its mid-body. On hover, the pen cap is placed on the back of the pen body.">
+		<h2>Inkstand (Kakimori) Aluminium Rollerball Pen</h2>
+			<p><u>Currently inked with:</u> Custom Inkstand ink, made in Dec 2018 in Tokyo</p>
+			<p>Although not a fountain pen, it also makes use of bottled ink. Instand inks are highly pigmented and will ruin other normal fountain pens, which I had to learn the hard way. :-( Although I had another rollerball pen from Inkstand which I bought when I made the ink in Tokyo in 2018, I had dropped it and it stopped writing.</p>
+			<p>Finally, in October 2021, I found out that inkstand has an online store and got this pen!!</p>
+			<p>I love this pen for casual writing. It has a nice body, if not slightly narrow, but (it) is still comfortable to write with.</p>
+		</section>
+		<section>
+		<input type="image" class="pen" onMouseOver="this.src='twsbi-open.png'" onMouseOut="this.src='twsbi.png'" src="twsbi.png" title="my TWSBI VAC700 IRIS" alt="An image of a clear fountain pen made of plastic, with the nib visible through the cap. Along the clip and the middle of the body, it has iridescent metal accents that shift magenta to blue. The body holds bright magenta ink. On hover, the cap is placed beside the body of the pen. The nib also has the same iridescent metal accent on its edges.">
+		<h2>TWSBI VAC700R (Iris), Fine Nib</h2>
+			<p><u>Currently inked with:</u> Dominant Industry Ink — Royal Azalea</p>
+			<p>This was a graduation gift I had bought for myself (in 2022)! Enamoured by the vacuum piston filling mechanism, and the transparent ink chamber, I decided to splurge and buy my most expensive pen (at that time). The colours of the pen are absolutely gorgeous and is a pen that sits on my desk as I dare not to bring it out of the house.</p>
+			<p>Although gorgeous, I have a hard time with writing long amounts of text with this pen due to my fingers digging into the cap screw threads while gripping the pen. It's still a very cool pen though, and I have fun refilling the ink when I get to. :-)</p>
+		</section>
+		<section>
+		<input type="image" class="pen" onMouseOver="this.src='tcbrass-open.png'" onMouseOut="this.src='tcbrass.png'" src="tcbrass.png" title="my Traveler's Company brass fountain pen" alt="An image of a short, capped fountain pen made of brass. The brass has worn out slightly, darkening in areas with high moisture exposure due to holding the pen. On hover, the cap is placed on the back of the pen, extending its length to be comparable to a regular pen. It has a metallic nib.">
+		<h2>Traveler's Company Brass Fountain Pen, Fine Nib</h2>
+			<p><u>Currently inked with:</u> Monteverde Ink — Black</p>
+			<p>I was fascinated by the idea of the pen aging (through patina) depending on how you hold the pen. It's been interesting to see how the pen has oxidized more around where I grip the pen, despite it being only about a year old (I bought this in May 2023). I also absolutely adore how compact it is!</p>
+			<p>I find myself reaching out for this pen quite a bit as it writes so well. It does have a narrow grip, which makes it hard to hold comfortably for extended amounts of writing. Its nib also seems to keep unscrewing slightly for me, but I still really like this pen! I may consider changing out the nib in the future.</p>
+		</section>
+		<section>
+		<input type="image" class="pen" onMouseOver="this.src='artefuegoventura-open.png'" onMouseOut="this.src='artefuegoventura.png'" src="artefuegoventura.png" title="my fancy dip pen!!" alt="An image of a glass dip pen, with a black tip. Its body is not cylindrical but an organic shape that tapers towards the end. The colour of the body consists of swirls of blue, black, green, orange and red. On hover, the pen is shown from a different angle, displaying different swirl patterns on the body.">
+		<h2>Artefuegoventura Glass Dip Pen</h2>
+			<p><u>Ink used here:</u> Vinta Inks — Liquid Sepia</p>
+			<p>My most expensive pen to date, I found this pen on Etsy & fell in love with the beautiful colours on its body. it sits right below my computer screen at my desk, and I'm happy to finally be able to support artisans & their craft ♡ Dip pens take a bit of fiddling (with) and I'm not 100% sure I've got a hang of writing with it just yet. I will keep practising! I bought this in Dec 2023 as a small gift for myself.</p>
+		</section>
+	<div class="line"></div>
+	<p style="text-align:center;"><a href="#top">back to top?</a></p>
 	</div>
   </div>
 
