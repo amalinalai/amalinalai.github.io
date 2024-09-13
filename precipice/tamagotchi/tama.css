@@ -7,12 +7,13 @@ h2 { padding-right: 10px; text-align: right; line-height: 50%; background-color:
 .h2-first { margin-top: -10px; }
 p { line-height: 150%; }
 
-.sprites-wrapper { display: flex; flex-wrap: wrap; margin-bottom: 20px; }
-.sprites-wrapper > div { flex: 50%; }
+.sprites-wrapper { display: flex; flex-wrap: wrap; margin-bottom: 20px; column-gap: 5%; }
+.left-sprites { flex: 30%; }
+.right-sprites { flex: 65%; }
 .sprites { image-rendering: pixelated; }
 .sprites:hover { filter: drop-shadow(0 0 5px #ffb4a5); cursor: crosshair; }
 
-.tama-listing { box-sizing: border-box; display: inline-grid; grid-template-columns: 80px auto; margin: 10px; padding: 10px; border: 1px dashed; width: 95%; }
+.tama-listing { box-sizing: border-box; display: inline-grid; grid-template-columns: 90px auto; margin: 10px; padding: 10px; border: 1px dashed; width: 95%; }
 
 .device { position: relative; margin: 10px; }
 .device > img { box-shadow: 1px 1px 1px #aaa; width: 100%; max-width:300px; }
