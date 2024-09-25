@@ -34,6 +34,9 @@
 	h1 { margin: 0px; font-size: 1.5em; }
 	h2 { margin-top: 0px; font-size: 1.3em; }
 	
+	a { color: #677890; transition: 0.2s; }
+	a:hover { background-color: #b3cead; color: #000; }
+	
 	@media screen and (max-width: 550px) {
 	  .review { flex-direction: column; height: unset; }
 	  .left { width: 70%; margin: auto; }
@@ -55,7 +58,7 @@
 	  <div class="info-box desc">
 	  <div class="box-caption">info</div>
 	  <div class="info-twrapper"><div class="info-text">
-	  <a href="https://bookbug.neocities.org/"><img src="https://bookbug.neocities.org/images/bookbugbug.png" alt="worm reading" title="hello!" style="float:right;"></a>
+	  <a href="https://bookbug.neocities.org/"><img src="bookbugbug.png" alt="worm reading" title="hello!" style="float:right;"></a>
 	  <h1>what this page?</h1>
 	  <p>Welcome to lina's bookbug page! Here you'll find book reviews of books I've read as part of the bookbug club. If you'd like to read my opinions on other books, you can also check out my <a href="/precipice/bookshelf">bookshelf</a>. The page styling is still under construction!</p>
 	  <h1>what is bookbug?</h1>
@@ -70,17 +73,20 @@
 	  <div class="info-twrapper"><div class="info-text">
 	  <p style="text-align:center; margin-top: 0px;"><a href="/precipice">← back to the home page & navigation?</a></p>
 	  <h1>jump to reviews</h1>
-	  <p>to be added</p>
+	  <ul>
+		<li><a href="#oct-24">october 2024</a></li>
+	  </ul>
 	  </div></div>
 	  </div>
 	</div>
-	<div class="review">
+	<!-- Start review -->
+	<div class="review" id="oct-24">
 	<div class="month"><div class="month-text">october 2024</div></div>
-	<div class="left"><img class="cover" src="https://place-hold.it/200x280">
+	<div class="left"><img class="cover" src="placeholder.gif" alt="placeholder image">
 	<div class="book-details"><h1>book title</h1> author name</div>
 	</div>
 	<div class="right">
-	<div class="text">
+	<div class="text" tabindex="0">
 	<h2>my thoughts...</h2>
 	<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Tortor ad malesuada dictumst ullamcorper erat fringilla urna. Viverra mauris praesent quam eu porta nisi potenti nascetur class. Phasellus quisque rutrum aliquet vel nisi. Interdum maecenas consequat velit duis ridiculus justo accumsan auctor. Curae massa ultricies; torquent elit aliquet nascetur. Metus purus est faucibus mauris suscipit mi phasellus elementum. Viverra venenatis hendrerit dui vivamus adipiscing velit. Per cras pellentesque rutrum metus curabitur. Hendrerit nibh malesuada velit etiam augue.</p>
 
@@ -90,6 +96,8 @@
 	</div>
 	</div>
 	</div>
+	<!-- End review -->
+	
   </div>
 </body>
 </html>
