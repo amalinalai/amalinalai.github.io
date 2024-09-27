@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="robots" content="noai, noimageai">
+	<title>archives › tamagotchi</title>
+	
+	<link rel="stylesheet" href="archives.css" type="text/css" media="all">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+	
+	<div class="container">
+	<div class="left">
+	<details>
+	<summary>click for navigation</summary>
+	<nav>
+	<iframe src="navigation.html" class="frame"></iframe>
+	</nav>
+	 </details>
+	</div>
+	<a href="#top" title="back to top?" alt="back to top?"><div class="backtop">top?</div></a>
+	
+	<main>	
+	<h1><span class="sketch-highlight">tamagotchi</span></h1>
+	<h2>aka <mark>a reignited interest!!</mark></h2>
+	
+	<p>Having recently re-discovered tamagotchis thanks to other personal websites, I got the new one for myself. With the excitement of my new nifty virtual pet, I wanted to make a little shrine dedicated to the tamagotchis I own and have raised!</p>
+	
+	<h3>version 1.0 › september 2024 — ???</h3>
+	<p>This is probably one of my most ambitious layouts to date. I knew I wanted something very tactile-looking and real, incorporating images and stickers in a collage-like fashion to mimic a diary of sort. After all, I had my first tamagotchi when I was a kid, around the age I still kept a physical diary. Although I love making collages, I just felt like collage-based websites are often difficult to make responsive, which is why I tended to avoid them and stuck to more modern and minimal web designs previously. However, I spent some time thinking about the layout before executing it. Although it may not be the best solution, I think it still works!</p>
+	<figure>
+	<img src="images/tamagotchi-v1.jpg" alt="A screenshot of my tamagotchi page. There is a teal leather notebook cover, with an open lined spiral-bound notebook inside. On the right edge of the notebook, there are coloured tabs which are links to the different sections of this shrine. Behind the notebook are pastel sprinkles.">
+	<figcaption><span>Version 1.0 of my Tamgotchi shrine.</span> I was so proud of the final resulting collage on the left page that incorporated both art from Tamagotchi (Bandai), my own photographs, as well as textures I've collected over the years. Screenshot taken on 27 September 2024.</figcaption>
+	</figure>
+	<p>The code for having the centered notebook with a few different divs overlaid on top of it took a bit of tinkering, but primarily used the same code base as my map of the internet page to have responsive divs on top of an image. This made use of <a href="https://stackoverflow.com/a/53597608">this solution on stackoverflow</a> and a <a href="https://zaneray.com/responsive-image-map/">responsive image map generator</a>. The rotated divs I used for the side coloured tabs navigation required some trial and error to get into place because the rotation changes the position slightly, but I managed somehow.</p>
+	<p>Because the notebook is wider than it is tall, I knew this would pose a problem translating into a mobile layout. I've seen some solutions where they would rotate the entire notebook sideways, so a user would have to view the website sideways on their phone, but I didn't want to do that. Instead, I opted to crop the image to only reveal half of the open ntebook while on mobile. This way, it would be taller than it is wide instead, making it a bit closer to a mobile screen. This is actually the reason why I only used the right page on the desktop design for text: I didn't want to have to fiddle with two content divs when I had to make it responsive, so instead I utilized the left page by designing a collage that could be easily cropped for mobile view without having to change too much of the actual code structure for the content of the page to make it responsive.</p>
+	<figure>
+	<img src="images/tamagotchi-v1-responsive.jpg" alt="A screenshot of my tamagotchi shrine on mobile.">
+	<figcaption><span>Version 1.0 of the responsive design.</span> This has the collage page (left side) cropped out so that only the main content is fully visible on the whole width of a mobile screen. Screenshot taken on 27 September 2024.</figcaption>
+	</figure>
+	<p>Although there are aspects which I think I could've done better, I'm quite proud of this page! The next thing I'd like to do is probably change out the link colours from the default ones. I also have plans to better divide the pages as I add more content, since the actual space for content is the size of the paper in the image, which is quite small and would require a lot of scrolling once I add more things.</p>
+	</main>
+</div>
+	
+  </body>
+</html>
+
