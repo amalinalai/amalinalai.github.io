@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noai, noimageai">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	
+	<style>
+	body { font-family: serif; line-height: 150%; font-size: 1.2em; }
+	.main { max-width: 800px; padding: 10px; }
+	.navigate-back { text-align: right; margin-top: 30px; margin-bottom: 30px; }
+	</style>
+	
+    <title>k0b0 h@cks</title>
+
+  </head>
+<body>
+  <div class="main">
+  <h1>My Kobo "Hacks"</h1>
+  <p>I have a Kobo Clara 2E. These are some modifications that I've been making to my Kobo to make it more exciting? While I've linked the tutorials and guides I've used, I'm also including the steps I took for posterity. If anyone else who stumbles upon this is as tech illiterate as I am, hopefully this helps them out too, especially for those guides with instructions that skip over some details.</p>
+  
+  <p>The following "hacks" are roughly listed from least to most technologically challenging (imo).</p>
+  
+  <h2 id="screensavers">Custom Screensavers</h2>
+  <p>This is one of the first changes I made to my Kobo. This allowed custom screensavers to replace book covers while your Kobo is asleep or powered off.</p>
+  <ol>
+	<li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Navigate to <code>KoboeReader/.kobo</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+	<li>Create a new folder titled <code>screensaver</code>.</li>
+	<li>Move or save the images to be used as screensavers in this folder. A Clara 2E's resolution is 1072 x 1448 px, so one can crop the images to that size.</li>
+	<li>Eject the Kobo eReader and disconnect it from the computer.</li>
+	<li>In <strong>Settings > Energy Saving and Privacy</strong>, check (tick) the <em>Show current read</em> and <em>Show book covers full screen</em> under the <strong>Sleep and Power Off</strong> section.</li>
+  </ol>
+  
+  <h2 id="devmode">Devmodeon</h2>
+  <p>Dev mode shows additional features that are typically hidden in a Kobo out of the box.</p>
+  <ol>
+	<li>In the search bar on the home page of the Kobo device, type <code>devmodeon</code>.</li>
+	<li>There should be now additional features under the settings page, including games in the experimental features.</li>
+	<li>To turn it off, type <code>devmodeoff</code> in the search bar on the home page.</li>
+  </ol>
+  
+  <h2 id="config-file">Kobo Configurations File</h2>
+  <p>A full list of configurations can be <a href="https://wiki.mobileread.com/wiki/Kobo_Configuration_Options">found here</a>, on the MobileRead wiki. I've used it to turn on the following features:</p>
+  
+  <h3 id="mywords">MyWords</h3>
+  <p>Adds a new tab under <strong>Activity</strong> which allows users to create a list of words. To save words while reading, long press on the word, then click on <em>Add to My Words</em>. in the word definition's pop-up.</p>
+  <ol>
+	<li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Navigate to <code>KoboeReader/.kobo/Kobo</code> and open the file <code>Kobo eReader.conf</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+    <li>Below <code>[FeatureSettings]</code> add <code>MyWords=True</code>.</li>
+    <li>Save the file then eject the Kobo eReader.</li>
+  </ol>
+  
+  <h3 id="exporthighlights">ExportHighlights</h3>
+  <p>Adds an option wheb clicking on the 3 dots of a book in the library tab to export highlights and annotations made into a .txt file.</p>
+  <ol>
+	<li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Navigate to <code>KoboeReader/.kobo/Kobo</code> and open the file <code>Kobo eReader.conf</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+    <li>Below <code>[FeatureSettings]</code> add <code>ExportHighlights=True</code>.</li>
+    <li>Save the file then eject the Kobo eReader.</li>
+  </ol>
+  
+  <h2 id="nickelmenu">NickelMenu</h2>
+  <p>NickelMenu adds addititional menu options both on the homescreen, library, browser as well as when the e-book is open. NickelMenu has a pretty <a href="https://pgaskin.net/NickelMenu/">comprehensive set of instructions for how to install and configure it</a>.</p>
+  <ol>
+    <li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Download KoboRoot.tgz from the NickelMenu page above and move it into <code>KOBOeReader/.kobo</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+    <li>Safely eject the eReader and wait for it to reboot. It may need to be connected to a power source if battery is low.</li>
+    <li>Ensure there is a new menu item in the bottom-right corner of the screen when the eReader is turned on. It should be named <strong>NickelMenu</strong>.</li>
+    <li>Connect the Kobo eReader to your computer again.</li>
+	<li>In <code>KOBOeReader/.adds/nm</code>, create a new file named <code>config</code>. I created this file in <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>, and saved it without an extension by changing <strong>Save as type</strong> to <em>All file types</em>.</li>
+	<li>In this file, I added the following configurations (tba).</li>
+	<li>Save the file then eject the Kobo eReader.</li>
+	</ol>
+  
+  <h2 id="niluje">NiLuJe's Kobo-Stuff</h2>
+  <p><a href="https://www.mobileread.com/forums/showthread.php?t=254214">Kobo-stuff</a> is a package that contains a lot of useful utilities for more advanced modifications to the eReader. The forum post linked contains the download and install instructions.</p>
+  <p>Additionally, I had to <a href="https://www.mobileread.com/forums/showthread.php?t=323083">prevent Kobo from importing dotfiles/folders</a> following this guide after installation to prevent random files from showing up as books.</p>
+  
+   <ol>
+    <li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Download KoboRoot.tgz from the end of the first forum link above and move it into <code>KOBOeReader/.kobo</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+    <li>Safely eject the eReader and wait for it to reboot. It may need to be connected to a power source if battery is low.</li>
+    <li>Connect the Kobo eReader to your computer again.</li>
+	<li>Navigate to <code>KoboeReader/.kobo/Kobo</code> and open the file <code>Kobo eReader.conf</code>.</li>
+	<li>Below <code>[FeatureSettings]</code> add <code>ExcludeSyncFolders=\\.(?!kobo|adobe).*?</code>.
+	<li>Save the file then eject the Kobo eReader.</li>
+	</ol>
+  
+  <h2 id="hsuan9522">Hsuan9522's FbInk Rebuild</h2>
+  <p>Frankly, I'm not sure if this is necessary, but the FbInk package included in NiLuJe's <a href="#niluje">Kobo-Stuff</a> doesn't recognize my device (outdated). I've installed <a href="https://github.com/hsuan9522/kobo-reading-calendar?tab=readme-ov-file">this rebuild by Hsuan9522</a> made for the newest Kobo device(s) and am able to use FbInk to print content on the screen. I've also not had any other issues (so far) with my Kobo.</p> 
+  <p>I've primarily installed this because I wanted to try my hand at coding and printing output on the Kobo screen.</p>
+  <ol>
+    <li>Connect the Kobo eReader to the computer via USB.</li>
+    <li>Download KoboRoot.tgz from the GitHub repository linked above and move it into <code>KOBOeReader/.kobo</code>. If this directory is not visible, turn on the option to view Hidden Files in the File Explorer.</li>
+  </ol>
+  
+  <h2 id="ssh">SSH Detour / Guide</h2>
+  <p>SSH allows you to connect to the Kobo remotely from your computer without having to use the USB cable. This can be useful to transfer files, or run certain commands via the terminal. NiLuJe's <a href="#niluje">Kobo-Stuff</a> comes with the feature to SSH to the Kobo device. The instructions here will assume that <a href="#niluje">Kobo-Stuff</a> has already been installed on the device.</p>
+  <ol>
+	<li>Make sure the Wifi is turned on. To prevent Wifi from disconnecting, turn on <em>ForceWifiOn</em> via the <a href="#nickelmenu">NickelMenu</a> configuration I've set above. Alternatively, it can be turned on in <strong>Settings > Energy Saving and Privacy</strong> with <a href="#devmode">devmode on</a>.</li>
+    <li>On the eReader, go to <strong>Settings > Device Information</strong> and note down the IP address.</li>
+	<li>In a terminal on the computer, or on <strong>Powershell</strong> on Windows, type <code>ssh root@[ip address here]</code>. For example, if the IP address I noted down from the previous step is <code>123.456.7.8</code>, I should type <code>ssh root@123.456.7.8</code></li>
+	<li>It will prompt you for a password. There is no password, so press <strong>Enter</strong>.</li>
+	<li>It may ask you about whether you can trust this device, you can type <code>yes</code>and press <strong>Enter</strong>.</li>
+	<li>You should now be connected to your Kobo device via SSH. The terminal for me reads <code>[root@goldfinch root]</code>.
+  </ol>
+  <p>For Windows, <a href="https://winscp.net/eng/index.php">WinSCP</a> is very useful for file transfers. Moreover, it has seamless integration with <a href="https://www.putty.org/">PuTTY</a>, which can be accessed directly in the WinSCP GUI and be used in place of Powershell for SSH connection.
+  
+  <h2 id="python">Python (Using NiLuJe's Kobo-Stuff)</h2>
+  <p>To install Python, the programming language, NiLuJe's <a href="#niluje">Kobo-Stuff</a> comes with the files needed to install Python. The instructions here assume that <a href="#niluje">Kobo-Stuff</a> has already been installed on the device.</p>
+  <p>I've also installed this to write Python scripts to run on my Kobo device, since this is the coding language I am most familiar with.</p>
+  <ol>
+    <li>Connect to the Kobo eReader <a href="#ssh">via SSH</a>.</li>
+    <li>Once connected, type <code>tmux new -s kobo update-kobostuff Python</code> into the terminal and press <strong>Enter</strong>.</li>
+  </ol>
+  
+  <h2 id="btkey">Bluetooth Keyboard</h2>
+  <p>I bought a <a href="https://shopee.sg/Mini-Palm-bluetooth-Keyboard-Wireless-Charging-Keyboard-49-Keys-For-Mobile-Phone-Tablet-Laptop-i.213133435.19032228820?sp_atk=6014a318-bac4-4bd9-aa4a-3b6e3170181a&xptdk=6014a318-bac4-4bd9-aa4a-3b6e3170181a">mini Bluetooth keyboard from Shopee</a> to help with typing on the Kobo while taking notes, using the search and browsing the web on the built-in browser. While the on-screen keyboard is fine, sometimes I'd have issues with my touch registering if I typed too quickly.</p>
+  <p>Althought my Clara 2E comes with Bluetooth which allowed me to connect directly via the Kobo device itself, I found that everytime I disconnected it, it would have issues with connecting and pairing. I found <a href="https://www.mobileread.com/forums/showthread.php?t=352280">this thread on MobileRead</a> on how to modify the Clara 2E to connect to bluetooth keyboards. After this modification, my keyboard seems to connect seamlessly.</p>
+  <ol>
+	<li>Pair and connect the Bluetooth keyboard. After paired, navigate to the Bluetooth settings on the phone and click on the Bluetooth Keyboard device name. If there is a Bluetooth address (looks something like <code>59:A0:E4:69:24:7B</code>). Note this address down.</li>
+	<li>Download uhid.ko module from the forum post linked above and move it into <code>KOBOeReader/.kobo</code>. This can be done either via USB connection, or by the command line over SSH.</li>
+	<li>Connect to the Kobo eReader <a href="#ssh">via SSH</a>.</li>
+	<li>In the command line, type <code>insmod /mnt/onboard/uhid.ko</code>.
+	<li>To prevent Bluetooth from disconnecting, turn on <em>ForceWifiOn</em> via the <a href="#nickelmenu">NickelMenu</a> configuration I've set above. Alternatively, it can be turned on in <strong>Settings > Energy Saving and Privacy</strong> with <a href="#devmode">devmode on</a>.</li>
+	<li>In the command line, type <code>bluetoothctl</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>power on</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>discoverable on</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>pairable on</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>agent off</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>agent NoInputNoOutput</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>default-agent</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>scan on</code> and press <strong>Enter</strong>.</li>
+	<li>In the command line, type <code>pair [keyboard Bluetooth address]</code> and press <strong>Enter</strong>. E.g. <code>pair 59:A0:E4:69:24:7B</code>.</li>
+	<li>Once pairing is successful, you can check by sending in the Bluetooth command line <code>info [keyboard Bluetooth address]</code> to see that it is paired and connected.</li>
+	<li>In the command line, type <code>quit</code> and press <strong>Enter</strong> to exit the Bluetooth module.</li>
+	<li>In the command line, type <code>mkdir /usr/local/modules</code> and press <strong>Enter</strong>. Then, type <code>mv /mnt/onboard/uhid.ko /usr/local/modules/uhid.ko</code> and press <strong>Enter</strong>.</li>
+	<li>Finally, in the command line, type <code>echo KERNEL==\"loop0\", RUN+=\"/bin/sh -c \'insmod /usr/local/modules/uhid.ko\'\" > /etc/udev/rules.d/99-modules.rules</code> and press <strong>Enter</strong>.
+	<li>You can close the command line. In order to keep the Bluetooth turned on while using the device (to prevent disconnecting), make sure to turn on <em>ForceWifiOn</em> via the NickelMenu option.</li>
+  </ol>
+  
+  <p>For more details on what each command does, check the forum post.</p>
+  
+  <h2 id="btkey">KoboWriter Rebuild</h2>
+  <p>I'm trying to code a way to turn my eReader into a typewriter, a la Freewriter or Zerowriter.</p>
+  </div>
+</body>
+</html>
