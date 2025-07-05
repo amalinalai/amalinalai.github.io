@@ -14,6 +14,9 @@
 	body { font-family: serif; line-height: 150%; font-size: 1.2em; }
 	.main { max-width: 800px; padding: 10px; }
 	.navigate-back { text-align: right; margin-top: 30px; margin-bottom: 30px; }
+	code { background-color: #efefef; border-radius: 3px; padding: 0 3px; }
+	pre { background-color: #efefef; border-radius: 5px; padding: 20px; }
+	pre > code { padding: 0; border-radius: 0px; }
 	</style>
 	
     <title>k0b0 h@cks</title>
@@ -81,9 +84,37 @@
     <li>Ensure there is a new menu item in the bottom-right corner of the screen when the eReader is turned on. It should be named <strong>NickelMenu</strong>.</li>
     <li>Connect the Kobo eReader to your computer again.</li>
 	<li>In <code>KOBOeReader/.adds/nm</code>, create a new file named <code>config</code>. I created this file in <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>, and saved it without an extension by changing <strong>Save as type</strong> to <em>All file types</em>.</li>
-	<li>In this file, I added the following configurations (tba).</li>
+	<li>In this file, I added the following configurations below.</li>
 	<li>Save the file then eject the Kobo eReader.</li>
 	</ol>
+	
+	<p>My config file:</p>
+	<pre><code>
+menu_item :main  :Sudoku             :nickel_extras  :sudoku
+menu_item :main  :Unblock            :nickel_extras  :unblock_it
+menu_item :main  :SketchPad          :nickel_extras  :sketch_pad
+menu_item :main  :Send to Kobo       :nickel_browser :modal: https://send.djazz.se
+menu_item :main  :Browser            :nickel_browser :https://duckduckgo.com
+menu_item :main  :Force WiFi Toggle  :nickel_setting :toggle :force_wifi
+  chain_success  :nickel_wifi : toggle
+menu_item :main  :Screenshots Toggle :nickel_setting :toggle :screenshots 
+
+# -----------------------------------------------------------------------------
+
+menu_item :reader  :Screenshots Toggle :nickel_setting :toggle :screenshots 
+
+# -----------------------------------------------------------------------------
+
+menu_item :browser  :Quit               :nickel_misc :home
+menu_item :browser  :Orientation        :nickel_orientation :swap
+menu_item :browser  :Screenshots Toggle :nickel_setting :toggle :screenshots 
+
+# -----------------------------------------------------------------------------
+
+menu_item :library  :Send to Kobo       :nickel_browser :modal: https://send.djazz.se
+menu_item :library  :Browser            :nickel_browser :https://duckduckgo.com
+menu_item :library  :Screenshots Toggle :nickel_setting :toggle :screenshots 
+	</code></pre>
   
   <h2 id="niluje">NiLuJe's Kobo-Stuff</h2>
   <p><a href="https://www.mobileread.com/forums/showthread.php?t=254214">Kobo-stuff</a> is a package that contains a lot of useful utilities for more advanced modifications to the eReader. The forum post linked contains the download and install instructions.</p>
@@ -155,7 +186,7 @@
   <p>For more details on what each command does, check the forum post.</p>
   
   <h2 id="btkey">KoboWriter Rebuild</h2>
-  <p>I'm trying to code a way to turn my eReader into a typewriter, a la Freewriter or Zerowriter.</p>
+  <p>I <em>was</em> trying to code a way to turn my eReader into a typewriter, a la Freewriter or Zerowriter. I worked on most of the back-end, leaving the GUI to be done in the future. However, I don't know how practical it is because I find my kobo heating up quite a bit when connected to the Bluetooth keyboard. The battery also starts to drain pretty quickly.</p>
   </div>
 </body>
 </html>
