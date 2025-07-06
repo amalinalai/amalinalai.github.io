@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noai, noimageai">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/precipice/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/precipice/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/precipice/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	
+	<style>
+	body { font-family: monospace; font-size: 1.2em; color: #222; display: flex; justify-content: center; background-color: #e8f3f7; text-align: center; }
+	.main { max-width: 800px;
+			padding: 10px;
+			display: grid; 
+			grid-template-areas: "header header"
+								 "icon status-list"; 
+			grid-template-columns: 1fr 4fr;
+			gap: 20px;
+			}
+	.main > .status-list { grid-area: status-list; box-sizing: border-box; margin-bottom: 20px; }
+	.main > .header { grid-area: header; }
+	.main > .icon { grid-area: icon; text-align: center; box-sizing: border-box; }
+	
+	.btt { z-index: 1; position: fixed; right: 20px; bottom: 20px; background-color: #e8f3f7; padding: 8px; border: 1px dashed; }
+	
+	.image { max-width:100%; }
+	.status { max-width: 100%; padding: 25px; border-width: 40px 50px 30px 40px; border-style: solid; border-color:#e8f3f7; border-image-source: url(cloud1.png); border-image-slice: 100 120 80 80; border-image-repeat: stretch;  }
+	.intro { margin-bottom: 40px; }
+	.activity-icon { margin-right: 8px; }
+	h1 { font-size: 1.3em; margin-bottom: 0px; }
+	a { text-decoration-style: wavy; color: #2C445E; }
+	a:hover { color: #a53372; transition: 0.2s; }
+	a:visited { color: #445e2c; }
+	
+	@media only screen and (max-width: 580px) {
+		.main { grid-template-columns: 1fr; grid-template-areas: "header" "icon" "status-list"; }
+	}
+	</style>
+    <title>status cloud</title>
+  </head>
+<body>
+  <div class="main">
+	<div class="header"><img src="header.png" class="image" alt="Status Cloud" title="status cloud ☁️"></div>
+	<div class="icon">
+	<img src="bunny.png" class="image" alt="Drawing of an anthropomorphic bunny wearing an overalls dress." title="hello!">
+	<p><em>"sometimes I have too many thoughts that I forget them..."</em></p>
+	</div>
+	<div class="status-list">
+		<div class="intro">
+		<h1>welcome to the status cloud,</h1>
+		an archive of the "currently..." section of <a href="/precipice">lina's website</a>.
+		</div>
+		<!-- STATUS START -->
+		<div class="status">
+		<p><small><strong>5 JULY 2025</strong> 🌧️ <em>stressed</em></small>
+		<br>fretting over writing papers...
+		</p>
+		<p>
+		<span alt="working" title="working" class="activity-icon">✍️</span>internship work, primarily, but also paper-writing to hopefully publish<br>
+		<span alt="reading" title="reading" class="activity-icon">📖</span>against the loveless world – susan abulhawa<br>
+		<span alt="listening" title="listening" class="activity-icon">🎧</span> focus – niki<br>
+		</p>
+		</div>
+		
+		<!-- STATUS START -->
+		<div class="status">
+		<p>no more thoughts...</p>
+		<p><small>drawings by lina :)</small></p>
+		</div>
+	
+	</div>
+  </div>
+  <div class="btt"><a href="#top">top?</a></div>
+</body>
+</html>
+    
