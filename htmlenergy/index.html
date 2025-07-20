@@ -5,13 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>html energy is all around us... in sg!</title>
 	<style>
-	body { font-family: Garamond, serif; padding: 15px; max-width: 700px; font-size: 1.3em; }
+	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond.ttf) format('truetype'); }
+	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond-Italic.ttf) format('truetype'); font-weight: bold; }
+	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond-Italic.ttf) format('truetype'); font-weight: normal; font-style: italic; }
+	
+	body { font-family: 'EB Garamond', serif; padding: 15px; max-width: 700px; font-size: 1.3em; background-color: #fff1c0; color: #1d3500;  }
 	.icon { margin-left: 8px; }
 	form { display: flex; gap: 7px; }
-	.n-submit, .n-input { font-family: Garamond, serif; font-size: 1em; padding: 5px; }
+	.n-submit, .n-input { font-family: 'EB Garamond', serif; font-size: 1em; padding: 5px; }
 	summary { cursor: pointer; font-style: italic; }
 	details > div { margin-left: 7px; padding-left: 15px; border-left: 2px solid; }
 	.resc { font-weight: 600; }
+	.divider { margin-top: 35px; }
+	.thanks { font-size: 0.8em; text-align: center; }
+	@media screen and (max-width: 600px) {
+	  form { flex-direction: column; align-items: center; }
+	}
 	</style>
   </head>
   <body>
@@ -28,6 +37,9 @@
 	<p>Yes!! Everyone can learn to code in HTML. It's a very forgiving and rewarding coding language to play with. And we'll help each other out! There's a <a href="#starter">starter kit</a> if it's your first time!</p>
 	</div>
 	</details>
+	
+	<center><img src="line_010.gif" alt="" class="divider"></center>
+	
 	<h2>All events</h2>
 	<ul>
 	<li><a href="event-2025.html">HTML Day 2025</a> — 2nd August 2025 <img src="new_006.gif" alt="New!" class="icon"></li>
@@ -40,6 +52,9 @@
 	  </section>
 	  <input class="n-submit" type="submit" value="Sign Up">
 	</form>
+	
+	<center><img src="line_010.gif" alt="" class="divider"></center>
+	
 	<h2 id="starter">Starter kit</h2>
 	<ul>
 	<li><a href="/htmlenergy/starterkit/HTML_Day_2025-Guide.pdf">Quick guide</a></li>
@@ -99,7 +114,14 @@
 	<li><span class="resc">Old professors' websites...</span><br>
 	<small>I kid you not, these are some of my favourite websites to look at.</small></li>
 	</ul>
+	
+	<center><img src="line_010.gif" alt="" class="divider"></center>
+	
 	<h2>Contact</h2>
 	<p>Email me at freewrite.superglue718 [at] passinbox.com if you have any questions!</p>
+	
+	<center><img src="flower.gif" alt="" class="divider"></center>
+	
+	<p class="thanks">Icon and divider from <a href="http://cute.lolipop.jp/">hotchoco</a>. Flower gif from <a href="https://99gifshop.neocities.org">99gifshop</a>.</p>
   </body>
 </html>
