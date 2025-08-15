@@ -28,6 +28,22 @@
   <p>I have a Kobo Clara 2E. These are some modifications that I've been making to my Kobo to make it more exciting? While I've linked the tutorials and guides I've used, I'm also including the steps I took for posterity. If anyone else who stumbles upon this is as tech illiterate as I am, hopefully this helps them out too, especially for those guides with instructions that skip over some details.</p>
   
   <p>The following "hacks" are roughly listed from least to most technologically challenging (imo).</p>
+  <details>
+	  <summary>Table of contents</summary>
+	  <ul>
+		  <li><a href="#online">Online Tools</a></li>
+		  <li><a href="#screensavers">Custom Screensavers</a></li>
+		  <li><a href="#devmode">Devmodeon</a></li>
+		  <li><a href="#config-file">Kobo Configurations File</a></li>
+		  <li><a href="#nickelmenu">NickelMenu</a></li>
+		  <li><a href="#niluje">NiLuJe's Kobo-stuff</a></li>
+		  <li><a href="#hsuan9522">Hsuan9522's FbInk Rebuild</a></li>
+		  <li><a href="#ssh">SSH Detour / Guide</a></li>
+		  <li><a href="#python">Python</a></li>
+		  <li><a href="#btkey">Bluetooth Keyboard</a></li>
+		  <li><a href="#kobocode">Coding Programs in Python for Kobo</a></li>
+	  </ul>
+  </details>
   
   <h2>Online Tools</h2>
   <ul>
@@ -185,8 +201,31 @@ menu_item :library  :Screenshots Toggle :nickel_setting :toggle :screenshots
   
   <p>For more details on what each command does, check the forum post.</p>
   
-  <h2 id="btkey">KoboWriter Rebuild</h2>
-  <p>I <em>was</em> trying to code a way to turn my eReader into a typewriter, a la Freewriter or Zerowriter. I worked on most of the back-end, leaving the GUI to be done in the future. However, I don't know how practical it is because I find my kobo heating up quite a bit when connected to the Bluetooth keyboard. The battery also starts to drain pretty quickly.</p>
+  <h2 id="kobocode">Coding Programs in Python for Kobo</h2>
+  <p>I <em>was</em> trying to code a way to turn my eReader into a typewriter, a la Freewriter or Zerowriter. There is an old project called <a href="https://github.com/olup/kobowriter/tree/main">KoboWriter</a> written in Go, which took a USB keyboard input. I worked on most of the back-end, leaving the GUI to be done in the future. However, I don't know how practical it is because I find my kobo heating up quite a bit when connected to the Bluetooth keyboard. The battery also starts to drain pretty quickly.</p>
+  <p>I've put it on hold, but I wanted to link some resources here on how to get started coding in Python!</p>
+  <h3>Other Python-based projects</h3>
+  <p>These projects are great for looking at how FbInk and other aspects of the Kobo can be called in code.</p>
+  <ul>
+	  <li><a href="https://github.com/SheepWizard/kobo-minesweeper">Kobo minesweeper</a></li>
+	  <li><a href="https://github.com/Mavireck/Kobo-Python-OSKandUtils">On-screen Keyboard and Utils</a></li>
+	  <li><a href="https://github.com/hsuan9522/kobo-reading-calendar?tab=readme-ov-file">Reading Calendar</a></li>
+	  <li><a href="https://github.com/Mavireck/Kobo-WolframAlpha">WolframAlpha</a></li>
+	  <li><a href="https://github.com/Slalamander/inkBoard">inkBoard</a></li>
+  </ul>
+  <h3>Reference Threads</h3>
+  <ul>
+	  <li><a href="https://www.mobileread.com/forums/showthread.php?t=332831">"I want to learn to write soft for Kobo"</a></li>
+	  <li><a href="https://www.mobileread.com/forums/showthread.php?t=365776">"Starting in kobo developing"</a></li>
+  </ul> 
+  <h3>Python Keyboard Input</h3>
+  <ul>
+	  <li><a href="https://stackoverflow.com/questions/13207678/whats-the-simplest-way-of-detecting-keyboard-input-in-a-script-from-the-termina/47197390#47197390">"What's the simplest way of detecting keyboard input in a script from the terminal?"</a></li>
+	  <li><a href="https://stackoverflow.com/questions/34497323/what-is-the-easiest-way-to-detect-key-presses-in-python-3-on-a-linux-machine#34497639">"What is the easiest way to detect key presses in python 3 on a linux machine?"</a></li>
+	  <li><a href="https://stackoverflow.com/questions/5060710/format-of-dev-input-event">"Format of /dev/input/event*"</a></li>
+	  <li><a href="https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal">"What does the 'b' character do in front of a string literal?"</a></li>
+	  <li><a href="https://stackoverflow.com/questions/12453580/how-to-concatenate-join-items-in-a-list-to-a-single-string">"How to concatenate (join) items in a list to a single string"</a></li>
+  </ul> 
   </div>
 </body>
 </html>
