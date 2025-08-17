@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Page Title</title>
+	<style>
+	body { font-family: Verdana,Helvetica,Arial,sans-serif; font-size: 0.7em; background-image:url('kirakira.gif'); background-repeat: repeat;	}
+	a { font-weight: 600; text-decoration: none; color: #222; transition: 0.2s; }
+	a:hover { color: #df97a2; text-decoration: underline; text-decoration-style: wavy; }
+	
+	.headerbar { box-sizing: border-box; position: fixed; top: 0; left: 0; width: 100%; color: #fff; background-color: #000; padding: 0px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; z-index: 1; }
+	.headerbar > div > a { color: #fff; text-decoration: none; }
+	.headerbar > div { display: flex; align-items: center; }
+	.headmobile { display: none; }
+	.headdesktop { display: flex; }
+	
+	.main { margin: 80px 20px; display: grid; grid-template-columns: 250px 500px 250px; grid-template-areas: "left middle right"; grid-gap: 10px; } 
+	.left { grid-area: left; }
+	.right { grid-area: right; }
+	.middle { grid-area: middle; }
+	
+	.sect { box-sizing: border-box; padding: 15px; width: 100%; margin-bottom: 10px; background:#fff; }
+	.sect > figure { box-sizing: border-box; margin: 15px; padding: 10px; }
+	.sect > figure > img { max-width: 100%; border: 1px solid #BBB; }
+	.sect > figure > figcaption { margin-top: 10px; text-align: center; font-style: italic; }
+	.sect > h1 { background-color: #df97a2; padding: 5px; font-size: 1em; text-transform: uppercase; color: #fff; margin: 0px; }
+	.centered { display: flex; align-items: center; flex-direction: column; }
+	
+	.nav {  position: sticky; top: 30px; }
+	
+	.status { width: 114px; border: 1px solid #BBB; padding: 3px; margin-bottom: 10px; display: flex; align-items: center; justify-content:space-between; }
+	.status-span { background:url(ic_status_smile.gif) no-repeat; padding-left: 20px; color: #666; height: 15px; }
+	.button { background:url(ic_avatar_dropdown.gif) no-repeat; width: 12px; height: 15px; }
+	
+	.profile-img { margin: 20px 0px 10px 0px; width: 120px; image-rendering: pixelated; }
+	.avatar-preview { width: 120px; image-rendering: pixelated; }
+	
+	/* Use a media query to add a break point */
+	@media screen and (max-width: 1050px) {
+	.main { align-items: start; grid-template-columns: 250px 500px; grid-template-areas: "left middle" "left right"; }
+	}	
+	
+	@media screen and (max-width: 770px) {
+	.main { align-items: start; grid-template-columns: 100%; grid-template-areas: "left" "middle" "right"; }
+	.headmobile { display: flex; }
+	.headdesktop { display: none; }
+	}	
+	</style>
+  </head>
+  <body>
+	<div class="headerbar headdesktop">
+	<div><a href="https://gaiaonline.com"><img src="mini_gaialogo.gif" alt="gaia"></a> | My Gaia | Shops | Forums | World | Games</div>
+	<div><a href="/precipice">poopgurl</a>&nbsp;|&nbsp;<a href="#">Back to Top</a>&nbsp;|&nbsp;Sign Out</div>
+	</div>
+	<div class="headerbar headmobile">
+	<div><a href="https://gaiaonline.com"><img src="mini_gaialogo.gif" alt="gaia"></a></div>
+	<div><a href="/precipice">poopgurl</a>&nbsp;|&nbsp;<a href="#">Back to Top</a>&nbsp;|&nbsp;Sign Out</div>
+	</div>
+	<div class="main">
+	<div class="sidebar left">
+		<div class="sect">
+			<h1>poopgurl</h1>
+			<div class="centered">
+			<img src="avatar-0.png" class="profile-img" alt="" title="poopgurl, that was my OLD username"><br>
+			<div class="status"><span class="status-span">Online</span><span class="button" title="this doesn't work lol"></span></div>
+			<span><b>Birthday:</b> 01/01</span>
+			</div>
+		</div>
+		<div class="sect">
+			<h1>equipped list</h1>
+			<br>
+			<img src="equipped-1.png" alt="" title="The Sun (Sunshine and Friends)">
+			<img src="equipped-2.png" alt="" title="Cream the Kitten (hiss)">
+			<img src="equipped-3.png" alt="" title="Frosting the Angora Rabbit (by your side)">
+			<img src="equipped-4.png" alt="" title="Frostie Winter Loppie (coat)">
+			<img src="equipped-5.png" alt="" title="Eleven Eleven (blush)">
+			<img src="equipped-6.png" alt="" title="Gentle Loving Manner (oh noes!)">
+			<img src="equipped-7.png" alt="" title="Comforting Yarn (cozy socks)">
+			<img src="equipped-8.png" alt="" title="Bubbly Knife Party: The Set: The Musical (dress)">
+			<img src="equipped-9.png" alt="" title="Dani's Panties (o 3o)">
+			<img src="equipped-10.png" alt="" title="Sweetheart Little Love Lapin">
+		</div>
+		<div class="sect nav">
+			<h1>sections</h1>
+			<ul>
+			<li><a href="#what-gaia">what is Gaia Online?</a>
+			<li><a href="#what-zomg">what was zOMG!?</a>
+			<li><a href="#my-feelings">my feelings on zOMG!</a>
+			<li><a href="#zomg-now">zOMG! now</a>
+			<li><a href="#avatars">avatars</a>
+			<li><a href="#rapidfire">rapidfire things I liked about Gaia Online</a>
+			</ul>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="sect" id="what-zomg">
+		<h1>what is gaia online?</h1>
+		<p>Gaia Online is a forum-based social networking website that was popular in the early 2000s-2010s. One of the (likely most recognizable) features of Gaia Online is the ability to customize your pixel avatars using items and accessories that can be purchased on the website with the in-game currencies. One could earn in-game currencies through exploring, chatting on forums, or playing their collection of <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash-based</a> games, including zOMG!</p>
+		<p>As an aside, Gaia Online is also very notorious case example of hyperinflation — a situation from which the current developers have been trying to recover from.</p>
+		<p>If you never grew up with Gaia Online, I feel like <a href="https://www.youtube.com/watch?v=vyzQnsa8SA0">this video by Red Bard</a> perfectly encapsulates the history of Gaia Online, and a lot of the nostalgia that came along with it. (The Skittles collab?! The MJ sparkle glove... these are things that somehow appear so vividly in my mind.)</p>
+		<p>This page was originally intended as an homage to the Gaia game zOMG!, but I've taken the liberty to add some other small things about my experience with Gaia Online towards the end of the page.</p>
+		</div>
+		<div class="sect" id="what-zomg">
+		<h1>what was zOMG!?</h1>
+		<p>zOMG! was a flash-based MMORPG game on Gaia Online that I spent much of my youth on. The basic premise was that inanimate objects had become "animated" monsters that players could fight using rings with powers. These rings could deal damage, heal, resuscitate and provide buffs or debuffs. Along the way, players would receive quests from NPCs; completing quests and fighting animated were rewarded with loot such as rings, Gaia gold (currency used on Gaia Online to dress up your avatar) and orbs. Orbs could be used to power up and upgrade your rings, allowing to you progress in the game and fight higher difficulty animated.</p>
+
+		<p>It was removed from Gaia Online in 2014, before returning in 2017. While it can still be played by adopting some workarounds to run flash, the landscape of zOMG! is nowhere near where it was at its peak.</p>
+		
+		<figure>
+		<img src="ingame-gold-mon.png" alt="">
+		<figcaption>An example of the "animated" monsters that you would find around the map in-game. This is the sand puff from Gold Beach.</figcaption>
+		</figure>
+		</div>
+		<div class="sect" id="my-feelings">
+		<h1>my feelings on zOMG!</h1>
+		<p>My own personal memory of zOMG! was probably from around 2010-2013. A friend of mine had introduced it to me in school, and for a period of time I remember rushing home to hop onto the same zOMG! server as her to play together.</p>
+
+		<p>Perhaps some of my strongest memories of zOMG! was the community that was on there. I remember there were boss fights — Kat's Kokeshi Doll in the Zen Gardens comes to mind most prominently — where you could team up with other players to take on. You didn't have to know them prior to form a crew to fight; loitering in the vicinity of the entrance was enough to have someone send a crew request or ask if you'd like to fight. Sometimes, if they knew it was your first time trying to complete the boss fight for a quest, they would give advice, like tell you which rings to swap out to best synergize with the crew. Often times, you'd send each other friend requests after a good run, and sometimes, you'd see them around again to play together.</p>
+		
+		<figure>
+		<img src="ingame-zen.png" alt="">
+		<figcaption>The entrance to 'The Shrine of the Doll', the location for the boss fight in Zen Gardens. There used to be players hanging around this entrance. Now, the map is relatively empty.</figcaption>
+		</figure>
+
+		<p>If your entire team loss all their health (and was thus "dazed"), you'd be kicked out of the boss map and be sent back to the map entrance. There were always people around outside ready to to revive you and help you heal up, if only so you didn't have to respawn and be sent back to this place called the "Null Chamber".</p>
+		
+		<figure>
+		<img src="ingame-null.png" alt="">
+		<figcaption>The Null Chamber. The crystals within this space allows for fast travel to different maps, such as Bass'ken Lake (tooltip shown in image).</figcaption>
+		</figure>
+
+		<p>Something else I look back fondly upon now was how helpful players often were. In zOMG!, you explore different locations with new types of animated. (Naturally, as you progressed along the map, the animated got hardier and tougher to beat, keeping pace with the progression of your own skill level and the damage you could deal.) In some locations, there were these "Null Crystals" that teleported you to a map/spaced called the "Null Chamber". In essence, Null Crystals were basically save points that allowed you to instantly teleport to other Null Crystal locations through the Null Chamber, circumventing the need to arduously walk back and forth between different locations should you wish. This, in essence, gave the ability to fast travel across different (select) maps and locations that you've already been to!</p>
+
+		<p>However, when you first enter a new location, your own version of the map would be completely black — these map segments would slowly reveal itself as you explored the map, so on your own, you'd have to take your time looking around the map for the Null Crystal, fighting monsters along the way. It is only once you've entered through the Null Chamber through a map's Null Crystal that you would be able to use that Null Crystal for fast travel. So, if say I had never been to Zen Gardens's Null Crystal yet, I wouldn't be able to fast travel to the Zen Gardens through the Null Chamber.</p>
+		
+		<figure>
+		<img src="ingame-gold.png" alt="">
+		<figcaption>Null crystal for Gold Beach.</figcaption>
+		</figure>
+		
+		<figure>
+		<img src="ingame-zen-null.png" alt="">
+		<figcaption>Null crystal for Zen Gardens.</figcaption>
+		</figure>
+
+		<p>Now, if you weren't quite high level enough yet for a map's difficulty, your character had a chance of losing all their health to the Animated, forcing you to return to the Null Chamber and restart your journey through that new map to find the Null Crystal (if any). Veteran players would sometimes wait by the entrance of a new map, scoping out new players who might need help. More than once, I remember them offering to bring me to the Null Crystal directly, even helping to kill animated that might have otherwise wiped me out had I been alone. Reflecting on it, there's something quite sweet about these older, stronger players lending a hand without any particular benefit to themselves. </p>
+
+		<p>Of course, logging into zOMG! today, I think it would be rare to find these experiences; there just aren't enough players on there anymore. I suppose that's the thing about MMORPGs — the community and player base is such a vital part of the game's experience. </p>
+
+		<p>In terms of progress, I never reached the "end", or the highest level one can get in the game. I remember really struggling with the Otami Ruins map, right before I stopped playing. I felt like I was high level enough to be comfortable with the previous map, Gold Beach, but not quite high enough to survive the Gold Beach map. Perhaps it was a matter of grinding a lot to get enough orbs to power up my rings, but I just never got around to doing that. And I'd never seen the Shallow Sea map until I was researching for this!</p>
+		
+		<figure>
+		<img src="ingame-otami.png" alt="">
+		<figcaption>Likely the furthest I got: the Otami Cliffs, which was a sub-map of Otami Ruins.</figcaption>
+		</figure>
+		</div>
+		<div class="sect" id="zomg-now">
+		<h1>zOMG! now</h1>
+		<p>I launched zOMG! again for the first time in probably almost over a decade to grab screenshots for this.</p>
+		<p>Will I ever return to play zOMG!? I don't know. I guess there's a kind of bittersweet feeling to it — like wanting to leave the game in the past because I want to keep the lens of nostalgia with which I look at the it, but also a desire to pick it up again, whether to "complete" it or just re-live the moment, in a way. Though I think the latter is an impossible task. I'll never be able to approach the game with the same frame of reference as I did when I was 10-12 years old. And so returning to the game seems like an almost pointless endeavour?</p>
+		<p>Something I am curious about to learn now is how "good" my selection of rings were, considering I was only around 10 years old when I assembled them. Likely not that great, I think. But I'd like to analyze it someday and read more on the meta of zOMG! combat now that I'm much older and can understand it better.</p>
+		</div>
+		<div class="sect" id="avatars">
+		<h1>avatars</h1>
+		<p>I regret not saving all my old avatars! What I have now is a re-creation of the general vibe of my avatar in 2011-2013, but it is definitely not an accurate one. I did, however, save some avatars that I liked/used from 2015 onwards.</p>
+		<center>
+		<img src="avatar-1.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-2.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-3.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-4.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-5.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-6.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-7.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-8.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-9.png" alt="" title="" class="avatar-preview">
+		<img src="avatar-10.png" alt="" title="" class="avatar-preview">
+		</center>
+		<p>As you can say, I really love dusty pink! I think Gaia Online has such a lovely collection of avatar items that makes it so fun, I'm constantly discovering new things even to this day. I don't go back to Gaia Online often, but I do enjoy popping in to customize an avatar or go shopping for new accessories and clothing items sometimes.</p>
+		</div>
+		<div class="sect" id="rapidfire">
+		<h1>rapidfire things I liked about gaia</h1>
+		<p>In my many on-off years spent on Gaia Online, these are some things that I look back fondly on:</p>
+		<ul>
+			<li> art & artists selling their work!!
+			<li> the pixel art of all the different clothing & accessories
+			<li> npc lore from their comics section
+			<li> events, especially winter / christmas events
+			<li> generally people were pretty nice
+			<li> the other flash games, like pinball and jigsaw
+		</ul>
+		</div>
+	</div>
+	<div class="sidebar right">
+		<div class="sect">
+			<h1>Recent Visitors</h1>
+			<p><a href="/precipice/guestbook">You</a> on
+			<script>
+				date = new Date().toLocaleDateString();
+				document.write(date);
+			</script>
+	<br><b>a friend</b> on
+			<script>
+				date = new Date();
+				date.setDate(date.getDate() - 1);
+				datetext = date.toLocaleDateString();
+				document.write(datetext);
+			</script>
+	</p>
+		</div>
+		<div class="sect">
+			<h1>thanks</h1>
+			<p>sorahana for pixel background.</p><p>all other Gaia Online assets are taken from their website. This template was made to look similar to the default Gaiaonline profiles, but has also been modified to be responsive.</p>
+		</div>
+	</div>
+	</div>
+  </body>
+</html>
