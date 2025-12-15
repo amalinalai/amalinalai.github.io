@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>HTML Energy Starter Kit</title>
+	<style>
+	body { max-width: 700px; padding: 15px; box-sizing: border-box; }
+	pre { overflow-y: scroll; width: 100%; height: 250px; border: 1px solid #ccc; padding: 5px; box-sizing: border-box; }
+	</style>
+  </head>
+  <body>
+	<h1>HTML & CSS Tutorial Starter Kit</h1>
+<!-- Basic Page Set-Up -->
+	<h2>Basic Page Set-up</h2>
+	<p><a href="basic.html">Preview of the page.</a></p>
+<pre>
+<code>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+	&#60;head&#62;
+		&#60;meta charset="utf-8"&#62;
+		&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+		&#60;title&#62;Page Title&#60;/title&#62;
+		
+		&#60;style&#62;
+		&#60;/style&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+		&#60;h1&#62;This is a header.&#60;/h1&#62;
+	
+		&#60;p&#62;This is a paragraph.&#60;/p&#62;
+		&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#60;/p&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+</code>
+</pre>
+
+<!-- Centered Set-Up -->
+	<h2>Centered One Column Set-up</h2>
+	<p><a href="onecol.html">Preview of the page.</a></p>
+<pre>
+<code>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+	&#60;head&#62;
+		&#60;meta charset="utf-8"&#62;
+		&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+		&#60;title&#62;Page Title&#60;/title&#62;
+		
+		&#60;style&#62;
+		body {
+			display: flex; /* remove these two lines if you don't want it centered! */
+			justify-content: center; /* CSS comments are put in between these 'bookends' */
+		}
+		
+		h1 {
+			font-family: Courier New, monospace;
+			font-size: 3em;
+		}
+		
+		.main {
+			max-width: 900px;
+			box-sizing: border-box;
+			padding: 50px;
+			border: 1px solid #111;
+			border-radius: 20px;
+		}
+		
+		u {
+			color: red;
+			text-decoration-style: wavy;
+		}
+		&#60;/style&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+		&#60;div class="main"&#62;
+		&#60;!-- This is a comment. You can use it to help demarcate sections, or put reminders for yourself. --&#62;
+		&#60;h1&#62;This is a header.&#60;/h1&#62;
+		
+		&#60;p&#62;This is a paragraph. You can style some text with &#60;b&#62;bold&#60;/b&#62;, &#60;i&#62;italic&#60;/i&#62;, &#60;u&#62;underline&#60;/u&#62;, and &#60;s&#62;strikethrough&#60;/s&#62;.&#60;/p&#62;
+		&#60;p&#62;You can even change how those styles look. Try changing them with &#60;code&#62;b { ... }&#60;/code&#62;, &#60;code&#62;i { ... }&#60;/code&#62;, etc. I've done the styling for underline for you to see.&#60;/p&#62;
+		
+		&#60;!-- My long paragraph starts here... --&#62;
+		&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#60;/p&#62;
+		&#60;/div&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+</code>
+</pre>
+
+<!-- Centered Two Column Set-Up -->
+	<h2>Centered Two Column Set-up</h2>
+	<p><a href="twocol.html">Preview of the page.</a></p>
+<pre>
+<code>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+	&#60;head&#62;
+		&#60;meta charset="utf-8"&#62;
+		&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+		&#60;title&#62;Page Title&#60;/title&#62;
+		
+		&#60;style&#62;
+		body {
+			display: flex; /* remove these two lines if you don't want it centered! */
+			justify-content: center; /* CSS comments are put in between these 'bookends' */
+		}
+		
+		h1 {
+			font-family: Courier New, monospace;
+			font-size: 5em;
+		}
+		
+		.main {
+			max-width: 900px;
+			display: grid;
+			grid-template-areas: "header-grid header-grid"
+							"content-grid sidebar-grid";
+			grid-template-columns: 2fr 1fr;
+		}
+		
+		.header {
+			box-sizing: border-box;
+			padding: 10px;
+			border: 2px dashed pink;
+			width: 100%;
+			grid-area: header-grid;
+		}
+		
+		.sidebar {
+			box-sizing: border-box;
+			grid-area: sidebar-grid;
+			border: 1px solid green;
+			padding: 10px;
+			font-family: Tahoma, sans serif;
+		}
+		
+		.content {
+			box-sizing: border-box;
+			grid-area: content-grid;
+			border: 1px solid blue;
+			padding: 10px;
+		}
+		
+		u {
+			color: red;
+			text-decoration-style: wavy;
+		}
+		&#60;/style&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+		&#60;div class="main"&#62;
+		&#60;!-- This is a comment. You can use it to help demarcate sections, or put reminders for yourself. --&#62;
+		&#60;div class="header"&#62;
+		&#60;h1&#62;This is a header.&#60;/h1&#62;
+		&#60;/div&#62;
+		
+		&#60;!-- Start of sidebar --&#62;
+		&#60;div class="sidebar"&#62;
+		&#60;p&#62;This is a paragraph. You can style some text with &#60;b&#62;bold&#60;/b&#62;, &#60;i&#62;italic&#60;/i&#62;, &#60;u&#62;underline&#60;/u&#62;, and &#60;s&#62;strikethrough&#60;/s&#62;.&#60;/p&#62;
+		&#60;p&#62;You can even change how those styles look. Try changing them with &#60;code&#62;b { ... }&#60;/code&#62;, &#60;code&#62;i { ... }&#60;/code&#62;, etc. I've done the styling for underline for you to see.&#60;/p&#62;
+		&#60;/div&#62;
+		&#60;!-- End of sidebar --&#62;
+		
+		&#60;div class="content"&#62;
+		&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#60;/p&#62;
+		&#60;/div&#62;
+		&#60;/div&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+</code>
+</pre>
+
+<!-- Rotated Sticky Notes Set-Up -->
+	<h2>Rotated Sticky Notes Set-up</h2>
+	<p><a href="stickynote.html">Preview of the page.</a></p>
+<pre>
+<code>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+  &#60;head&#62;
+	&#60;meta charset="UTF-8"&#62;
+	&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"/&#62;
+	&#60;title&#62;Page Title&#60;/title&#62;
+	&#60;style&#62;
+	.post-it-one {
+		box-sizing: border-box;
+		padding: 20px;
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 400px;
+		left: 20px;
+		background-color: yellow;
+		overflow-y: scroll;
+		rotate: 30deg;
+	}
+	
+	.post-it-two {
+		box-sizing: border-box;
+		padding: 20px;
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top: 130px;
+		left: 200px;
+		background-color: pink;
+		overflow-y: scroll;
+		z-index: -1; /* try removing this or changing the value! this affects whether the div is arranged towards the front or back */
+	}
+	
+	u {
+		text-decoration-style: wavy;
+		color: red;
+	}
+	&#60;/style&#62;
+  &#60;/head&#62;
+  &#60;body&#62;
+	&#60;!-- This is a comment. You can use it to help demarcate sections, or put reminders for yourself. --&#62;
+	&#60;h1&#62;This is a header.&#60;/h1&#62;
+	
+	&#60;!-- My yellow sticky note starts here... --&#62;
+	&#60;div class="post-it-one"&#62;
+	&#60;p&#62;This is a paragraph. You can style some text with &#60;b&#62;bold&#60;/b&#62;, &#60;i&#62;italic&#60;/i&#62;, &#60;u&#62;underline&#60;/u&#62;, and &#60;s&#62;strikethrough&#60;/s&#62;.&#60;/p&#62;
+	&#60;p&#62;You can even change how those styles look. Try changing them with &#60;code&#62;b { ... }&#60;/code&#62;, &#60;code&#62;i { ... }&#60;/code&#62;, etc. I've done the styling for underline for you to see.&#60;/p&#62;
+	&#60;/div&#62;
+	
+	&#60;!-- My pink sticky note starts here... --&#62;
+	&#60;div class="post-it-two"&#62;
+	&#60;p&#62;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#60;/p&#62;
+	&#60;/div&#62;
+	&#60;p&#62;Hey there!&#60;/p&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
+
+</code>
+</pre>
+
+  </body>
+</html>
