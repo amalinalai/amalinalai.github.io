@@ -2,27 +2,27 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<title>a journey through 2025...</title>
 		<style>
-		body { x-overflow: none; background: #e6f9ff; color: #6b4508; font-family: Helvetica, sans-serif; }
+		body { background: #e6f9ff; color: #6b4508; font-family: Helvetica, sans-serif; height: 100%; }
 		a { background: #bdff7a; color: #6b4508; }
 		a:hover { background: transparent; border-bottom: 2px #bdff7a solid; }
 		
 		
 		/* Scene elements */
 		.sky { z-index: -2; background: linear-gradient(90deg,rgba(230, 249, 255, 1) 0%, rgba(255, 230, 255, 1) 50%, rgba(255, 245, 204, 1) 100%); position: absolute; top: 0px; left: 0px; height: 100%; width: 2400px; }
-		.grass { background-color: #bdff7a; height: 20px; width: 100vw; border-top: 1px #6b4508 solid; position: fixed; bottom: 0px; left: 0px; z-index: -1; }
-		.cyclist { position: fixed; bottom: 10px; left: 40px; -webkit-transform: scaleX(-1); transform: scaleX(-1); z-index: 1; }
+		.grass { background-color: #bdff7a; height: 4vh; width: 100vw; border-top: 1px #6b4508 solid; position: fixed; top: 96vh; left: 0px; z-index: -1; }
+		.cyclist { position: fixed; top:93vh; left: 40px; -webkit-transform: scaleX(-1); transform: scaleX(-1); z-index: 1; }
 		
-		.textbubble { font-size: 0.7em; box-sizing: border-box; width: 250px; position: fixed; bottom: 15px; left: 90px; background: #fff; border: 1px #6b4508 solid; padding: 5px; }
+		.textbubble { font-size: 0.7em; box-sizing: border-box; width: 250px; position: fixed; top: 93vh; left: 90px; background: #fff; border: 1px #6b4508 solid; padding: 5px; }
 		.textbubble:before { content: ""; width: 0px; height: 0px; position: absolute; border-right: 6px dashed #6b4508; border-left: 6px solid transparent; border-top: 6px solid #6b4508; border-bottom: 6px solid transparent; left: -12px; top: 12px; }
 		.textbubble:after { content: ""; width: 0px; height: 0px; position: absolute; border-right: 6px dashed #fff; border-left: 4px solid transparent; border-top: 4px solid #fff; border-bottom: 5px solid transparent; left: -9px; top: 13px; }
 		
-		.textbubble-scroll { font-size: 0.7em; box-sizing: border-box; width: 50px; position: fixed; bottom: 15px; left: 345px; background: #fff; border: 1px #6b4508 solid; padding: 5px; text-align: center; font-weight: 600; }
+		.textbubble-scroll { font-size: 0.7em; box-sizing: border-box; width: 50px; position: fixed; top:93vh; left: 345px; background: #fff; border: 1px #6b4508 solid; padding: 5px; text-align: center; font-weight: 600; }
 		
 		/* Blog posts */
-		main { width: 100%; display: flex; flex-direction: row; flex-wrap: no-wrap; justify-content: flex-start; align-items: flex-start; flex: none; }
+		main { width: 100%; height: 95%; display: flex; flex-direction: row; flex-wrap: no-wrap; justify-content: flex-start; align-items: flex-start; flex: none; }
 		.post { background: #fff; padding: 18px; border-radius: 10px; border: 1px #6b4508 solid; min-width: 400px; max-width: 500px; max-height: 76vh; margin: 8px; overflow: auto; scrollbar-width: thin; }
 		.post > p { text-align: justify; }
 		
@@ -38,6 +38,23 @@
 		  50% {margin-left: 400px; }
 		  100% {margin-left: 0px;}
 		}
+		
+		
+	@media screen and (max-width: 420px) {
+	  .post { min-width: 250px; max-width: 300px; max-height: 73vh; }
+	  .cyclist { left: 5px; }
+	  h1 { width: 1000px; }
+	  .textbubble { left: 55px; }
+	  .textbubble-scroll { left: 310px; }
+	}
+	
+	@media screen and (max-width: 320px) {
+	  .post { min-width: 250px; max-width: 280px; max-height: 73vh; }
+	  .cyclist { left: 5px; }
+	  h1 { width: 1000px; }
+	  .textbubble { left: 55px; }
+	  .textbubble-scroll { left: 310px; }
+	}
 		</style>
 	</head>
 	<body>
@@ -67,7 +84,7 @@
 		<p>I told everyone I took a break from my PhD this year to <a href="https://www.are.na/block/37127037">do an internship</a> because I wanted to see what options there were for me after I graduate, but I suppose what I was really seeking was refuge. A pause button. It was one of the best things I could have done for myself.</p>
 		<p>It was here, in a new context where I had to learn a whole new job, that I let myself <em>try</em> so many new things. Yes, I learnt whatever skills I needed for the job, like acquisitions and copyediting. But I also learnt the bass guitar, the keyboard, and even a little bit of drums! Never would I have thought that I'd somehow pick up music this year and play in an office band.</p>
 		<figure>
-		<img src="images/ny26-drums.png">
+		<img src="images/ny26-drums.png" alt="">
 		<figcaption>Learning the drums.</figcaption>
 		</figure>
 		<p>I let myself ask questions, make requests. I was on the editorial team but I asked to follow a book launch and a conference event to see what the marketing department does. I got to shadow a few typesetters to learn how they worked. I made conversations where I could in the pantry, seeking insight from whoever I could.</p>
@@ -81,12 +98,12 @@
 		<p>I also <a href="https://amalinalai.github.io/htmlenergy/projects/htmlday25-lina.html">hosted HTML Day</a> in 2025, which was really exciting. I remember seeing the email that HTML Day was around the corner, but I saw that there hadn't been a previous event in Singapore before. For a moment I thought: that's a shame, I really wanted to attend an event. Then I thought: why not just host one myself?</p>
 		<p>So that's precisely what I did.</p>
 		<figure>
-		<img src="https://amalinalai.github.io/htmlenergy/images/2025-photo3.jpg">
+		<img src="https://amalinalai.github.io/htmlenergy/images/2025-photo3.jpg" alt="">
 		<figcaption>Teaching my friends how to code in HTML at HTML Day 2025. :)</figcaption>
 		</figure>
 		<p>It's crazy to think sometimes of how one thing can lead to another. In a serendipitous weaving of fate, past and future, me hosting HTML day ended up leading to an invitation to <a href="https://nlb.libcal.com/event/5858205">host a workshop on the handmade web</a> / HTML & CSS for <em>the</em> National Library in Singapore at the start of 2026. (I still can't believe that!) Alongside that, I was also invited to speak on my very first panel — something that I was so deathly nervous and unsure about, but said <strong>yes</strong> anyway!</p>
 		<figure>
-		<img src="images/ny26-panel.png">
+		<img src="images/ny26-panel.png" alt="">
 		<figcaption>Giving a short walkthrough and introduction to the handmade web for the panel in 2026!</figcaption>
 		</figure>
 		<p>In the same thematic ballpark, something else I did at the end of 2025 was to reach out to more people. The idea of networking always seemed a little scary, but I realized that the worst thing that could happen was to have nothing come out of it. And much like how HTML Day led to other things, so too can simply reaching out.</p>
