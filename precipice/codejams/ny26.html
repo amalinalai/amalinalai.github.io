@@ -13,7 +13,7 @@
 		/* Scene elements */
 		.sky { z-index: -2; background: linear-gradient(90deg,rgba(230, 249, 255, 1) 0%, rgba(255, 230, 255, 1) 50%, rgba(255, 245, 204, 1) 100%); position: absolute; top: 0px; left: 0px; height: 100%; width: 2400px; }
 		.grass { background-color: #bdff7a; height: 4vh; width: 100vw; border-top: 1px #6b4508 solid; position: fixed; top: 96vh; left: 0px; z-index: -1; }
-		.cyclist { position: fixed; top:93vh; left: 40px; -webkit-transform: scaleX(-1); transform: scaleX(-1); z-index: 1; }
+		.cyclist { position: fixed; top:93vh; left: 40px; -webkit-transform: scaleX(-1); transform: scaleX(-1); z-index: 1; image-rendering: pixelated; }
 		
 		.textbubble { font-size: 0.7em; box-sizing: border-box; width: 250px; position: fixed; top: 93vh; left: 90px; background: #fff; border: 1px #6b4508 solid; padding: 5px; }
 		.textbubble:before { content: ""; width: 0px; height: 0px; position: absolute; border-right: 6px dashed #6b4508; border-left: 6px solid transparent; border-top: 6px solid #6b4508; border-bottom: 6px solid transparent; left: -12px; top: 12px; }
@@ -42,6 +42,7 @@
 		
 	@media screen and (max-width: 420px) {
 	  .post { min-width: 250px; max-width: 300px; max-height: 73vh; }
+	  .sky { width: 1600px; }
 	  .cyclist { left: 5px; top:87vh; }
 	  .grass { height: 10vh; width: 100vw; top: 90vh; }
 	  h1 { width: 1000px; }
@@ -51,6 +52,7 @@
 	
 	@media screen and (max-width: 320px) {
 	  .post { min-width: 250px; max-width: 280px; max-height: 73vh; }
+	  .sky { width: 1500px; }
 	  .cyclist { left: 5px; top:87vh; }
 	  .grass { height: 10vh; width: 100vw; top: 90vh; }
 	  h1 { width: 1000px; }
