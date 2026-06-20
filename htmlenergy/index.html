@@ -5,17 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>html energy is all around us... in sg!</title>
 	<style>
-	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond.ttf) format('truetype'); }
-	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond-Bold.ttf) format('truetype'); font-weight: bold; }
-	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond-Italic.ttf) format('truetype'); font-weight: normal; font-style: italic; }
-	@font-face {font-family:'EB Garamond'; src:url(/fonts/EBGaramond-BoldItalic.ttf) format('truetype'); font-weight: bold; font-style: italic; }
 	
-	body { font-family: 'EB Garamond', serif; padding: 15px; max-width: 700px; font-size: 1.3em; background-color: #fff1c0; color: #1d3500;  }
+	body { font-family: monospace; padding: 15px; max-width: 700px; font-size: 1.1em; background-color: #fefefe; color: #1d3500; text-align: justify; }
+	p { line-height: 130%; }
+	h1 { text-align: center; }
+	h2 { margin-top: 20px; }
+	h2::before { content: "#  "; color: #617c3f; }
+	h3::before { content: "##  "; color: #617c3f; }
+	
+	.new-event { border: 2px dotted #617c3f; padding: 10px; background: #fff; transition: 0.2s; font-size: 1.5em; text-align: center; }
+	.new-event:hover { filter:drop-shadow(0px 0px 5px chartreuse); } 
+	.computer { filter:drop-shadow(1px 1px 1px #333); }
 	.icon { margin-left: 8px; }
+	
 	form { display: flex; gap: 7px; }
-	.n-submit, .n-input { font-family: 'EB Garamond', serif; font-size: 1em; padding: 5px; }
-	summary { cursor: pointer; font-style: italic; }
-	details > div { margin-left: 7px; padding-left: 15px; border-left: 2px solid; }
+	.n-submit, .n-input { font-family: monospace; font-size: 1.1em; padding: 5px; }
 	.resc { font-weight: 600; }
 	.divider { margin-top: 35px; }
 	.thanks { font-size: 0.8em; text-align: center; }
@@ -25,29 +29,33 @@
 	</style>
   </head>
   <body>
-	<h1>Singapore-based HTML Freewrites</h1>
-	<p>This is the landing page for HTML freewrites in Singapore.</p>
-	<p>HTML freewrites are event where people get together to (learn and) write HTML documents – check out <a href="https://html.energy/">HTML energy</a> for the philosophy behind it & events all over the world!</p>
-	<details><summary>What is HTML?</summary>
-	<div>
-	<p>HTML documents form the backbone of every website you've ever visited. Before website builders (Squarespace, Wix, etc), people made websites by coding their own HTML documents.</p>
+  <center><img class="computer" alt="" src="html club.png"></center>
+	<h1>> WELCOME TO...<br> <marquee behavior="alternate">THE HANDMADE WEB CLUB!</marquee></h1>
+	
+	<div class="new-event">
+	<strong>Next session: 18 August 2026</strong><br>
+	@ Bukit Panjang Public Library, 2pm<br>
+	Event page: <a href="event-2026.html">HTML Day 2026!</a><br>
+	
 	</div>
-	</details>
-	<details><summary>Can I join? I've never coded before.</summary>
-	<div>
-	<p>Yes!! Everyone can learn to code in HTML. It's a very forgiving and rewarding coding language to play with. And we'll help each other out! There's a <a href="#starter">starter kit</a> if it's your first time!</p>
-	</div>
-	</details>
+	
+	<h2>What is this?</h2>
+	<p>A callback to the early internet of the 90s and 00s, the handmade web is a sprawling landscape of diverse personal and community-based websites that exist outside of mainstream social media. In a space that centers creativity and self-expression, these websites are often made by people coding their own HTML documents (which are the backbone of every website you've ever visited!)</p>
+	<p>This <strong>Singapore-based community is an invitation to participate in the handmade web</strong>: join us in finding new ways of engaging with the World Wide Web!</p>
+	
+	<h2>What do you do?</h2>
+	<p>Our community sessions consist of HTML freewrites where people get together to learn and write HTML documents – check out <a href="https://html.energy/">HTML energy</a> for the philosophy behind it.</p>
+	
+	<h2>Can I join? I've never coded before.</h2>
+	<p>Yes!! Whether you’re a complete beginner or an expert coder, all are welcome! Everyone can learn to code in HTML and we will help each other out! Just come by for our sessions. You may subscribe to the newsletter below if you want to be notified of a new event.</p>
+	<p>HTML is a very forgiving and rewarding coding language to play with. There's a <a href="#starter">starter kit</a> if it's your first time!</p>
+	
 	
 	<center><img src="line_010.gif" alt="" class="divider"></center>
 	
-	<h2>All events</h2>
-	<ul>
-	<li><a href="https://nlb.libcal.com/event/5858205">Crafting A Handmade Web (NLB Event)</a> — 10th January 2026 <img src="new_006.gif" alt="New!" class="icon"></li>
-	<li><a href="event-2025.html">HTML Day 2025</a> — 2nd August 2025</li>
-	</ul>
+	
 	<h2>Newsletter</h2>
-	<p>If you want to be notified whenever a new HTML freewrite in SG is coming up, fill up your email below! (We won't send you any other emails.)</p>
+	<p>If you want join the club and be notified whenever a new HTML freewrite in SG is coming up, fill up your email below! (We won't send you any other emails.)</p>
 	<form name="form" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLScsz-MqGKmFdv49zdqgDR_FXWEfisc_lfE7nZxdqPwFfsLYlg/formResponse" target="_blank">
 	  <section>
 	  <input class="n-input" name="entry.782286999" type="text" placeholder="Email" aria-label="Email Adress" id="email" required>
@@ -55,8 +63,19 @@
 	  <input class="n-submit" type="submit" value="Sign Up">
 	</form>
 
+	<h2>All events</h2>
+	<ul>
+	<li><a href="event-2026.html">HTML Day 2026</a> — 15th August 2026  <img src="new_006.gif" alt="New!" class="icon"></li>
+	<li><a href="https://nlb.libcal.com/event/5858205">Crafting A Handmade Web (NLB Event)</a> — 10th January 2026</li>
+	<li><a href="event-2025.html">HTML Day 2025</a> — 2nd August 2025</li>
+	</ul>
+
 	<h2>Webring</h2>
 	<p><a href="https://www.gabriel-export.earth/html-energy-webring/">Join the HTML Energy webring</a> by Gabriel. :)</p>
+	
+	
+	<h2>Contact</h2>
+	<p>Lina and Trevor are behind this club! Email us at htmlinsg [at] pm.me if you have any questions!</p>
 	
 	<center><img src="line_010.gif" alt="" class="divider"></center>
 	
@@ -110,11 +129,6 @@
 	
 	<center><img src="line_010.gif" alt="" class="divider"></center>
 	
-	<!--<h2>Contact</h2>
-	<p>Email me at freewrite.superglue718 [at] passinbox.com if you have any questions!</p>-->
-	
-	<center><img src="flower.gif" alt="" class="divider"></center>
-	
-	<p class="thanks">Icon and divider from <a href="http://cute.lolipop.jp/">hotchoco</a>. Flower gif from <a href="https://99gifshop.neocities.org">99gifshop</a>.</p>
+	<p class="thanks">Icon and divider from <a href="http://cute.lolipop.jp/">hotchoco</a>.</p>
   </body>
 </html>
