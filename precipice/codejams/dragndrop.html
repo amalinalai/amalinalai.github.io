@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body { display: flex; }
+#left { width: 50%; }
+#right {width: 50%; }
+
+.area {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+}
+
+#stickerbook { display: flex; width: 100%; }
+
+.draggable {
+  position: absolute;
+  filter: drop-shadow(#ccc 3px 3px 2px);
+}
+</style>
+</head>
+<body>
+
+<div id="left">
+<h1>Stickerbook</h1>
+
+<div id="div1" class="area" ondrop="drop(event)"   ondragover="dragoverHandler(event)"></div>
+<div id="stickerbook">
+<div id="sticker-1" draggable="true" ondragstart="dragstartHandler(event)">
+<svg width="100" height="100" >
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+</div>
+
+<div id="sticker-2" draggable="true" ondragstart="dragstartHandler(event)">
+<svg width="100" height="100" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+	<linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+	  <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+	  <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+	</linearGradient>
+  </defs>
+  <polygon points="200,50 220,120 290,120 240,170 260,240 200,200 140,240 160,170 110,120 180,120" fill="url(#starGrad)" stroke="#FF8C00" stroke-width="3"/>
+</svg>
+</div>
+
+<img id="sticker-4" src="https://amalinalai.github.io/precipice/bookshelf/icons/babel.png" draggable="true" ondragstart="dragstartHandler(event)" width="100" height="100">
+<img id="sticker-5" src="https://amalinalai.github.io/precipice/bookshelf/icons/empress-of-salt-and-fortune.png" draggable="true" ondragstart="dragstartHandler(event)" width="100" height="100">
+
+</div>
+
+<br>
+<button onclick="getCode()">Get Code</button> <button onclick="clearStickerMaker()">Clear</button> <br>
+
+
+<label>
+<textarea rows="10" cols="70" id="copyArea"></textarea>
+</label>
+</div>
+
+<div id="right">
+<h1>Scene</h1>
+
+<div id="div2" class="area">
+</div>
+<br>
+<label>
+<textarea rows="10" cols="70" id="pasteArea"></textarea>
+</label>
+<br>
+<button onclick="pasteCode()">Paste / Run</button>
+</div>
+
+</body>
+<script>
+// Buttons Script
+function clearStickerMaker() {
+	document.getElementById("div1").innerHTML = "";
+	document.getElementById("copyArea").value = "";
+}
+
+function getCode() {
+  var x = document.getElementById("div1").innerHTML;
+  document.getElementById("copyArea").value = x;
+}
+
+function pasteCode() {
+  var x = document.getElementById("pasteArea").value;
+  document.getElementById("div2").innerHTML = x;
+}
+</script>
+<script>
+// Updating draggable elements script
+// Select the node that will be observed for mutations
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+const targetNode = document.getElementById("div1");
+
+function logNewNodes(records) {
+  for (const record of records) {
+    // Check if the childList of the target node has been mutated
+    if (record.type === "childList") {
+      movement(); // updateDraggableElems
+    }
+  }
+}
+
+const observer = new MutationObserver(logNewNodes);
+observer.observe(targetNode, { childList: true });
+</script>
+<script>
+// Drag and Drop Scripts
+
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+
+function drop(ev) {
+  ev.preventDefault();
+  var data=ev.dataTransfer.getData("text/html");
+	var nodeCopy = document.getElementById(data).cloneNode(true);
+	nodeCopy.removeAttribute('id');
+	nodeCopy.removeAttribute('draggable');
+	nodeCopy.removeAttribute('ondragstart');
+	nodeCopy.classList.add("draggable");
+	ev.target.appendChild(nodeCopy);
+}
+</script>
+<script>
+// Drag to arrange scripts
+
+var draggableElements = document.getElementsByClassName("draggable");
+
+function movement(){
+//Make the DIV element draggable:
+	var draggableElements = document.getElementsByClassName("draggable");
+
+	for(var i = 0; i < draggableElements.length; i++){
+		dragElement(draggableElements[i]);
+	}
+}
+
+function dragElement(elmnt) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+		elmnt.onmousedown = dragMouseDown;
+	function dragMouseDown(e) {
+		e = e || window.event;
+		pos3 = parseInt(e.clientX);
+		pos4 = parseInt(e.clientY);
+		document.onmouseup = closeDragElement;
+		document.onmousemove = elementDrag;
+		elmnt.style.zIndex = draggableElements.length;
+		var i = 1;
+		for (element of draggableElements) if (element != elmnt) element.style.zIndex = i++;
+		return false;
+	}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		pos1 = pos3 - parseInt(e.clientX);
+		pos2 = pos4 - parseInt(e.clientY);
+		pos3 = parseInt(e.clientX);
+		pos4 = parseInt(e.clientY);
+		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+		// console.log(elmnt.offsetTop)
+		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	}
+
+	function closeDragElement() {
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+</script>
+</html>
+
